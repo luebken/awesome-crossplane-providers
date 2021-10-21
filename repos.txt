@@ -2,7 +2,6 @@ crossplane-contrib/provider-linode
 crossplane-contrib/provider-equinix-metal
 crossplane-contrib/provider-github
 crossplane-contrib/provider-helm
-crossplane-contrib/provider-terraform-gcp
 crossplane-contrib/provider-ssh
 crossplane-contrib/provider-sql
 crossplane-contrib/provider-in-cluster
@@ -30,6 +29,7 @@ crossplane-contrib/provider-civo
 crossplane-contrib/provider-styra
 crossplane-contrib/provider-tf-aws
 crossplane-contrib/provider-tf-azure
+crossplane-contrib/terrajet
 crossplane-contrib/provider-yandex-cloud
 crossplane/provider-gcp
 crossplane/provider-azure
