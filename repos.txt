@@ -27,9 +27,10 @@ crossplane-contrib/provider-rancher
 crossplane-contrib/provider-kubernetes
 crossplane-contrib/provider-civo
 crossplane-contrib/provider-styra
-crossplane-contrib/provider-tf-aws
-crossplane-contrib/provider-tf-azure
-crossplane-contrib/terrajet
+crossplane-contrib/provider-jet-aws
+crossplane-contrib/provider-jet-azure
+crossplane-contrib/provider-jet-gcp
+crossplane/terrajet
 crossplane-contrib/provider-yandex-cloud
 crossplane/provider-gcp
 crossplane/provider-azure
