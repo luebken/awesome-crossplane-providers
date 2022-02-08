@@ -46,26 +46,25 @@ async function queryAll() {
     stats = stats.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
     console.log("\n\n\n---")
-    console.log("Providers with at least one release:")
-    console.log("| Github | Description | License | Stargazers | Last Update | Last Release |")
-    console.log("|--------|-------------|---------|------------|-------------|--------------|")
+    console.log("| Github | Description | Stargazers | Last Update | Last Release |")
+    console.log("|--------|-------------|------------|-------------|--------------|")
+
+    let provider_with_release = []
     stats.forEach(stat => {
+
+        let s = "| [" + stat.full_name + "](https://github.com/" + stat.full_name + ")"
+            + " | " + stat.description
+            + " | " + stat.stargazers_count
+            + " | " + stat.updated_at.split('T')[0]
+
         if (stat.last_release.published_at) {
-
-            let s = "| [" + stat.full_name + "](https://github.com/" + stat.full_name + ")"
-                + " | " + stat.description
-                + " | " + stat.license
-                + " | " + stat.stargazers_count
-                + " | " + stat.updated_at.split('T')[0]
-
-            if (stat.last_release.published_at) {
-                s += " | " + stat.last_release.name + " " + stat.last_release.published_at.split('T')[0]
-            } else {
-                s += " | No release yet"
-            }
-            s += " |"
-            console.log(s)
+            s += " | " + stat.last_release.published_at.split('T')[0]
+        } else {
+            s += " | No release yet"
         }
+        s += " |"
+        console.log(s)
+
     });
 }
 
