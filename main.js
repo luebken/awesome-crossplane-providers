@@ -60,7 +60,7 @@ async function queryAll() {
         if (stat.last_release.published_at) {
             s += " | " + stat.last_release.published_at.split('T')[0]
         } else {
-            s += " | No release yet"
+            s += " | "
         }
         s += " |"
         console.log(s)

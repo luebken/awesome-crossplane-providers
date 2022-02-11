@@ -60,7 +60,7 @@ rybnico/provider-jet-hcloud
 zzxwill/provider-jet-alibaba
 AlertoJon-io/pagerduty-crossplane-provider
 janwillies/provider-jet-akamai
-grafana/provider-jet-grafana
+grafana/crossplane-provider-grafana
 ADustyOldMuffin/provider-jet-do
 sebastien-prudhomme/provider-jet-github
 jmazumder/terraform-provider-spotinst
