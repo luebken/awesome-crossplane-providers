@@ -57,10 +57,10 @@ realli07kkk/huaweicloud-crossplane
 maltejk/crossplane-provider-myrasec
 abacus3/provider-jet-grafana
 rybnico/provider-jet-hcloud
-zzxwill/provider-jet-alibaba
 AlertoJon-io/pagerduty-crossplane-provider
 janwillies/provider-jet-akamai
 grafana/crossplane-provider-grafana
 ADustyOldMuffin/provider-jet-do
 sebastien-prudhomme/provider-jet-github
 jmazumder/terraform-provider-spotinst
+bmpandrade/provider-jet-datadog
