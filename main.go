@@ -19,7 +19,7 @@ func main() {
 	tc := oauth2.NewClient(ctx, ts)
 	client := github.NewClient(tc)
 
-	result := "Repository;URL;Description;Stars;Subscribers;Open Issues;Last Update;Last Release;Docs\n"
+	result := "Repository;URL;Description;Stars;Subscribers;Open Issues;Last Update;Last Release;Docs;CRDs\n"
 	for _, oR := range util.ReadReposFromFile() {
 		fmt.Print(".")
 		repo, _, err := client.Repositories.Get(ctx, oR.Owner, oR.Repo)
@@ -30,18 +30,20 @@ func main() {
 		release, _, err := client.Repositories.GetLatestRelease(ctx, oR.Owner, oR.Repo)
 		last_release := ""
 		docs_url := ""
+		crds := ""
 		if err != nil {
 			//fmt.Println("err ", err)
 		} else {
 			last_release = release.CreatedAt.Time.Format("2006-01-02")
 			docs_url = "https://doc.crds.dev/github.com/" + *repo.GetOwner().Login + "/" + *repo.Name + "@" + *release.TagName
+			crds = util.GetNumberOfCRDs(docs_url)
 		}
 		if !*repo.Archived {
 			desc := ""
 			if repo.Description != nil {
 				desc = *repo.Description
 			}
-			result = result + fmt.Sprintf("%s;%s;%s;%d;%d;%d;%v;%v;%v\n",
+			result = result + fmt.Sprintf("%s;%s;%s;%d;%d;%d;%v;%v;%v;%v\n",
 				*repo.FullName,
 				*repo.HTMLURL,
 				desc,
@@ -50,7 +52,8 @@ func main() {
 				*repo.OpenIssuesCount,
 				repo.UpdatedAt.Time.Format("2006-01-02"),
 				last_release,
-				docs_url)
+				docs_url,
+				crds)
 		}
 	}
 	util.WriteToFile(result)

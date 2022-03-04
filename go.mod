@@ -3,6 +3,7 @@ module github.com/luebken/awesome-crossplane-providers
 go 1.16
 
 require (
+	github.com/PuerkitoBio/goquery v1.8.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/go-github/v42 v42.0.0
 	golang.org/x/crypto v0.0.0-20220214200702-86341886e292 // indirect
