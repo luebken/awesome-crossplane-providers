@@ -19,7 +19,7 @@ func main() {
 	tc := oauth2.NewClient(ctx, ts)
 	client := github.NewClient(tc)
 
-	result := "Repository;URL;Description;Stars;Subscribers;Open Issues;Last Update;Last Release;Docs;CRDs\n"
+	result := "Repository;URL;Description;Stars;Subscribers;Open Issues;Last Update;Last Release;Docs;CRDs Total;CRDs Alpha;CRDs Beta;CRDs V1\n"
 	for _, oR := range util.ReadReposFromFile() {
 		fmt.Print(".")
 		repo, _, err := client.Repositories.Get(ctx, oR.Owner, oR.Repo)
@@ -30,20 +30,26 @@ func main() {
 		release, _, err := client.Repositories.GetLatestRelease(ctx, oR.Owner, oR.Repo)
 		last_release := ""
 		docs_url := ""
-		crds := ""
+		crdsTotal := 0
+		crdsAlpha := 0
+		crdsBeta := 0
+		crdsV1 := 0
 		if err != nil {
 			//fmt.Println("err ", err)
 		} else {
 			last_release = release.CreatedAt.Time.Format("2006-01-02")
 			docs_url = "https://doc.crds.dev/github.com/" + *repo.GetOwner().Login + "/" + *repo.Name + "@" + *release.TagName
-			crds = util.GetNumberOfCRDs(docs_url)
+			crdsTotal = util.GetNumberOfCRDs(docs_url).Total
+			crdsAlpha = util.GetNumberOfCRDs(docs_url).Alpha
+			crdsBeta = util.GetNumberOfCRDs(docs_url).Beta
+			crdsV1 = util.GetNumberOfCRDs(docs_url).V1
 		}
 		if !*repo.Archived {
 			desc := ""
 			if repo.Description != nil {
 				desc = *repo.Description
 			}
-			result = result + fmt.Sprintf("%s;%s;%s;%d;%d;%d;%v;%v;%v;%v\n",
+			result = result + fmt.Sprintf("%s;%s;%s;%d;%d;%d;%v;%v;%v;%d;%d;%d;%d\n",
 				*repo.FullName,
 				*repo.HTMLURL,
 				desc,
@@ -53,7 +59,10 @@ func main() {
 				repo.UpdatedAt.Time.Format("2006-01-02"),
 				last_release,
 				docs_url,
-				crds)
+				crdsTotal,
+				crdsAlpha,
+				crdsBeta,
+				crdsV1)
 		}
 	}
 	util.WriteToFile(result)

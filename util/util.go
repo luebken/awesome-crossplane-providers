@@ -2,13 +2,14 @@ package util
 
 import (
 	"bufio"
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
+	"regexp"
 	"strings"
-
-	"github.com/PuerkitoBio/goquery"
 )
 
 type OwnerRepo struct {
@@ -48,7 +49,32 @@ func WriteToFile(s string) {
 	}
 }
 
-func GetNumberOfCRDs(url string) (crds string) {
+type repoCRD struct {
+	Path     string
+	Filename string
+	Group    string
+	Version  string
+	Kind     string
+	CRD      []byte
+}
+
+type orgData struct {
+	Repo  string
+	Tag   string
+	At    string
+	Tags  []string
+	CRDs  map[string]repoCRD
+	Total int
+}
+
+type CRDsStats struct {
+	Total int
+	Alpha int
+	Beta  int
+	V1    int
+}
+
+func GetNumberOfCRDs(url string) (cRDsStats *CRDsStats) {
 	res, err := http.Get(url)
 	if err != nil {
 		log.Fatal(err)
@@ -57,14 +83,35 @@ func GetNumberOfCRDs(url string) (crds string) {
 	if res.StatusCode != 200 {
 		log.Fatalf("status code error: %d %s", res.StatusCode, res.Status)
 	}
-	doc, err := goquery.NewDocumentFromReader(res.Body)
+
+	buf, err := ioutil.ReadAll(res.Body)
 	if err != nil {
 		log.Fatal(err)
 	}
-	doc.Find("body > div > div.content-wrapper > div > p > b").Each(func(i int, s *goquery.Selection) {
-		crds = s.Text()
-	})
+	s := string(buf)
+	r, _ := regexp.Compile(`JSON\.parse\(.(.*).\)`)
+	rawMatch := r.FindStringSubmatch(s)[1]
 
+	var orgData orgData
+	err = json.Unmarshal([]byte(rawMatch), &orgData)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	cRDsStats = new(CRDsStats)
+	cRDsStats.Total = orgData.Total
+
+	for _, crd := range orgData.CRDs {
+		if strings.Contains(crd.Version, "alpha") {
+			cRDsStats.Alpha += 1
+		}
+		if strings.Contains(crd.Version, "beta") {
+			cRDsStats.Beta += 1
+		}
+		if crd.Version == "v1" {
+			cRDsStats.V1 += 1
+		}
+	}
 	//TODO calculate alpha / beta resources
-	return crds
+	return cRDsStats
 }
