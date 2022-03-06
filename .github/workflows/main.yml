@@ -23,4 +23,4 @@ jobs:
       - name: Docker Pull
         run: docker pull luebken/awesome-crossplane-providers:latest
       - name: Docker run
-        run: docker run luebken/awesome-crossplane-providers:latest
+        run: docker run --env MY_GITHUB_TOKEN=${{ secrets.MY_GITHUB_TOKEN }} luebken/awesome-crossplane-providers:latest
