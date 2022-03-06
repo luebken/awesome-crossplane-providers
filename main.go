@@ -4,20 +4,23 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/google/go-github/v42/github"
 	"github.com/luebken/awesome-crossplane-providers/util"
 	"golang.org/x/oauth2"
 )
 
-func main() {
-
-	ts := oauth2.StaticTokenSource(
+var (
+	ts = oauth2.StaticTokenSource(
 		&oauth2.Token{AccessToken: os.Getenv("GITHUB_TOKEN")},
 	)
-	ctx := context.Background()
-	tc := oauth2.NewClient(ctx, ts)
-	client := github.NewClient(tc)
+	ctx    = context.Background()
+	tc     = oauth2.NewClient(ctx, ts)
+	client = github.NewClient(tc)
+)
+
+func main() {
 
 	result := "Repository;URL;Description;Stars;Subscribers;Open Issues;Last Update;Last Release;Docs;CRDs Total;CRDs Alpha;CRDs Beta;CRDs V1\n"
 
@@ -30,14 +33,9 @@ func main() {
 	crdsTotalV1 := 0
 	crdsTotalTotal := 0
 
-	for _, oR := range util.ReadReposFromFile() {
+	for _, repo := range queryRepos() {
 		fmt.Print(".") // progress indicator
-		repo, _, err := client.Repositories.Get(ctx, oR.Owner, oR.Repo)
-		if err != nil {
-			fmt.Println("err ", err)
-		}
-		fmt.Print("|") // progress indicator
-		release, _, err := client.Repositories.GetLatestRelease(ctx, oR.Owner, oR.Repo)
+		release, _, err := client.Repositories.GetLatestRelease(ctx, *repo.Owner.Login, *repo.Name)
 		last_release := ""
 		docs_url := ""
 		crdsTotal := 0
@@ -56,15 +54,19 @@ func main() {
 		}
 		if !*repo.Archived {
 			desc := ""
+			subscribersCount := 0
 			if repo.Description != nil {
 				desc = *repo.Description
+			}
+			if repo.SubscribersCount != nil {
+				subscribersCount = *repo.SubscribersCount
 			}
 			result += fmt.Sprintf("%s;%s;%s;%d;%d;%d;%v;%v;%v;%d;%d;%d;%d\n",
 				*repo.FullName,
 				*repo.HTMLURL,
 				desc,
 				*repo.StargazersCount,
-				*repo.SubscribersCount,
+				subscribersCount,
 				*repo.OpenIssuesCount,
 				repo.UpdatedAt.Time.Format("2006-01-02"),
 				last_release,
@@ -105,14 +107,90 @@ func main() {
 	util.WriteToFile(result)
 }
 
-// for {
-// 	newIssues, resp, err := client.Issues.ListByRepo(ctx, "crossplane", "crossplane", opt)
-// 	if err != nil {
-// 		fmt.Println("err ", err)
-// 	}
-// 	issues = append(issues, newIssues...)
-// 	if resp.NextPage == 0 {
-// 		break
-// 	}
-// 	opt.Page = resp.NextPage
-// }
+func queryRepos() (repos []*github.Repository) {
+	fmt.Println("Searching for potential Crossplane provider repos.")
+
+	// search for common phrases in readme, name, description
+	searchQueries := []string{
+		`archived:false in:readme,name,description "is a crossplane provider"`,
+		`archived:false in:readme,name,description "is a minimal crossplane provider"`,
+		`archived:false in:readme,name,description "is an experimental crossplane provider"`,
+		`archived:false in:readme,name,description "crossplane infrastructure provider"`,
+	}
+	for _, q := range searchQueries {
+		opt := &github.SearchOptions{
+			ListOptions: github.ListOptions{PerPage: 100},
+		}
+		for {
+			fmt.Print(".")
+			result, resp, err := client.Search.Repositories(ctx, q, opt)
+			if err != nil {
+				fmt.Println("err ", err)
+			}
+			repos = append(repos, result.Repositories...)
+
+			if resp.NextPage == 0 {
+				break
+			}
+			opt.Page = resp.NextPage
+		}
+	}
+
+	// crossplane orgs repos with "provider"
+	crossplaneOrgs := []string{
+		"crossplane-contrib", "crossplane",
+	}
+	for _, o := range crossplaneOrgs {
+		for {
+			opt := &github.RepositoryListOptions{
+				ListOptions: github.ListOptions{PerPage: 100},
+			}
+			fmt.Print(".")
+			newRepos, resp, err := client.Repositories.List(ctx, o, opt)
+			if err != nil {
+				fmt.Println("err ", err)
+			}
+
+			for _, r := range newRepos {
+				if strings.Contains(*r.Name, "provider") {
+					repos = append(repos, r)
+				}
+			}
+
+			if resp.NextPage == 0 {
+				break
+			}
+			opt.Page = resp.NextPage
+		}
+	}
+
+	repos = removeDuplicateRepos(repos)
+	repos = removeBlacklist(repos)
+	fmt.Printf("\nAnalyzing %d provider repos.\n", len(repos))
+
+	return repos
+}
+
+func removeBlacklist(repos []*github.Repository) []*github.Repository {
+	list := []*github.Repository{}
+	blacklist := "https://github.com/terrytangyuan/awesome-argo "
+	blacklist += " "
+	for _, repo := range repos {
+		if !strings.Contains(blacklist, *repo.HTMLURL) {
+			list = append(list, repo)
+		}
+	}
+	return list
+}
+
+func removeDuplicateRepos(repos []*github.Repository) []*github.Repository {
+	keys := make(map[string]bool)
+	list := []*github.Repository{}
+	for _, repo := range repos {
+		if _, value := keys[*repo.HTMLURL]; !value {
+			keys[*repo.HTMLURL] = true
+			list = append(list, repo)
+		}
+	}
+	return list
+}
