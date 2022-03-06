@@ -23,6 +23,8 @@ jobs:
         run: pwd
       - name: LS
         run: ls
+      - name: LS
+        run: ls /
       - name: diff
         run: git diff
       - name: echo
