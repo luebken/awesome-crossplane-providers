@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/google/go-github/v42/github"
 	"github.com/luebken/awesome-crossplane-providers/query"
@@ -23,7 +24,7 @@ var (
 func main() {
 	fmt.Println("Start")
 
-	result := "Repository;URL;Description;Stars;Subscribers;Open Issues;Last Update;Created;Last Release;Docs;CRDs Total;CRDs Alpha;CRDs Beta;CRDs V1\n"
+	result := "Repository,URL,Description,Stars,Subscribers,Open Issues,Last Update,Created,Last Release,Docs,CRDs Total,CRDs Alpha,CRDs Beta,CRDs V1\n"
 
 	providersTotal := 0
 	providersAlpha := 0
@@ -57,12 +58,12 @@ func main() {
 			desc := ""
 			subscribersCount := 0
 			if repo.Description != nil {
-				desc = *repo.Description
+				desc = strings.Replace(*repo.Description, ",", "", -1)
 			}
 			if repo.SubscribersCount != nil {
 				subscribersCount = *repo.SubscribersCount
 			}
-			result += fmt.Sprintf("%s;%s;%s;%d;%d;%d;%v;%v;%v;%v;%d;%d;%d;%d\n",
+			result += fmt.Sprintf("%s,%s,%s,%d,%d,%d,%v,%v,%v,%v,%d,%d,%d,%d\n",
 				*repo.FullName,
 				*repo.HTMLURL,
 				desc,
@@ -94,7 +95,7 @@ func main() {
 		}
 	}
 
-	summary := fmt.Sprintf("\nProviders Total:;%d\nProviders Alpha:;%d\nProviders Beta:;%d\nProviders V1:;%d\nCRDs Total:;%d\nCRDs Alpha:;%d\nCRDs Beta:;%d\nCRDs V1:;%d\n",
+	summary := fmt.Sprintf("\nProviders Total:,%d\nProviders Alpha:,%d\nProviders Beta:,%d\nProviders V1:,%d\nCRDs Total:,%d\nCRDs Alpha:,%d\nCRDs Beta:,%d\nCRDs V1:,%d\n",
 		providersTotal,
 		providersAlpha,
 		providersBeta,
