@@ -23,8 +23,6 @@ jobs:
         run: pwd
       - name: LS
         run: ls
-      - name: LS
-        run: ls $GITHUB_WORKSPACE/awesome-crossplane-providers
       - name: diff
         run: git diff
       - name: echo
