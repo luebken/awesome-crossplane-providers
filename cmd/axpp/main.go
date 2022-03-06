@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"time"
 
 	"github.com/google/go-github/v42/github"
 	"github.com/luebken/awesome-crossplane-providers/query"
@@ -106,8 +107,8 @@ func main() {
 		crdsTotalV1,
 	)
 
-	result += summary
-	util.WriteToFile(result)
+	util.WriteToFile(result, fmt.Sprintf("repo-stats-%s.csv", time.Now().Format("2006-01-02")))
+	util.WriteToFile(summary, fmt.Sprintf("repo-stats-summary-%s.csv", time.Now().Format("2006-01-02")))
 
 	fmt.Println("End")
 }
