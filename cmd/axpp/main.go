@@ -43,7 +43,7 @@ func main() {
 		crdsBeta := 0
 		crdsV1 := 0
 		if err != nil {
-			fmt.Println("err ", err)
+			//fmt.Println("err ", err)
 		} else {
 			last_release = release.CreatedAt.Time.Format("2006-01-02")
 			docs_url = "https://doc.crds.dev/github.com/" + *repo.GetOwner().Login + "/" + *repo.Name + "@" + *release.TagName
