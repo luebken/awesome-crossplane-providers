@@ -22,7 +22,7 @@ var (
 
 func main() {
 
-	result := "Repository;URL;Description;Stars;Subscribers;Open Issues;Last Update;Last Release;Docs;CRDs Total;CRDs Alpha;CRDs Beta;CRDs V1\n"
+	result := "Repository;URL;Description;Stars;Subscribers;Open Issues;Last Update;Created;Last Release;Docs;CRDs Total;CRDs Alpha;CRDs Beta;CRDs V1\n"
 
 	providersTotal := 0
 	providersAlpha := 0
@@ -61,7 +61,7 @@ func main() {
 			if repo.SubscribersCount != nil {
 				subscribersCount = *repo.SubscribersCount
 			}
-			result += fmt.Sprintf("%s;%s;%s;%d;%d;%d;%v;%v;%v;%d;%d;%d;%d\n",
+			result += fmt.Sprintf("%s;%s;%s;%d;%d;%d;%v;%v;%v;%v;%d;%d;%d;%d\n",
 				*repo.FullName,
 				*repo.HTMLURL,
 				desc,
@@ -69,6 +69,7 @@ func main() {
 				subscribersCount,
 				*repo.OpenIssuesCount,
 				repo.UpdatedAt.Time.Format("2006-01-02"),
+				repo.CreatedAt.Time.Format("2006-01-02"),
 				last_release,
 				docs_url,
 				crdsTotal,
