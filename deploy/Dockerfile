@@ -13,7 +13,7 @@ COPY . .
 RUN go mod download
 
 # Build the binary.
-RUN CGO_ENABLED=0 GOOS=linux go build -o axpp -mod=readonly -v ./cmd/axpp/main.go
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o axpp -mod=readonly -v ./cmd/axpp/main.go
 
 # Use the official Alpine image for a lean production container.
 # https://hub.docker.com/_/alpine

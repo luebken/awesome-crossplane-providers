@@ -13,7 +13,7 @@ import (
 
 var (
 	ts = oauth2.StaticTokenSource(
-		&oauth2.Token{AccessToken: os.Getenv("GITHUB_TOKEN")},
+		&oauth2.Token{AccessToken: os.Getenv("MY_GITHUB_TOKEN")},
 	)
 	ctx    = context.Background()
 	tc     = oauth2.NewClient(ctx, ts)
@@ -21,6 +21,7 @@ var (
 )
 
 func main() {
+	fmt.Println("Start")
 
 	result := "Repository;URL;Description;Stars;Subscribers;Open Issues;Last Update;Created;Last Release;Docs;CRDs Total;CRDs Alpha;CRDs Beta;CRDs V1\n"
 
@@ -106,4 +107,6 @@ func main() {
 
 	result += summary
 	util.WriteToFile(result)
+
+	fmt.Println("End")
 }

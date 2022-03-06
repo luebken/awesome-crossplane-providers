@@ -9,6 +9,7 @@ import (
 	"os"
 	"regexp"
 	"strings"
+	"time"
 )
 
 type OwnerRepo struct {
@@ -16,11 +17,16 @@ type OwnerRepo struct {
 	Repo  string
 }
 
+// writes file to /data
 func WriteToFile(s string) {
-	d1 := []byte(s)
-	err := os.WriteFile("repo-stats.csv", d1, 0644)
+	filename := fmt.Sprintf("repo-stats-%s.csv", time.Now().Format("2006-01-02"))
+	full_filename := "/data/" + filename
+	fmt.Println("\nWant to write to " + full_filename)
+	err := os.WriteFile(full_filename, []byte(s), 0644)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Err WriteFile ", err)
+	} else {
+		fmt.Println("Wrote to " + full_filename)
 	}
 }
 
