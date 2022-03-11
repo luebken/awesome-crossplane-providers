@@ -22,10 +22,25 @@ var (
 	client = github.NewClient(tc)
 )
 
+type ProviderStat struct {
+	Fullname    string
+	HTMLURL     string
+	Description string
+	Stargazers  int
+	Subscribers int
+	OpenIssues  int
+	UpdatedAt   time.Time
+	CreatedAt   time.Time
+	LastRelease string
+	DocsURL     string
+	CRDsTotal   int
+	CRDsBeta    int
+	CRDsAlpha   int
+	CRDsV1      int
+}
+
 func main() {
 	fmt.Println("Start")
-
-	result := "Repository,URL,Description,Stars,Subscribers,Open Issues,Last Update,Created,Last Release,Docs,CRDs Total,CRDs Alpha,CRDs Beta,CRDs V1\n"
 
 	providersTotal := 0
 	providersAlpha := 0
@@ -35,6 +50,8 @@ func main() {
 	crdsTotalBeta := 0
 	crdsTotalV1 := 0
 	crdsTotalTotal := 0
+
+	stats := []ProviderStat{}
 
 	for _, repo := range query.QueryPotentialProviderRepos(client, ctx) {
 		fmt.Print(".") // progress indicator
@@ -56,29 +73,30 @@ func main() {
 			crdsV1 = util.GetNumberOfCRDs(docs_url).V1
 		}
 		if !*repo.Archived { // double check
-			desc := ""
-			subscribersCount := 0
-			if repo.Description != nil {
-				desc = strings.Replace(*repo.Description, ",", "", -1)
+			ps := ProviderStat{
+				Fullname: *repo.FullName,
+				HTMLURL:  *repo.HTMLURL,
+				//Description:
+				Stargazers: *repo.StargazersCount,
+				// Subscribers:
+				OpenIssues:  *repo.OpenIssuesCount,
+				UpdatedAt:   repo.UpdatedAt.Time,
+				CreatedAt:   repo.CreatedAt.Time,
+				LastRelease: last_release,
+				DocsURL:     docs_url,
+				CRDsTotal:   crdsTotal,
+				CRDsAlpha:   crdsAlpha,
+				CRDsBeta:    crdsBeta,
+				CRDsV1:      crdsV1,
 			}
 			if repo.SubscribersCount != nil {
-				subscribersCount = *repo.SubscribersCount
+				ps.Subscribers = *repo.SubscribersCount
 			}
-			result += fmt.Sprintf("%s,%s,%s,%d,%d,%d,%v,%v,%v,%v,%d,%d,%d,%d\n",
-				*repo.FullName,
-				*repo.HTMLURL,
-				desc,
-				*repo.StargazersCount,
-				subscribersCount,
-				*repo.OpenIssuesCount,
-				repo.UpdatedAt.Time.Format("2006-01-02"),
-				repo.CreatedAt.Time.Format("2006-01-02"),
-				last_release,
-				docs_url,
-				crdsTotal,
-				crdsAlpha,
-				crdsBeta,
-				crdsV1)
+			if repo.Description != nil {
+				ps.Description = strings.Replace(*repo.Description, ",", "", -1)
+			}
+			stats = append(stats, ps)
+
 			providersTotal += 1
 			if crdsAlpha > 0 {
 				providersAlpha += 1
@@ -96,6 +114,29 @@ func main() {
 		}
 	}
 
+	// Stats
+	statsString := "Repository,URL,Description,Stars,Subscribers,Open Issues,Last Update,Created,Last Release,Docs,CRDs Total,CRDs Alpha,CRDs Beta,CRDs V1\n"
+	for _, ps := range stats {
+		statsString += fmt.Sprintf("%s,%s,%s,%d,%d,%d,%v,%v,%v,%v,%d,%d,%d,%d\n",
+			ps.Fullname,
+			ps.HTMLURL,
+			ps.Description,
+			ps.Stargazers,
+			ps.Subscribers,
+			ps.OpenIssues,
+			ps.UpdatedAt.Format("2006-01-02"),
+			ps.CreatedAt.Format("2006-01-02"),
+			ps.LastRelease,
+			ps.DocsURL,
+			ps.CRDsTotal,
+			ps.CRDsAlpha,
+			ps.CRDsBeta,
+			ps.CRDsV1)
+
+	}
+	util.WriteToFile(statsString, fmt.Sprintf("repo-stats-%s.csv", time.Now().Format("2006-01-02")))
+
+	//Summary
 	summary := fmt.Sprintf("\nProviders Total:,%d\nProviders Alpha:,%d\nProviders Beta:,%d\nProviders V1:,%d\nCRDs Total:,%d\nCRDs Alpha:,%d\nCRDs Beta:,%d\nCRDs V1:,%d\n",
 		providersTotal,
 		providersAlpha,
@@ -106,8 +147,6 @@ func main() {
 		crdsTotalBeta,
 		crdsTotalV1,
 	)
-
-	util.WriteToFile(result, fmt.Sprintf("repo-stats-%s.csv", time.Now().Format("2006-01-02")))
 	util.WriteToFile(summary, fmt.Sprintf("repo-stats-summary-%s.csv", time.Now().Format("2006-01-02")))
 
 	fmt.Println("End")
