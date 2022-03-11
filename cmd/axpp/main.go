@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"sort"
 	"strings"
 	"time"
 
@@ -38,6 +39,11 @@ type ProviderStat struct {
 	CRDsAlpha   int
 	CRDsV1      int
 }
+type ByUpdatedAt []ProviderStat
+
+func (ps ByUpdatedAt) Len() int           { return len(ps) }
+func (ps ByUpdatedAt) Less(i, j int) bool { return ps[i].UpdatedAt.After(ps[j].UpdatedAt) }
+func (ps ByUpdatedAt) Swap(i, j int)      { ps[i], ps[j] = ps[j], ps[i] }
 
 func main() {
 	fmt.Println("Start")
@@ -134,7 +140,8 @@ func main() {
 			ps.CRDsV1)
 
 	}
-	util.WriteToFile(statsString, fmt.Sprintf("repo-stats-%s.csv", time.Now().Format("2006-01-02")))
+
+	util.WriteToFile(statsString, fmt.Sprintf("/reports/repo-stats-%s.csv", time.Now().Format("2006-01-02")))
 
 	//Summary
 	summary := fmt.Sprintf("\nProviders Total:,%d\nProviders Alpha:,%d\nProviders Beta:,%d\nProviders V1:,%d\nCRDs Total:,%d\nCRDs Alpha:,%d\nCRDs Beta:,%d\nCRDs V1:,%d\n",
@@ -147,7 +154,22 @@ func main() {
 		crdsTotalBeta,
 		crdsTotalV1,
 	)
-	util.WriteToFile(summary, fmt.Sprintf("repo-stats-summary-%s.csv", time.Now().Format("2006-01-02")))
+	util.WriteToFile(summary, fmt.Sprintf("/reports/repo-stats-summary-%s.csv", time.Now().Format("2006-01-02")))
+
+	//Readme
+	sort.Sort(ByUpdatedAt(stats))
+
+	readme := "# Released Providers:\n\n"
+	readme += "||Updated|CRDs:|Alpha|Beta|V1|\n"
+	readme += "|---|---|---|---|---|---|\n"
+	for _, ps := range stats {
+		if ps.LastRelease != "" {
+			readme += fmt.Sprintf("|[%s](%s) - [docs](%s)|%s||%d|%d|%d|\n",
+				ps.Fullname, ps.HTMLURL, ps.DocsURL, ps.UpdatedAt.Format("2006-01-02"), ps.CRDsAlpha, ps.CRDsBeta, ps.CRDsV1)
+		}
+	}
+	readme += "\nGenerated at: " + time.Now().Format("2006-01-02")
+	util.WriteToFile(readme, "readme.md")
 
 	fmt.Println("End")
 }

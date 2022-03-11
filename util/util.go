@@ -17,8 +17,7 @@ type OwnerRepo struct {
 }
 
 // writes file to /reports
-func WriteToFile(s string, filename string) {
-	full_filename := "/reports/" + filename
+func WriteToFile(s string, full_filename string) {
 	fmt.Println("\nWant to write to " + full_filename)
 	err := os.WriteFile(full_filename, []byte(s), 0644)
 	if err != nil {
