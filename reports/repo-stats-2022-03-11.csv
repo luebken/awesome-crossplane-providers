@@ -1,11 +1,11 @@
 Repository,URL,Description,Stars,Subscribers,Open Issues,Last Update,Created,Last Release,Docs,CRDs Total,CRDs Alpha,CRDs Beta,CRDs V1
-crossplane-contrib/provider-helm,https://github.com/crossplane-contrib/provider-helm,Crossplane Helm Provider,45,0,19,2022-02-26,2020-07-22,2021-10-14,https://doc.crds.dev/github.com/crossplane-contrib/provider-helm@v0.9.0,3,0,3,0
-crossplane-contrib/provider-kubernetes,https://github.com/crossplane-contrib/provider-kubernetes,Crossplane provider to provision and manage Kubernetes objects on (remote) Kubernetes clusters.,38,0,6,2022-03-01,2021-07-13,2022-02-17,https://doc.crds.dev/github.com/crossplane-contrib/provider-kubernetes@v0.2.0,3,3,0,0
-crossplane-contrib/provider-jet-aws,https://github.com/crossplane-contrib/provider-jet-aws,AWS Provider for Crossplane that is built with Terrajet.,18,0,12,2022-02-24,2021-08-09,2022-01-07,https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.4.0-preview,763,763,0,0
-crossplane-contrib/provider-jet-gcp,https://github.com/crossplane-contrib/provider-jet-gcp,GCP Provider for Crossplane generated using Terrajet,8,0,17,2022-02-10,2021-10-26,2022-01-07,https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-gcp@v0.2.0-preview,438,438,0,0
+crossplane-contrib/provider-helm,https://github.com/crossplane-contrib/provider-helm,Crossplane Helm Provider,45,0,20,2022-02-26,2020-07-22,2022-03-11,https://doc.crds.dev/github.com/crossplane-contrib/provider-helm@v0.10.0,3,0,3,0
+crossplane-contrib/provider-kubernetes,https://github.com/crossplane-contrib/provider-kubernetes,Crossplane provider to provision and manage Kubernetes objects on (remote) Kubernetes clusters.,39,0,6,2022-03-11,2021-07-13,2022-03-11,https://doc.crds.dev/github.com/crossplane-contrib/provider-kubernetes@v0.3.0,3,3,0,0
+crossplane-contrib/provider-jet-aws,https://github.com/crossplane-contrib/provider-jet-aws,AWS Provider for Crossplane that is built with Terrajet.,18,0,14,2022-02-24,2021-08-09,2022-01-07,https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.4.0-preview,763,763,0,0
+crossplane-contrib/provider-jet-gcp,https://github.com/crossplane-contrib/provider-jet-gcp,GCP Provider for Crossplane generated using Terrajet,8,0,16,2022-02-10,2021-10-26,2022-01-07,https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-gcp@v0.2.0-preview,438,438,0,0
+crossplane-contrib/provider-jet-azure,https://github.com/crossplane-contrib/provider-jet-azure,,6,0,19,2022-03-03,2021-09-01,2022-03-01,https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-azure@v0.8.0-preview,646,646,0,0
 crossplane-contrib/provider-jet-template,https://github.com/crossplane-contrib/provider-jet-template,A template for building terrajet based @crossplane providers,10,0,0,2022-03-10,2021-10-22,,,0,0,0,0
-crossplane-contrib/provider-jet-azure,https://github.com/crossplane-contrib/provider-jet-azure,,6,0,20,2022-03-03,2021-09-01,2022-03-01,https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-azure@v0.8.0-preview,646,646,0,0
-crossplane-contrib/provider-kafka,https://github.com/crossplane-contrib/provider-kafka,Crossplane provider for Kafka,6,0,3,2022-01-07,2021-10-06,,,0,0,0,0
+crossplane-contrib/provider-kafka,https://github.com/crossplane-contrib/provider-kafka,Crossplane provider for Kafka,7,0,3,2022-03-11,2021-10-06,,,0,0,0,0
 crossplane-contrib/provider-cloudflare,https://github.com/crossplane-contrib/provider-cloudflare,A Cloudflare provider for Crossplane,12,0,4,2022-01-19,2021-03-10,,,0,0,0,0
 crossplane-contrib/provider-newrelic,https://github.com/crossplane-contrib/provider-newrelic,,4,0,1,2021-12-15,2021-05-19,,,0,0,0,0
 crossplane-contrib/provider-tf-equinix-metal,https://github.com/crossplane-contrib/provider-tf-equinix-metal,Crossplane Provider for Equinix Metal based on the Terraform provider,5,0,2,2021-11-21,2021-11-12,,,0,0,0,0
@@ -23,69 +23,69 @@ crossplane-contrib/provider-jet-vault,https://github.com/crossplane-contrib/prov
 jerrymccollom/provider-sample,https://github.com/jerrymccollom/provider-sample,Sample provider,0,0,0,2022-01-17,2022-01-16,,,0,0,0,0
 IBM/crossplane-provider-kubernetes,https://github.com/IBM/crossplane-provider-kubernetes,Crossplane provider for k8s,2,0,0,2022-01-05,2021-10-29,2022-02-08,https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.4.1,3,3,0,0
 muvaf/test-generated-aws,https://github.com/muvaf/test-generated-aws,,0,0,0,2020-10-23,2020-10-19,,,0,0,0,0
-jmazumder/terraform-provider-spotjet,https://github.com/jmazumder/terraform-provider-spotjet,,0,0,0,2022-02-02,2022-02-02,,,0,0,0,0
+bmpandrade/provider-jet-datadog,https://github.com/bmpandrade/provider-jet-datadog,,0,0,0,2022-02-24,2022-02-24,,,0,0,0,0
 AlertoJon-io/pagerduty-crossplane-provider,https://github.com/AlertoJon-io/pagerduty-crossplane-provider,,0,0,0,2022-02-05,2022-02-05,,,0,0,0,0
 cromark/provider-jet-vault,https://github.com/cromark/provider-jet-vault,,0,0,0,2022-02-24,2022-02-06,,,0,0,0,0
 janwillies/provider-jet-akamai,https://github.com/janwillies/provider-jet-akamai,,0,0,0,2022-02-03,2022-02-03,,,0,0,0,0
-bmpandrade/provider-jet-datadog,https://github.com/bmpandrade/provider-jet-datadog,,0,0,0,2022-02-24,2022-02-24,,,0,0,0,0
-jaroslav-svoboda/provider-jet-azure-devops,https://github.com/jaroslav-svoboda/provider-jet-azure-devops,,0,0,1,2022-01-24,2022-01-24,,,0,0,0,0
-jmazumder/provider-jet-spotinst,https://github.com/jmazumder/provider-jet-spotinst,Jet Implementation of terraform-provider-spotinst,0,0,0,2022-02-15,2022-02-15,,,0,0,0,0
-ArunRamakani/provider-jet-grafana,https://github.com/ArunRamakani/provider-jet-grafana,,0,0,0,2022-02-20,2022-02-20,,,0,0,0,0
+jmazumder/terraform-provider-spotjet,https://github.com/jmazumder/terraform-provider-spotjet,,0,0,0,2022-02-02,2022-02-02,,,0,0,0,0
 matthewnolf/github-provider,https://github.com/matthewnolf/github-provider,,0,0,0,2022-03-04,2022-03-04,,,0,0,0,0
 crossplane-contrib/provider-jet-alibaba,https://github.com/crossplane-contrib/provider-jet-alibaba,A Crossplane provider for Alibaba Cloud (@aliyun),1,0,1,2022-03-05,2022-03-04,,,0,0,0,0
 turkenh/provider-kubernetes-poc,https://github.com/turkenh/provider-kubernetes-poc,[POC] Crossplane provider for managing Kubernetes resources in remote clusters,1,0,0,2021-07-11,2020-09-14,,,0,0,0,0
-sebastien-prudhomme/provider-jet-github,https://github.com/sebastien-prudhomme/provider-jet-github,,0,0,0,2022-02-03,2022-02-03,,,0,0,0,0
-ADustyOldMuffin/digitalocean-provider,https://github.com/ADustyOldMuffin/digitalocean-provider,,0,0,0,2021-11-18,2021-11-18,,,0,0,0,0
 crossplane-contrib/provider-jet-linode,https://github.com/crossplane-contrib/provider-jet-linode,,0,0,3,2021-12-22,2021-12-02,,,0,0,0,0
+ADustyOldMuffin/digitalocean-provider,https://github.com/ADustyOldMuffin/digitalocean-provider,,0,0,0,2021-11-18,2021-11-18,,,0,0,0,0
+sebastien-prudhomme/provider-jet-github,https://github.com/sebastien-prudhomme/provider-jet-github,,0,0,0,2022-02-03,2022-02-03,,,0,0,0,0
 Giomaster/azuredevops-jet,https://github.com/Giomaster/azuredevops-jet,,0,0,0,2022-02-23,2022-02-23,,,0,0,0,0
 abdelazizhd/provider-jet-imgix,https://github.com/abdelazizhd/provider-jet-imgix,,0,0,0,2022-03-01,2022-03-01,,,0,0,0,0
+jmazumder/provider-jet-spotinst,https://github.com/jmazumder/provider-jet-spotinst,Jet Implementation of terraform-provider-spotinst,0,0,0,2022-02-15,2022-02-15,,,0,0,0,0
+jaroslav-svoboda/provider-jet-azure-devops,https://github.com/jaroslav-svoboda/provider-jet-azure-devops,,0,0,1,2022-01-24,2022-01-24,,,0,0,0,0
+ArunRamakani/provider-jet-grafana,https://github.com/ArunRamakani/provider-jet-grafana,,0,0,0,2022-02-20,2022-02-20,,,0,0,0,0
 ajwgroup/provider-jet-azuread,https://github.com/ajwgroup/provider-jet-azuread,,0,0,0,2022-02-23,2022-02-23,,,0,0,0,0
 giattal/provider-jet-vsphere,https://github.com/giattal/provider-jet-vsphere,,0,0,0,2022-03-07,2022-03-07,,,0,0,0,0
-Telemetron/provider-jet-datadog,https://github.com/Telemetron/provider-jet-datadog,,0,0,0,2021-11-22,2021-11-22,,,0,0,0,0
 ADustyOldMuffin/provider-jet-do,https://github.com/ADustyOldMuffin/provider-jet-do,DigitalOcean terrajet provider,0,0,0,2022-02-03,2022-02-03,,,0,0,0,0
+Telemetron/provider-jet-datadog,https://github.com/Telemetron/provider-jet-datadog,,0,0,0,2021-11-22,2021-11-22,,,0,0,0,0
 opendevsecopsio/crossplane-vmware,https://github.com/opendevsecopsio/crossplane-vmware,,0,0,0,2022-03-09,2022-03-09,,,0,0,0,0
-katafira/provider-gitlab-operator,https://github.com/katafira/provider-gitlab-operator,,0,0,1,2022-03-07,2022-03-07,,,0,0,0,0
-maqiuyujoyce/provider-jet-template,https://github.com/maqiuyujoyce/provider-jet-template,,0,0,0,2022-02-09,2022-02-09,,,0,0,0,0
-keinproblem/hello-crossplane,https://github.com/keinproblem/hello-crossplane,Managed with Crossplane Github Provider (generated with Terrajet),0,0,0,2022-02-02,2022-02-02,,,0,0,0,0
-samueltorres/crossplane-do-provider,https://github.com/samueltorres/crossplane-do-provider,,0,0,0,2021-11-25,2021-11-24,,,0,0,0,0
-luebken/provider-jet-rancher,https://github.com/luebken/provider-jet-rancher,EXPERIMENTAL,0,0,0,2021-11-11,2021-11-11,,,0,0,0,0
-luebken/provider-tf-rancher,https://github.com/luebken/provider-tf-rancher,EXPERIMENTAL,0,0,0,2021-11-11,2021-11-11,,,0,0,0,0
-katafira/provider-jet-gitlab,https://github.com/katafira/provider-jet-gitlab,,0,0,0,2022-03-09,2022-03-09,,,0,0,0,0
 LucaLanziani/provider-jet-cloudflare,https://github.com/LucaLanziani/provider-jet-cloudflare,,0,0,0,2022-03-07,2022-02-01,,,0,0,0,0
 meghana-rajashekar/testing-intersight,https://github.com/meghana-rajashekar/testing-intersight,,0,0,0,2022-01-06,2022-01-06,,,0,0,0,0
 jasonmimick/provider-mongodbatlas-terraform,https://github.com/jasonmimick/provider-mongodbatlas-terraform,POC using terrajet to link up the MongoDB Atlas Terraform provider into Crossplane,0,0,0,2021-12-07,2021-12-07,,,0,0,0,0
-batthebee/provider-jet-github,https://github.com/batthebee/provider-jet-github,test,0,0,0,2022-01-25,2022-01-25,,,0,0,0,0
 rybnico/provider-jet-hcloud,https://github.com/rybnico/provider-jet-hcloud,,0,0,0,2022-02-06,2022-02-06,,,0,0,0,0
-abdelazizhd/gcp-lb-https,https://github.com/abdelazizhd/gcp-lb-https,,0,0,0,2022-02-17,2022-02-17,,,0,0,0,0
+batthebee/provider-jet-github,https://github.com/batthebee/provider-jet-github,test,0,0,0,2022-01-25,2022-01-25,,,0,0,0,0
+luebken/provider-jet-rancher,https://github.com/luebken/provider-jet-rancher,EXPERIMENTAL,0,0,0,2021-11-11,2021-11-11,,,0,0,0,0
+luebken/provider-tf-rancher,https://github.com/luebken/provider-tf-rancher,EXPERIMENTAL,0,0,0,2021-11-11,2021-11-11,,,0,0,0,0
+katafira/provider-jet-gitlab,https://github.com/katafira/provider-jet-gitlab,,0,0,0,2022-03-09,2022-03-09,,,0,0,0,0
+katafira/provider-gitlab-operator,https://github.com/katafira/provider-gitlab-operator,,0,0,1,2022-03-07,2022-03-07,,,0,0,0,0
+maqiuyujoyce/provider-jet-template,https://github.com/maqiuyujoyce/provider-jet-template,,0,0,0,2022-02-09,2022-02-09,,,0,0,0,0
+samueltorres/crossplane-do-provider,https://github.com/samueltorres/crossplane-do-provider,,0,0,0,2021-11-25,2021-11-24,,,0,0,0,0
+keinproblem/hello-crossplane,https://github.com/keinproblem/hello-crossplane,Managed with Crossplane Github Provider (generated with Terrajet),0,0,0,2022-02-02,2022-02-02,,,0,0,0,0
 opentelekomcloud/provider-jet-opentelekomcloud,https://github.com/opentelekomcloud/provider-jet-opentelekomcloud,,0,0,0,2022-01-31,2022-01-20,,,0,0,0,0
+abdelazizhd/gcp-lb-https,https://github.com/abdelazizhd/gcp-lb-https,,0,0,0,2022-02-17,2022-02-17,,,0,0,0,0
 abdelazizhd/crossplane-gcp,https://github.com/abdelazizhd/crossplane-gcp,,0,0,0,2022-02-17,2022-02-17,,,0,0,0,0
 ArunRamakani/hashicorp-provider,https://github.com/ArunRamakani/hashicorp-provider,Hashicorp Provider for Crossplane  using terrajet,0,0,0,2022-02-20,2022-02-20,,,0,0,0,0
 shahidv3/git-provider-jet,https://github.com/shahidv3/git-provider-jet,,0,0,0,2021-12-18,2021-12-18,,,0,0,0,0
 jmazumder/terraform-provider-spotinst,https://github.com/jmazumder/terraform-provider-spotinst,terrajet compatible terraform-provider-spotinst,0,0,0,2022-02-02,2022-02-02,,,0,0,0,0
 turkenh/provider-jet-tencentcloud,https://github.com/turkenh/provider-jet-tencentcloud,,0,0,0,2022-01-19,2022-01-18,,,0,0,0,0
 abacus3/provider-jet-grafana,https://github.com/abacus3/provider-jet-grafana,This crossplane provider is based on the provider-grafana Terraform provider and was build using crossplane terrajet.,1,0,0,2022-02-28,2022-02-07,2022-02-09,https://doc.crds.dev/github.com/abacus3/provider-jet-grafana@v0.1.0,7,7,0,0
-timgchile/provider-jet-imgix,https://github.com/timgchile/provider-jet-imgix,,0,0,0,2022-03-09,2022-02-24,,,0,0,0,0
 timgchile/provider-jet-elasticcloud,https://github.com/timgchile/provider-jet-elasticcloud,,0,0,0,2022-03-09,2022-03-09,,,0,0,0,0
+timgchile/provider-jet-imgix,https://github.com/timgchile/provider-jet-imgix,,0,0,0,2022-03-09,2022-02-24,,,0,0,0,0
 matthewnolf/hello-crossplane,https://github.com/matthewnolf/hello-crossplane,Managed with Crossplane Github Provider (generated with Terrajet),0,0,0,2022-03-07,2022-03-07,,,0,0,0,0
-edgefarm/provider-jet-keycloak,https://github.com/edgefarm/provider-jet-keycloak,keycloak Provider for Crossplane generated using Terrajet,0,0,0,2022-01-20,2022-01-20,,,0,0,0,0
-crossplane-contrib/provider-jet-rancher,https://github.com/crossplane-contrib/provider-jet-rancher,,0,0,2,2022-01-26,2022-01-26,2022-01-26,https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-rancher@v0.1.0,53,53,0,0
-bryanl/provider-jet-vsphere,https://github.com/bryanl/provider-jet-vsphere,,0,0,0,2022-01-31,2022-01-31,,,0,0,0,0
 meghana-rajashekar/new_repo,https://github.com/meghana-rajashekar/new_repo,,0,0,0,2021-12-17,2021-12-17,,,0,0,0,0
-cromark/terraform-provider-github,https://github.com/cromark/terraform-provider-github,terraform-provider-github,0,0,0,2021-12-20,2021-12-20,,,0,0,0,0
+bryanl/provider-jet-vsphere,https://github.com/bryanl/provider-jet-vsphere,,0,0,0,2022-01-31,2022-01-31,,,0,0,0,0
 perlinger/provider-jet-github,https://github.com/perlinger/provider-jet-github,,0,0,0,2022-02-28,2022-02-28,,,0,0,0,0
-jaroslav-svoboda/provider-jet-azuredevops,https://github.com/jaroslav-svoboda/provider-jet-azuredevops,,0,0,0,2022-02-22,2022-02-22,,,0,0,0,0
+cromark/terraform-provider-github,https://github.com/cromark/terraform-provider-github,terraform-provider-github,0,0,0,2021-12-20,2021-12-20,,,0,0,0,0
+edgefarm/provider-jet-keycloak,https://github.com/edgefarm/provider-jet-keycloak,keycloak Provider for Crossplane generated using Terrajet,0,0,0,2022-01-20,2022-01-20,,,0,0,0,0
 abdelazizhd/provider-jet-template,https://github.com/abdelazizhd/provider-jet-template,,0,0,0,2022-03-09,2022-03-09,,,0,0,0,0
-matthewnolf/grafana-provider,https://github.com/matthewnolf/grafana-provider,,0,0,0,2022-03-07,2022-03-07,,,0,0,0,0
-shahidv3/provider-jet-oracle,https://github.com/shahidv3/provider-jet-oracle,,0,0,0,2021-12-29,2021-12-29,,,0,0,0,0
-3pings/xplane-intersight,https://github.com/3pings/xplane-intersight,,0,0,0,2022-01-13,2022-01-13,,,0,0,0,0
-ricable/provider-jet-civo,https://github.com/ricable/provider-jet-civo,Crossplane Jet Provider for Civo Kubernetes ,0,0,0,2022-01-25,2022-01-25,,,0,0,0,0
-turkenh/provider-jet-alibaba,https://github.com/turkenh/provider-jet-alibaba,,0,0,0,2022-02-25,2022-02-07,,,0,0,0,0
-maltejk/provider-metakube,https://github.com/maltejk/provider-metakube,,0,0,1,2021-12-06,2021-12-06,,,0,0,0,0
-abdelazizhd/provider-timg-gcp,https://github.com/abdelazizhd/provider-timg-gcp,,0,0,0,2022-02-17,2022-02-17,,,0,0,0,0
-pickjonathan/provider-jet-vsphere,https://github.com/pickjonathan/provider-jet-vsphere,,0,0,0,2022-02-17,2022-02-17,,,0,0,0,0
-zzxwill/provider-tf-alibaba,https://github.com/zzxwill/provider-tf-alibaba,,0,0,0,2021-11-15,2021-11-15,,,0,0,0,0
+jaroslav-svoboda/provider-jet-azuredevops,https://github.com/jaroslav-svoboda/provider-jet-azuredevops,,0,0,0,2022-02-22,2022-02-22,,,0,0,0,0
+crossplane-contrib/provider-jet-rancher,https://github.com/crossplane-contrib/provider-jet-rancher,,0,0,1,2022-01-26,2022-01-26,2022-01-26,https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-rancher@v0.1.0,53,53,0,0
 realli07kkk/huaweicloud-crossplane,https://github.com/realli07kkk/huaweicloud-crossplane,,0,0,0,2022-01-28,2022-01-28,,,0,0,0,0
 bretagne-peiqi/terrajet-provider-example,https://github.com/bretagne-peiqi/terrajet-provider-example,,0,0,0,2022-02-11,2022-02-11,,,0,0,0,0
+zzxwill/provider-tf-alibaba,https://github.com/zzxwill/provider-tf-alibaba,,0,0,0,2021-11-15,2021-11-15,,,0,0,0,0
+matthewnolf/grafana-provider,https://github.com/matthewnolf/grafana-provider,,0,0,0,2022-03-07,2022-03-07,,,0,0,0,0
+maltejk/provider-metakube,https://github.com/maltejk/provider-metakube,,0,0,1,2021-12-06,2021-12-06,,,0,0,0,0
+ricable/provider-jet-civo,https://github.com/ricable/provider-jet-civo,Crossplane Jet Provider for Civo Kubernetes ,0,0,0,2022-01-25,2022-01-25,,,0,0,0,0
+shahidv3/provider-jet-oracle,https://github.com/shahidv3/provider-jet-oracle,,0,0,0,2021-12-29,2021-12-29,,,0,0,0,0
+3pings/xplane-intersight,https://github.com/3pings/xplane-intersight,,0,0,0,2022-01-13,2022-01-13,,,0,0,0,0
+pickjonathan/provider-jet-vsphere,https://github.com/pickjonathan/provider-jet-vsphere,,0,0,0,2022-02-17,2022-02-17,,,0,0,0,0
+abdelazizhd/provider-timg-gcp,https://github.com/abdelazizhd/provider-timg-gcp,,0,0,0,2022-02-17,2022-02-17,,,0,0,0,0
+turkenh/provider-jet-alibaba,https://github.com/turkenh/provider-jet-alibaba,,0,0,0,2022-02-25,2022-02-07,,,0,0,0,0
 cloud-pak-gitops/crossplane-provider-instana,https://github.com/cloud-pak-gitops/crossplane-provider-instana,Crossplane Provider for Instana to simplify the installation and management of Instana Cluster,0,0,0,2021-10-21,2021-10-11,,,0,0,0,0
 jianh619/provider-instana,https://github.com/jianh619/provider-instana,,0,0,0,2021-10-18,2021-09-15,,,0,0,0,0
 cloud-pak-gitops/crossplane-provider-cp4waiops,https://github.com/cloud-pak-gitops/crossplane-provider-cp4waiops,Crossplane Provider for Cloud Pak for Watson AIOps to simplify the installation and management of Cloud Pak for Watson AIOps,0,0,0,2021-10-21,2021-10-11,,,0,0,0,0
@@ -106,11 +106,11 @@ benagricola/provider-aws-irsa,https://github.com/benagricola/provider-aws-irsa,I
 salaboy/provider-kubecon,https://github.com/salaboy/provider-kubecon,,0,0,0,2021-05-10,2021-05-10,,,0,0,0,0
 salaboy/provider-knative,https://github.com/salaboy/provider-knative,Crossplane Knative Provider (install Knative into your Kubernetes Clusters) ,0,0,0,2021-09-11,2021-09-11,,,0,0,0,0
 luebken/provider-stormforge,https://github.com/luebken/provider-stormforge,,0,0,0,2021-08-02,2021-08-02,,,0,0,0,0
-laetho/provider-metagraf,https://github.com/laetho/provider-metagraf,crossplane provider research,0,0,0,2021-05-07,2021-05-07,,,0,0,0,0
-smileisak/provider-harbor,https://github.com/smileisak/provider-harbor,,0,0,0,2021-12-10,2021-12-09,,,0,0,0,0
 cdloh/provider-tf-cloudflare,https://github.com/cdloh/provider-tf-cloudflare,,0,0,0,2021-10-14,2021-10-14,,,0,0,0,0
 jgillich/crossplane-provider-scaleway,https://github.com/jgillich/crossplane-provider-scaleway,,0,0,0,2021-09-11,2021-09-11,,,0,0,0,0
 knfoo/provider-private-cloud,https://github.com/knfoo/provider-private-cloud,,0,0,0,2021-10-28,2021-10-28,,,0,0,0,0
+laetho/provider-metagraf,https://github.com/laetho/provider-metagraf,crossplane provider research,0,0,0,2021-05-07,2021-05-07,,,0,0,0,0
+smileisak/provider-harbor,https://github.com/smileisak/provider-harbor,,0,0,0,2021-12-10,2021-12-09,,,0,0,0,0
 susunola/crossplane,https://github.com/susunola/crossplane,,0,0,0,2021-03-31,2021-03-31,,,0,0,0,0
 jograca/provider-awsscheduler,https://github.com/jograca/provider-awsscheduler,provider-awsscheduler,0,0,0,2021-09-03,2021-09-03,,,0,0,0,0
 benagricola/provider-yaegi,https://github.com/benagricola/provider-yaegi,This is a horrible idea. Exposes the traefik/yaegi interpreter as a Crossplane resource.,0,0,0,2021-05-05,2021-05-05,,,0,0,0,0
@@ -123,11 +123,11 @@ bigmikes/test-crossplane-provider,https://github.com/bigmikes/test-crossplane-pr
 rajendragosavi/my-own-crossplane-provider,https://github.com/rajendragosavi/my-own-crossplane-provider,,0,0,0,2021-12-19,2021-12-19,,,0,0,0,0
 siddharthlal-cn/scratch-provider,https://github.com/siddharthlal-cn/scratch-provider,,0,0,0,2020-12-19,2020-12-19,,,0,0,0,0
 AaronME/provider-cards,https://github.com/AaronME/provider-cards,A sample provider to generate playing cards,0,0,0,2022-03-10,2022-02-14,,,0,0,0,0
-haorenfsa/provider-milvus,https://github.com/haorenfsa/provider-milvus,milvus provider for crossplane,0,0,0,2022-02-08,2022-02-08,,,0,0,0,0
 dgmorales/crossplane-provider-approval,https://github.com/dgmorales/crossplane-provider-approval,,0,0,0,2022-03-03,2022-03-03,,,0,0,0,0
+haorenfsa/provider-milvus,https://github.com/haorenfsa/provider-milvus,milvus provider for crossplane,0,0,0,2022-02-08,2022-02-08,,,0,0,0,0
+fahedouch/crossplane-provider-ansible,https://github.com/fahedouch/crossplane-provider-ansible,crossplane provider ansible,0,0,0,2021-12-21,2021-12-21,,,0,0,0,0
 shahidv3/oracle-provider,https://github.com/shahidv3/oracle-provider,,0,0,0,2021-12-28,2021-12-28,,,0,0,0,0
 mortenko/provider-template,https://github.com/mortenko/provider-template,template for writing providers for crossplane,0,0,0,2022-02-03,2022-02-03,,,0,0,0,0
-fahedouch/crossplane-provider-ansible,https://github.com/fahedouch/crossplane-provider-ansible,crossplane provider ansible,0,0,0,2021-12-21,2021-12-21,,,0,0,0,0
 arijanluiken/shizzle-provider,https://github.com/arijanluiken/shizzle-provider,,0,0,0,2022-03-09,2022-03-09,,,0,0,0,0
 niiku/crossplane-example-provider,https://github.com/niiku/crossplane-example-provider,,0,0,0,2020-11-13,2020-11-13,,,0,0,0,0
 HoogWater/provider-naas,https://github.com/HoogWater/provider-naas,,0,0,0,2022-01-19,2022-01-19,,,0,0,0,0
@@ -139,8 +139,8 @@ salaboy/cdevents-provider,https://github.com/salaboy/cdevents-provider,Crossplan
 benagricola/provider-externaldata,https://github.com/benagricola/provider-externaldata,A provider to pull external data into a Crossplane composition so it can be used as a patching source,0,0,0,2021-07-26,2021-07-23,,,0,0,0,0
 crossplane-contrib/provider-tinkerbell,https://github.com/crossplane-contrib/provider-tinkerbell,**EXPERIMENTAL** (and non-functional) Crossplane Provider for Tinkerbell,4,0,0,2022-02-11,2020-11-06,,,0,0,0,0
 maltejk/crossplane-provider-myrasec,https://github.com/maltejk/crossplane-provider-myrasec,,0,0,7,2022-01-27,2022-01-27,,,0,0,0,0
-crossplane/provider-aws,https://github.com/crossplane/provider-aws,Crossplane AWS Provider,175,0,204,2022-03-03,2019-09-01,2022-02-12,https://doc.crds.dev/github.com/crossplane/provider-aws@v0.24.1,124,87,37,0
-crossplane/provider-gcp,https://github.com/crossplane/provider-gcp,Crossplane GCP provider,67,0,67,2022-03-05,2019-08-23,2022-02-16,https://doc.crds.dev/github.com/crossplane/provider-gcp@v0.20.0,27,16,11,0
+crossplane/provider-aws,https://github.com/crossplane/provider-aws,Crossplane AWS Provider,175,0,204,2022-03-03,2019-09-01,2022-03-11,https://doc.crds.dev/github.com/crossplane/provider-aws@v0.25.0,133,96,37,0
+crossplane/provider-gcp,https://github.com/crossplane/provider-gcp,Crossplane GCP provider,67,0,68,2022-03-05,2019-08-23,2022-02-16,https://doc.crds.dev/github.com/crossplane/provider-gcp@v0.20.0,27,16,11,0
 crossplane/provider-azure,https://github.com/crossplane/provider-azure,Crossplane Azure Provider,52,0,78,2022-03-09,2019-08-30,2021-12-15,https://doc.crds.dev/github.com/crossplane/provider-azure@v0.18.1,21,14,7,0
 crossplane/provider-rook,https://github.com/crossplane/provider-rook,Crossplane Rook infrastructure provider,18,0,2,2022-01-31,2019-10-03,,,0,0,0,0
 crossplane-contrib/provider-digitalocean,https://github.com/crossplane-contrib/provider-digitalocean,Crossplane DigitalOcean infrastructure provider,17,0,14,2022-02-25,2020-12-16,2022-01-30,https://doc.crds.dev/github.com/crossplane-contrib/provider-digitalocean@v0.1.0,6,6,0,0
@@ -148,7 +148,7 @@ crossplane/provider-alibaba,https://github.com/crossplane/provider-alibaba,Cross
 crossplane-contrib/provider-github,https://github.com/crossplane-contrib/provider-github,Crossplane Provider for GitHub,10,0,4,2022-02-16,2020-03-04,,,0,0,0,0
 crossplane-contrib/provider-gitlab,https://github.com/crossplane-contrib/provider-gitlab,Crossplane Gitlab provider,26,0,3,2022-02-25,2020-11-27,2022-01-19,https://doc.crds.dev/github.com/crossplane-contrib/provider-gitlab@v0.2.0,10,8,2,0
 crossplane-contrib/provider-civo,https://github.com/crossplane-contrib/provider-civo,,12,0,7,2022-01-05,2021-07-13,,,0,0,0,0
-multicloudlab/crossplane-provider-ansible,https://github.com/multicloudlab/crossplane-provider-ansible,,3,0,3,2022-03-10,2021-11-24,,,0,0,0,0
+multicloudlab/crossplane-provider-ansible,https://github.com/multicloudlab/crossplane-provider-ansible,,3,0,4,2022-03-10,2021-11-24,,,0,0,0,0
 crossplane/provider-gcp-beta,https://github.com/crossplane/provider-gcp-beta,Crossplane Google Cloud Platform (GCP) infrastructure provider. provider-gcp-beta contains managed resources relying on beta APIs of GCP APIs.,7,0,0,2022-02-08,2021-03-31,2021-09-20,https://doc.crds.dev/github.com/crossplane/provider-gcp-beta@v0.1.0,6,2,4,0
 crossplane-contrib/provider-ibm-cloud,https://github.com/crossplane-contrib/provider-ibm-cloud,Crossplane provider for @ibm-cloud,11,0,0,2022-02-01,2020-10-14,,,0,0,0,0
 crossplane-contrib/provider-argocd,https://github.com/crossplane-contrib/provider-argocd,Crossplane provider to provision and manage ArgoCD objects,19,0,6,2022-02-15,2021-04-06,2021-12-15,https://doc.crds.dev/github.com/crossplane-contrib/provider-argocd@v0.1.0,5,5,0,0
