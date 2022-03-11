@@ -6,7 +6,7 @@ build:
 	docker push luebken/awesome-crossplane-providers
 
 run:
-	@docker run -v ${PWD}/reports:/reports --env MY_GITHUB_TOKEN=${MY_GITHUB_TOKEN} luebken/awesome-crossplane-providers
+	@docker run -v ${PWD}:/repo --env MY_GITHUB_TOKEN=${MY_GITHUB_TOKEN} luebken/awesome-crossplane-providers
 
 build-2:
 	docker build . -f deploy/Dockerfile -t luebken/awesome-crossplane-providers:latest

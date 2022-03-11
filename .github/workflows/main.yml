@@ -22,7 +22,7 @@ jobs:
       - name: LS
         run: ls
       - name: Docker run
-        run: docker run -v $GITHUB_WORKSPACE/reports:/reports --env MY_GITHUB_TOKEN=${{ secrets.MY_GITHUB_TOKEN }} luebken/awesome-crossplane-providers:latest
+        run: docker run -v $GITHUB_WORKSPACE:/repo --env MY_GITHUB_TOKEN=${{ secrets.MY_GITHUB_TOKEN }} luebken/awesome-crossplane-providers:latest
       - name: LS
         run: ls
       - name: diff
