@@ -26,4 +26,4 @@
 |[crossplane-contrib/provider-jet-mongodbatlas](https://github.com/crossplane-contrib/provider-jet-mongodbatlas) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-mongodbatlas@v0.2.0)|2022-01-09||39|0|0|
 |[IBM/crossplane-provider-kubernetes](https://github.com/IBM/crossplane-provider-kubernetes) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.4.1)|2022-01-05||3|0|0|
 
-Generated at: 2022-03-11
+Generated at: 2022-03-12
