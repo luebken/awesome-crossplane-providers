@@ -57,28 +57,31 @@ func main() {
 	crdsTotalV1 := 0
 	crdsTotalTotal := 0
 
-	stats := []ProviderStat{}
+	ch := make(chan ProviderStat)
+	defer func() {
+		close(ch)
+	}()
 
-	for _, repo := range query.QueryPotentialProviderRepos(client, ctx) {
-		fmt.Print(".") // progress indicator
-		release, _, err := client.Repositories.GetLatestRelease(ctx, *repo.Owner.Login, *repo.Name)
-		last_release := ""
-		docs_url := ""
-		crdsTotal := 0
-		crdsAlpha := 0
-		crdsBeta := 0
-		crdsV1 := 0
-		if err != nil {
-			//fmt.Println("err ", err)
-		} else {
-			last_release = release.CreatedAt.Time.Format("2006-01-02")
-			docs_url = "https://doc.crds.dev/github.com/" + *repo.GetOwner().Login + "/" + *repo.Name + "@" + *release.TagName
-			crdsTotal = util.GetNumberOfCRDs(docs_url).Total
-			crdsAlpha = util.GetNumberOfCRDs(docs_url).Alpha
-			crdsBeta = util.GetNumberOfCRDs(docs_url).Beta
-			crdsV1 = util.GetNumberOfCRDs(docs_url).V1
-		}
-		if !*repo.Archived { // double check
+	repos := query.QueryPotentialProviderRepos(client, ctx)
+	for _, repo := range repos {
+		go func(repo *github.Repository) {
+			release, _, err := client.Repositories.GetLatestRelease(ctx, *repo.Owner.Login, *repo.Name)
+			last_release := ""
+			docs_url := ""
+			crdsTotal := 0
+			crdsAlpha := 0
+			crdsBeta := 0
+			crdsV1 := 0
+			if err != nil {
+				//fmt.Println("err ", err)
+			} else {
+				last_release = release.CreatedAt.Time.Format("2006-01-02")
+				docs_url = "https://doc.crds.dev/github.com/" + *repo.GetOwner().Login + "/" + *repo.Name + "@" + *release.TagName
+				crdsTotal = util.GetNumberOfCRDs(docs_url).Total
+				crdsAlpha = util.GetNumberOfCRDs(docs_url).Alpha
+				crdsBeta = util.GetNumberOfCRDs(docs_url).Beta
+				crdsV1 = util.GetNumberOfCRDs(docs_url).V1
+			}
 			ps := ProviderStat{
 				Fullname: *repo.FullName,
 				HTMLURL:  *repo.HTMLURL,
@@ -101,7 +104,6 @@ func main() {
 			if repo.Description != nil {
 				ps.Description = strings.Replace(*repo.Description, ",", "", -1)
 			}
-			stats = append(stats, ps)
 
 			providersTotal += 1
 			if crdsAlpha > 0 {
@@ -117,10 +119,20 @@ func main() {
 			crdsTotalBeta += crdsBeta
 			crdsTotalV1 += crdsTotalV1
 			crdsTotalTotal += crdsTotal
-		}
+
+			ch <- ps
+		}(repo)
 	}
 
-	// Stats
+	stats := []ProviderStat{}
+	for i := 0; i < len(repos); i++ {
+		fmt.Print(".") // progress indicator
+		ps := <-ch
+		stats = append(stats, ps)
+	}
+	sort.Sort(ByUpdatedAt(stats))
+
+	// repo-stats-%s.csv
 	statsString := "Repository,URL,Description,Stars,Subscribers,Open Issues,Last Update,Created,Last Release,Docs,CRDs Total,CRDs Alpha,CRDs Beta,CRDs V1\n"
 	for _, ps := range stats {
 		statsString += fmt.Sprintf("%s,%s,%s,%d,%d,%d,%v,%v,%v,%v,%d,%d,%d,%d\n",
@@ -143,7 +155,7 @@ func main() {
 
 	util.WriteToFile(statsString, fmt.Sprintf("/repo/reports/repo-stats-%s.csv", time.Now().Format("2006-01-02")))
 
-	//Summary
+	//repo-stats-summary-%s.csv
 	summary := fmt.Sprintf("\nProviders Total:,%d\nProviders Alpha:,%d\nProviders Beta:,%d\nProviders V1:,%d\nCRDs Total:,%d\nCRDs Alpha:,%d\nCRDs Beta:,%d\nCRDs V1:,%d\n",
 		providersTotal,
 		providersAlpha,
@@ -159,6 +171,7 @@ func main() {
 	//Readme
 	sort.Sort(ByUpdatedAt(stats))
 
+	//readme.md
 	readme := "# Released Providers:\n\n"
 	readme += "||Updated|CRDs:|Alpha|Beta|V1|\n"
 	readme += "|---|---|---|---|---|---|\n"
