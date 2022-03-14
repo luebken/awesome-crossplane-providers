@@ -22,7 +22,8 @@
 |[crossplane-contrib/provider-sql](https://github.com/crossplane-contrib/provider-sql) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-sql@v0.3.0)|2022-01-20||16|0|0|
 |[crossplane-contrib/provider-styra](https://github.com/crossplane-contrib/provider-styra) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-styra@v0.2.0)|2022-01-18||6|0|0|
 |[crossplane-contrib/provider-influxdb](https://github.com/crossplane-contrib/provider-influxdb) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-influxdb@v0.1.2)|2022-01-10||5|0|0|
+|[IBM/crossplane-provider-ibm-cloud](https://github.com/IBM/crossplane-provider-ibm-cloud) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-ibm-cloud@v1.4.1)|2022-01-10||13|2|0|
 |[crossplane-contrib/provider-jet-mongodbatlas](https://github.com/crossplane-contrib/provider-jet-mongodbatlas) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-mongodbatlas@v0.2.0)|2022-01-09||39|0|0|
 |[IBM/crossplane-provider-kubernetes](https://github.com/IBM/crossplane-provider-kubernetes) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.4.1)|2022-01-05||3|0|0|
 
-Generated at: 2022-03-13
+Generated at: 2022-03-14
