@@ -154,6 +154,7 @@ func main() {
 	}
 
 	util.WriteToFile(statsString, fmt.Sprintf("/repo/reports/repo-stats-%s.csv", time.Now().Format("2006-01-02")))
+	util.WriteToFile(statsString, "/repo/reports/repo-stats-latest.csv")
 
 	//repo-stats-summary-%s.csv
 	summary := fmt.Sprintf("\nProviders Total:,%d\nProviders Alpha:,%d\nProviders Beta:,%d\nProviders V1:,%d\nCRDs Total:,%d\nCRDs Alpha:,%d\nCRDs Beta:,%d\nCRDs V1:,%d\n",
@@ -167,6 +168,7 @@ func main() {
 		crdsTotalV1,
 	)
 	util.WriteToFile(summary, fmt.Sprintf("/repo/reports/repo-stats-summary-%s.csv", time.Now().Format("2006-01-02")))
+	util.WriteToFile(summary, "/repo/reports/repo-stats-summary.csv")
 
 	//Readme
 	sort.Sort(ByUpdatedAt(stats))
