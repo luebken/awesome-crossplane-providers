@@ -20,6 +20,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Docker Build
         run: cd $GITHUB_WORKSPACE; docker build . -f deploy/Dockerfile -t luebken/awesome-crossplane-providers:latest
       - name: Docker Push
