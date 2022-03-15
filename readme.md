@@ -4,7 +4,7 @@
 |---|---|---|---|---|---|
 |[crossplane-contrib/provider-argocd](https://github.com/crossplane-contrib/provider-argocd) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-argocd@v0.1.0)|2022-03-13||5|0|0|
 |[crossplane/provider-aws](https://github.com/crossplane/provider-aws) - [docs](https://doc.crds.dev/github.com/crossplane/provider-aws@v0.25.0)|2022-03-12||96|37|0|
-|[crossplane-contrib/provider-jet-aws](https://github.com/crossplane-contrib/provider-jet-aws) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.4.0-preview)|2022-03-12||763|0|0|
+|[crossplane-contrib/provider-jet-aws](https://github.com/crossplane-contrib/provider-jet-aws) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.4.1)|2022-03-12||81|0|0|
 |[crossplane-contrib/provider-kubernetes](https://github.com/crossplane-contrib/provider-kubernetes) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-kubernetes@v0.3.0)|2022-03-11||3|0|0|
 |[remyleone/crossplane-scaleway-provider](https://github.com/remyleone/crossplane-scaleway-provider) - [docs](https://doc.crds.dev/github.com/remyleone/crossplane-scaleway-provider@v0.0.1)|2022-03-10||41|0|0|
 |[crossplane/provider-azure](https://github.com/crossplane/provider-azure) - [docs](https://doc.crds.dev/github.com/crossplane/provider-azure@v0.18.1)|2022-03-09||14|7|0|
@@ -26,4 +26,4 @@
 |[crossplane-contrib/provider-jet-mongodbatlas](https://github.com/crossplane-contrib/provider-jet-mongodbatlas) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-mongodbatlas@v0.2.0)|2022-01-09||39|0|0|
 |[IBM/crossplane-provider-kubernetes](https://github.com/IBM/crossplane-provider-kubernetes) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.5.0)|2022-01-05||3|0|0|
 
-Generated at: 2022-03-14
+Generated at: 2022-03-15
