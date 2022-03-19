@@ -20,4 +20,5 @@ run-local:
 
 build-site:
 	cd site; npm run build
+	rm -rf docs/*
 	mv site/build/* docs/

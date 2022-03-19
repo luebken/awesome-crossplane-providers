@@ -1,1 +1,0 @@
-files for https://luebken.github.io/awesome-crossplane-providers/
