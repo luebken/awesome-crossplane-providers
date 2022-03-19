@@ -15,7 +15,7 @@ const columns = [
 export const BasicTable = () => {
     return (
         <MaterialTable
-            title="Basic Table"
+            title="Awesome Crossplane Providers"
             icons={tableIcons}
             columns={columns}
             data={data}
