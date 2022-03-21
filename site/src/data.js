@@ -10,19 +10,18 @@ const columns = [
 { title: 'CRDs', field: 'crds', filtering:false, type: 'numeric' },
 ];
 const data = [
+  {name:'crossplane-contrib/provider-sql', url: 'https://github.com/crossplane-contrib/provider-sql', docsURL: 'https://doc.crds.dev/github.com/crossplane-contrib/provider-sql@v0.3.0','updated': '2022-03-21', 'crdsMaturity': 'Alpha', 'crds': '16',},
   {name:'crossplane-contrib/provider-jet-alibaba', url: 'https://github.com/crossplane-contrib/provider-jet-alibaba', docsURL: '','updated': '2022-03-21', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'crossplane/provider-template', url: 'https://github.com/crossplane/provider-template', docsURL: '','updated': '2022-03-20', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'pickjonathan/vsphere-jet-provider', url: 'https://github.com/pickjonathan/vsphere-jet-provider', docsURL: '','updated': '2022-03-20', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'crossplane-contrib/provider-jet-gcp', url: 'https://github.com/crossplane-contrib/provider-jet-gcp', docsURL: 'https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-gcp@v0.2.0-preview','updated': '2022-03-19', 'crdsMaturity': 'Alpha', 'crds': '438',},
   {name:'opendevsecopsio/crossplane-provider-jet-vsphere', url: 'https://github.com/opendevsecopsio/crossplane-provider-jet-vsphere', docsURL: '','updated': '2022-03-18', 'crdsMaturity': 'Unreleased', 'crds': '0',},
-  {name:'crossplane/provider-aws', url: 'https://github.com/crossplane/provider-aws', docsURL: 'https://doc.crds.dev/github.com/crossplane/provider-aws@v0.25.0','updated': '2022-03-18', 'crdsMaturity': 'Beta', 'crds': '133',},
   {name:'crossplane-contrib/provider-argocd', url: 'https://github.com/crossplane-contrib/provider-argocd', docsURL: 'https://doc.crds.dev/github.com/crossplane-contrib/provider-argocd@v0.1.0','updated': '2022-03-18', 'crdsMaturity': 'Alpha', 'crds': '5',},
+  {name:'crossplane/provider-aws', url: 'https://github.com/crossplane/provider-aws', docsURL: 'https://doc.crds.dev/github.com/crossplane/provider-aws@v0.25.0','updated': '2022-03-18', 'crdsMaturity': 'Beta', 'crds': '133',},
   {name:'crossplane-contrib/provider-kubernetes', url: 'https://github.com/crossplane-contrib/provider-kubernetes', docsURL: 'https://doc.crds.dev/github.com/crossplane-contrib/provider-kubernetes@v0.3.0','updated': '2022-03-18', 'crdsMaturity': 'Alpha', 'crds': '3',},
   {name:'crossplane-contrib/provider-helm', url: 'https://github.com/crossplane-contrib/provider-helm', docsURL: 'https://doc.crds.dev/github.com/crossplane-contrib/provider-helm@v0.10.0','updated': '2022-03-17', 'crdsMaturity': 'Beta', 'crds': '3',},
   {name:'d3ployment/provider-jet-esxi', url: 'https://github.com/d3ployment/provider-jet-esxi', docsURL: '','updated': '2022-03-16', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'Piotr1215/provider-jet-archive', url: 'https://github.com/Piotr1215/provider-jet-archive', docsURL: '','updated': '2022-03-16', 'crdsMaturity': 'Unreleased', 'crds': '0',},
-  {name:'multicloudlab/crossplane-provider-ansible', url: 'https://github.com/multicloudlab/crossplane-provider-ansible', docsURL: '','updated': '2022-03-16', 'crdsMaturity': 'Unreleased', 'crds': '0',},
-  {name:'crossplane-contrib/provider-sql', url: 'https://github.com/crossplane-contrib/provider-sql', docsURL: 'https://doc.crds.dev/github.com/crossplane-contrib/provider-sql@v0.3.0','updated': '2022-03-16', 'crdsMaturity': 'Alpha', 'crds': '16',},
   {name:'crossplane-contrib/provider-jet-pagerduty', url: 'https://github.com/crossplane-contrib/provider-jet-pagerduty', docsURL: '','updated': '2022-03-16', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'davidcollom/crossplane-jet-uptimerobot', url: 'https://github.com/davidcollom/crossplane-jet-uptimerobot', docsURL: 'https://doc.crds.dev/github.com/davidcollom/crossplane-jet-uptimerobot@0.0.1','updated': '2022-03-16', 'crdsMaturity': 'Alpha', 'crds': '5',},
   {name:'crossplane-contrib/provider-jet-aws', url: 'https://github.com/crossplane-contrib/provider-jet-aws', docsURL: 'https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.4.2','updated': '2022-03-15', 'crdsMaturity': 'Alpha', 'crds': '81',},
@@ -106,6 +105,7 @@ const data = [
   {name:'bryanl/provider-jet-vsphere', url: 'https://github.com/bryanl/provider-jet-vsphere', docsURL: '','updated': '2022-01-31', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'opentelekomcloud/provider-jet-opentelekomcloud', url: 'https://github.com/opentelekomcloud/provider-jet-opentelekomcloud', docsURL: '','updated': '2022-01-31', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'realli07kkk/huaweicloud-crossplane', url: 'https://github.com/realli07kkk/huaweicloud-crossplane', docsURL: '','updated': '2022-01-28', 'crdsMaturity': 'Unreleased', 'crds': '0',},
+  {name:'maltejk/crossplane-provider-myrasec', url: 'https://github.com/maltejk/crossplane-provider-myrasec', docsURL: '','updated': '2022-01-27', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'crossplane-contrib/provider-jet-rancher', url: 'https://github.com/crossplane-contrib/provider-jet-rancher', docsURL: 'https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-rancher@v0.1.0','updated': '2022-01-26', 'crdsMaturity': 'Alpha', 'crds': '53',},
   {name:'ricable/provider-jet-civo', url: 'https://github.com/ricable/provider-jet-civo', docsURL: '','updated': '2022-01-25', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'batthebee/provider-jet-github', url: 'https://github.com/batthebee/provider-jet-github', docsURL: '','updated': '2022-01-25', 'crdsMaturity': 'Unreleased', 'crds': '0',},
@@ -120,7 +120,6 @@ const data = [
   {name:'bigmikes/test-crossplane-provider', url: 'https://github.com/bigmikes/test-crossplane-provider', docsURL: '','updated': '2022-01-16', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'3pings/xplane-intersight', url: 'https://github.com/3pings/xplane-intersight', docsURL: '','updated': '2022-01-13', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'crossplane-contrib/provider-influxdb', url: 'https://github.com/crossplane-contrib/provider-influxdb', docsURL: 'https://doc.crds.dev/github.com/crossplane-contrib/provider-influxdb@v0.1.2','updated': '2022-01-10', 'crdsMaturity': 'Alpha', 'crds': '5',},
-  {name:'IBM/crossplane-provider-ibm-cloud', url: 'https://github.com/IBM/crossplane-provider-ibm-cloud', docsURL: 'https://doc.crds.dev/github.com/IBM/crossplane-provider-ibm-cloud@v1.5.0','updated': '2022-01-10', 'crdsMaturity': 'Beta', 'crds': '15',},
   {name:'crossplane-contrib/provider-jet-mongodbatlas', url: 'https://github.com/crossplane-contrib/provider-jet-mongodbatlas', docsURL: 'https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-mongodbatlas@v0.2.0','updated': '2022-01-09', 'crdsMaturity': 'Alpha', 'crds': '39',},
   {name:'meghana-rajashekar/testing-intersight', url: 'https://github.com/meghana-rajashekar/testing-intersight', docsURL: '','updated': '2022-01-06', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'IBM/crossplane-provider-kubernetes', url: 'https://github.com/IBM/crossplane-provider-kubernetes', docsURL: 'https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.5.0','updated': '2022-01-05', 'crdsMaturity': 'Alpha', 'crds': '3',},
@@ -136,11 +135,9 @@ const data = [
   {name:'shahidv3/git-provider-jet', url: 'https://github.com/shahidv3/git-provider-jet', docsURL: '','updated': '2021-12-18', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'meghana-rajashekar/new_repo', url: 'https://github.com/meghana-rajashekar/new_repo', docsURL: '','updated': '2021-12-17', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'crossplane-contrib/provider-newrelic', url: 'https://github.com/crossplane-contrib/provider-newrelic', docsURL: '','updated': '2021-12-15', 'crdsMaturity': 'Unreleased', 'crds': '0',},
-  {name:'IBM/crossplane-provider-aws', url: 'https://github.com/IBM/crossplane-provider-aws', docsURL: '','updated': '2021-12-13', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'elyasafm/my_private_cloud', url: 'https://github.com/elyasafm/my_private_cloud', docsURL: '','updated': '2021-12-12', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'smileisak/provider-harbor', url: 'https://github.com/smileisak/provider-harbor', docsURL: '','updated': '2021-12-10', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'jasonmimick/provider-mongodbatlas-terraform', url: 'https://github.com/jasonmimick/provider-mongodbatlas-terraform', docsURL: '','updated': '2021-12-07', 'crdsMaturity': 'Unreleased', 'crds': '0',},
-  {name:'herveleclerc/crossplane-provider-azure', url: 'https://github.com/herveleclerc/crossplane-provider-azure', docsURL: '','updated': '2021-12-07', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'maltejk/provider-metakube', url: 'https://github.com/maltejk/provider-metakube', docsURL: '','updated': '2021-12-06', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'crossplane-contrib/provider-tf-equinix', url: 'https://github.com/crossplane-contrib/provider-tf-equinix', docsURL: '','updated': '2021-12-03', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'samueltorres/crossplane-do-provider', url: 'https://github.com/samueltorres/crossplane-do-provider', docsURL: '','updated': '2021-11-25', 'crdsMaturity': 'Unreleased', 'crds': '0',},
@@ -198,5 +195,5 @@ const data = [
   {name:'muvaf/test-generated-aws', url: 'https://github.com/muvaf/test-generated-aws', docsURL: '','updated': '2020-10-23', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'ryanewk/test-crossplane-provider', url: 'https://github.com/ryanewk/test-crossplane-provider', docsURL: '','updated': '2020-04-02', 'crdsMaturity': 'Unreleased', 'crds': '0',},
 ];
-const exported = { data: data, columns: columns }
+const exported = { data: data, columns: columns, date: '2022-03-21' }
 export default exported;

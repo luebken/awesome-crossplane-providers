@@ -215,7 +215,7 @@ func main() {
 			ps.Fullname, ps.HTMLURL, ps.DocsURL, ps.UpdatedAt.Format("2006-01-02"), crdsMaturity, ps.CRDsTotal)
 	}
 	datajs += "];\n"
-	datajs += "const exported = { data: data, columns: columns }\n"
+	datajs += fmt.Sprintf("const exported = { data: data, columns: columns, date: '%s' }\n", time.Now().Format("2006-01-02"))
 	datajs += "export default exported;\n"
 
 	util.WriteToFile(datajs, "/repo/site/src/data.js")
