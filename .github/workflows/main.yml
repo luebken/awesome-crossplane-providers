@@ -26,6 +26,9 @@ jobs:
           cd site
           npm install
           npm run build
+          cd ..
+          rm -rf docs/*
+          cp -r site/build/ docs/
       - name: diff
         run: git diff
       - name: Commit report
