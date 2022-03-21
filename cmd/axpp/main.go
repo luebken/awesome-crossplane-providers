@@ -184,7 +184,7 @@ func main() {
 		}
 	}
 	readme += "\nGenerated at: " + time.Now().Format("2006-01-02")
-	util.WriteToFile(readme, "/repo/readme.md")
+	util.WriteToFile(readme, "/repo/released-providers.md")
 
 	//data.js
 	datajs := "const columns = [\n"
