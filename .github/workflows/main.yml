@@ -23,8 +23,9 @@ jobs:
         run: docker run -v $GITHUB_WORKSPACE:/repo --env MY_GITHUB_TOKEN=${{ secrets.MY_GITHUB_TOKEN }} luebken/awesome-crossplane-providers:latest
       - name: site
         run: |
-          cd site; npm install
-          cd site; npm run build
+          cd site
+          npm install
+          npm run build
       - name: diff
         run: git diff
       - name: Commit report
