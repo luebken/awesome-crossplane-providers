@@ -1,6 +1,6 @@
 const columns = [
 { title: 'Provider', field: 'name', filtering:false, render: rowData => <a href={rowData.url}>{rowData.name}</a> },
-{ title: '', field: 'docs', filtering:false, render: rowData => { if (rowData.docsURL != '') return <a href={rowData.docsURL}>Docs</a> } },
+{ title: '', field: 'docs', filtering:false, render: rowData => { if (rowData.docsURL !== '') return <a href={rowData.docsURL}>Docs</a> } },
 { title: 'Updated', field: 'updated', filtering:false},
 {
   title: 'CRDs maturity', field: 'crdsMaturity',
