@@ -218,7 +218,7 @@ func main() {
 	datajs += "const exported = { data: data, columns: columns }\n"
 	datajs += "export default exported;\n"
 
-	util.WriteToFile(datajs, "/site/src/data.js")
+	util.WriteToFile(datajs, "/repo/site/src/data.js")
 
 	fmt.Println("End")
 }
