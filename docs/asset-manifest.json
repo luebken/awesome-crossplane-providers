@@ -1,29 +1,29 @@
 {
   "files": {
     "main.css": "/awesome-crossplane-providers/static/css/main.1d5f2213.chunk.css",
-    "main.js": "/awesome-crossplane-providers/static/js/main.ff60e04d.chunk.js",
-    "main.js.map": "/awesome-crossplane-providers/static/js/main.ff60e04d.chunk.js.map",
-    "runtime-main.js": "/awesome-crossplane-providers/static/js/runtime-main.c46aa432.js",
-    "runtime-main.js.map": "/awesome-crossplane-providers/static/js/runtime-main.c46aa432.js.map",
-    "static/js/2.73c28d22.chunk.js": "/awesome-crossplane-providers/static/js/2.73c28d22.chunk.js",
-    "static/js/2.73c28d22.chunk.js.map": "/awesome-crossplane-providers/static/js/2.73c28d22.chunk.js.map",
-    "static/js/3.72e10d0a.chunk.js": "/awesome-crossplane-providers/static/js/3.72e10d0a.chunk.js",
-    "static/js/3.72e10d0a.chunk.js.map": "/awesome-crossplane-providers/static/js/3.72e10d0a.chunk.js.map",
-    "static/js/4.2f35a0a3.chunk.js": "/awesome-crossplane-providers/static/js/4.2f35a0a3.chunk.js",
-    "static/js/4.2f35a0a3.chunk.js.map": "/awesome-crossplane-providers/static/js/4.2f35a0a3.chunk.js.map",
-    "static/js/5.998f4b45.chunk.js": "/awesome-crossplane-providers/static/js/5.998f4b45.chunk.js",
-    "static/js/5.998f4b45.chunk.js.map": "/awesome-crossplane-providers/static/js/5.998f4b45.chunk.js.map",
+    "main.js": "/awesome-crossplane-providers/static/js/main.a60b093c.chunk.js",
+    "main.js.map": "/awesome-crossplane-providers/static/js/main.a60b093c.chunk.js.map",
+    "runtime-main.js": "/awesome-crossplane-providers/static/js/runtime-main.e9947960.js",
+    "runtime-main.js.map": "/awesome-crossplane-providers/static/js/runtime-main.e9947960.js.map",
+    "static/js/2.b0bf218b.chunk.js": "/awesome-crossplane-providers/static/js/2.b0bf218b.chunk.js",
+    "static/js/2.b0bf218b.chunk.js.map": "/awesome-crossplane-providers/static/js/2.b0bf218b.chunk.js.map",
+    "static/js/3.f4f3e110.chunk.js": "/awesome-crossplane-providers/static/js/3.f4f3e110.chunk.js",
+    "static/js/3.f4f3e110.chunk.js.map": "/awesome-crossplane-providers/static/js/3.f4f3e110.chunk.js.map",
+    "static/js/4.396a575c.chunk.js": "/awesome-crossplane-providers/static/js/4.396a575c.chunk.js",
+    "static/js/4.396a575c.chunk.js.map": "/awesome-crossplane-providers/static/js/4.396a575c.chunk.js.map",
+    "static/js/5.fc086999.chunk.js": "/awesome-crossplane-providers/static/js/5.fc086999.chunk.js",
+    "static/js/5.fc086999.chunk.js.map": "/awesome-crossplane-providers/static/js/5.fc086999.chunk.js.map",
     "index.html": "/awesome-crossplane-providers/index.html",
     "static/css/main.1d5f2213.chunk.css.map": "/awesome-crossplane-providers/static/css/main.1d5f2213.chunk.css.map",
-    "static/js/2.73c28d22.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/2.73c28d22.chunk.js.LICENSE.txt",
-    "static/js/3.72e10d0a.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/3.72e10d0a.chunk.js.LICENSE.txt",
-    "static/js/4.2f35a0a3.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/4.2f35a0a3.chunk.js.LICENSE.txt",
-    "static/js/5.998f4b45.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/5.998f4b45.chunk.js.LICENSE.txt"
+    "static/js/2.b0bf218b.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/2.b0bf218b.chunk.js.LICENSE.txt",
+    "static/js/3.f4f3e110.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/3.f4f3e110.chunk.js.LICENSE.txt",
+    "static/js/4.396a575c.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/4.396a575c.chunk.js.LICENSE.txt",
+    "static/js/5.fc086999.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/5.fc086999.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c46aa432.js",
-    "static/js/3.72e10d0a.chunk.js",
+    "static/js/runtime-main.e9947960.js",
+    "static/js/3.f4f3e110.chunk.js",
     "static/css/main.1d5f2213.chunk.css",
-    "static/js/main.ff60e04d.chunk.js"
+    "static/js/main.a60b093c.chunk.js"
   ]
 }
