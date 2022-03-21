@@ -2,12 +2,12 @@
 
 ||Updated|CRDs:|Alpha|Beta|V1|
 |---|---|---|---|---|---|
+|[crossplane-contrib/provider-sql](https://github.com/crossplane-contrib/provider-sql) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-sql@v0.3.0)|2022-03-21||16|0|0|
 |[crossplane-contrib/provider-jet-gcp](https://github.com/crossplane-contrib/provider-jet-gcp) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-gcp@v0.2.0-preview)|2022-03-19||438|0|0|
-|[crossplane/provider-aws](https://github.com/crossplane/provider-aws) - [docs](https://doc.crds.dev/github.com/crossplane/provider-aws@v0.25.0)|2022-03-18||96|37|0|
 |[crossplane-contrib/provider-argocd](https://github.com/crossplane-contrib/provider-argocd) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-argocd@v0.1.0)|2022-03-18||5|0|0|
+|[crossplane/provider-aws](https://github.com/crossplane/provider-aws) - [docs](https://doc.crds.dev/github.com/crossplane/provider-aws@v0.25.0)|2022-03-18||96|37|0|
 |[crossplane-contrib/provider-kubernetes](https://github.com/crossplane-contrib/provider-kubernetes) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-kubernetes@v0.3.0)|2022-03-18||3|0|0|
 |[crossplane-contrib/provider-helm](https://github.com/crossplane-contrib/provider-helm) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-helm@v0.10.0)|2022-03-17||0|3|0|
-|[crossplane-contrib/provider-sql](https://github.com/crossplane-contrib/provider-sql) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-sql@v0.3.0)|2022-03-16||16|0|0|
 |[davidcollom/crossplane-jet-uptimerobot](https://github.com/davidcollom/crossplane-jet-uptimerobot) - [docs](https://doc.crds.dev/github.com/davidcollom/crossplane-jet-uptimerobot@0.0.1)|2022-03-16||5|0|0|
 |[crossplane-contrib/provider-jet-aws](https://github.com/crossplane-contrib/provider-jet-aws) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.4.2)|2022-03-15||81|0|0|
 |[davidcollom/crossplane-jet-cloudflare](https://github.com/davidcollom/crossplane-jet-cloudflare) - [docs](https://doc.crds.dev/github.com/davidcollom/crossplane-jet-cloudflare@0.0.1)|2022-03-14||65|0|0|
