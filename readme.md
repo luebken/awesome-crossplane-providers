@@ -3,8 +3,8 @@
 ||Updated|CRDs:|Alpha|Beta|V1|
 |---|---|---|---|---|---|
 |[crossplane-contrib/provider-jet-gcp](https://github.com/crossplane-contrib/provider-jet-gcp) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-gcp@v0.2.0-preview)|2022-03-19||438|0|0|
-|[crossplane-contrib/provider-argocd](https://github.com/crossplane-contrib/provider-argocd) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-argocd@v0.1.0)|2022-03-18||5|0|0|
 |[crossplane/provider-aws](https://github.com/crossplane/provider-aws) - [docs](https://doc.crds.dev/github.com/crossplane/provider-aws@v0.25.0)|2022-03-18||96|37|0|
+|[crossplane-contrib/provider-argocd](https://github.com/crossplane-contrib/provider-argocd) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-argocd@v0.1.0)|2022-03-18||5|0|0|
 |[crossplane-contrib/provider-kubernetes](https://github.com/crossplane-contrib/provider-kubernetes) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-kubernetes@v0.3.0)|2022-03-18||3|0|0|
 |[crossplane-contrib/provider-helm](https://github.com/crossplane-contrib/provider-helm) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-helm@v0.10.0)|2022-03-17||0|3|0|
 |[crossplane-contrib/provider-sql](https://github.com/crossplane-contrib/provider-sql) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-sql@v0.3.0)|2022-03-16||16|0|0|
