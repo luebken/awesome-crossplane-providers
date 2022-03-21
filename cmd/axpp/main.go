@@ -186,5 +186,39 @@ func main() {
 	readme += "\nGenerated at: " + time.Now().Format("2006-01-02")
 	util.WriteToFile(readme, "/repo/readme.md")
 
+	//data.js
+	datajs := "const columns = [\n"
+	datajs += "{ title: 'Provider', field: 'name', filtering:false, render: rowData => <a href={rowData.url}>{rowData.name}</a> },\n"
+	datajs += "{ title: '', field: 'docs', filtering:false, render: rowData => { if (rowData.docsURL != '') return <a href={rowData.docsURL}>Docs</a> } },\n"
+	datajs += "{ title: 'Updated', field: 'updated', filtering:false},\n"
+	datajs += "{\n"
+	datajs += "  title: 'CRDs maturity', field: 'crdsMaturity',\n"
+	datajs += "  lookup: { Unreleased: 'Unreleased', Alpha: 'Alpha', Beta: 'Beta', V1: 'V1' },\n"
+	datajs += "  defaultFilter: ['Alpha', 'Beta', 'V1']\n"
+	datajs += "},\n"
+	datajs += "{ title: 'CRDs', field: 'crds', filtering:false, type: 'numeric' },\n"
+	datajs += "];\n"
+
+	datajs += "const data = [\n"
+	for _, ps := range stats {
+		crdsMaturity := "Unreleased"
+		if ps.CRDsAlpha > 0 {
+			crdsMaturity = "Alpha"
+		}
+		if ps.CRDsBeta > 0 {
+			crdsMaturity = "Beta"
+		}
+		if ps.CRDsV1 > 0 {
+			crdsMaturity = "V1"
+		}
+		datajs += fmt.Sprintf("  {name:'%s', url: '%s', docsURL: '%s','updated': '%s', 'crdsMaturity': '%s', 'crds': '%d',},\n",
+			ps.Fullname, ps.HTMLURL, ps.DocsURL, ps.UpdatedAt.Format("2006-01-02"), crdsMaturity, ps.CRDsTotal)
+	}
+	datajs += "];\n"
+	datajs += "const exported = { data: data, columns: columns }\n"
+	datajs += "export default exported;\n"
+
+	util.WriteToFile(datajs, "/site/src/data.js")
+
 	fmt.Println("End")
 }
