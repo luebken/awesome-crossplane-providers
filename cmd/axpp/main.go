@@ -189,7 +189,7 @@ func main() {
 	//data.js
 	datajs := "const columns = [\n"
 	datajs += "{ title: 'Provider', field: 'name', filtering:false, render: rowData => <a href={rowData.url}>{rowData.name}</a> },\n"
-	datajs += "{ title: '', field: 'docs', filtering:false, render: rowData => { if (rowData.docsURL != '') return <a href={rowData.docsURL}>Docs</a> } },\n"
+	datajs += "{ title: '', field: 'docs', filtering:false, render: rowData => { if (rowData.docsURL !== '') return <a href={rowData.docsURL}>Docs</a> } },\n"
 	datajs += "{ title: 'Updated', field: 'updated', filtering:false},\n"
 	datajs += "{\n"
 	datajs += "  title: 'CRDs maturity', field: 'crdsMaturity',\n"
