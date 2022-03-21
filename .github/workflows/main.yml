@@ -19,12 +19,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Docker Pull
         run: docker pull luebken/awesome-crossplane-providers:latest
-      - name: LS
-        run: ls
       - name: Docker run
         run: docker run -v $GITHUB_WORKSPACE:/repo --env MY_GITHUB_TOKEN=${{ secrets.MY_GITHUB_TOKEN }} luebken/awesome-crossplane-providers:latest
-      - name: LS
-        run: ls
       - name: site
         run: |
           cd site; npm install
