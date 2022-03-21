@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/awesome-crossplane-providers/static/css/main.37f05155.chunk.css",
-    "main.js": "/awesome-crossplane-providers/static/js/main.f02356e3.chunk.js",
-    "main.js.map": "/awesome-crossplane-providers/static/js/main.f02356e3.chunk.js.map",
+    "main.js": "/awesome-crossplane-providers/static/js/main.a63b0e60.chunk.js",
+    "main.js.map": "/awesome-crossplane-providers/static/js/main.a63b0e60.chunk.js.map",
     "runtime-main.js": "/awesome-crossplane-providers/static/js/runtime-main.321ed67a.js",
     "runtime-main.js.map": "/awesome-crossplane-providers/static/js/runtime-main.321ed67a.js.map",
     "static/js/2.72c18a43.chunk.js": "/awesome-crossplane-providers/static/js/2.72c18a43.chunk.js",
     "static/js/2.72c18a43.chunk.js.map": "/awesome-crossplane-providers/static/js/2.72c18a43.chunk.js.map",
-    "static/js/3.594f78f9.chunk.js": "/awesome-crossplane-providers/static/js/3.594f78f9.chunk.js",
-    "static/js/3.594f78f9.chunk.js.map": "/awesome-crossplane-providers/static/js/3.594f78f9.chunk.js.map",
+    "static/js/3.c037af6f.chunk.js": "/awesome-crossplane-providers/static/js/3.c037af6f.chunk.js",
+    "static/js/3.c037af6f.chunk.js.map": "/awesome-crossplane-providers/static/js/3.c037af6f.chunk.js.map",
     "static/js/4.5f0d87a1.chunk.js": "/awesome-crossplane-providers/static/js/4.5f0d87a1.chunk.js",
     "static/js/4.5f0d87a1.chunk.js.map": "/awesome-crossplane-providers/static/js/4.5f0d87a1.chunk.js.map",
     "static/js/5.0f86fbe9.chunk.js": "/awesome-crossplane-providers/static/js/5.0f86fbe9.chunk.js",
@@ -16,14 +16,14 @@
     "index.html": "/awesome-crossplane-providers/index.html",
     "static/css/main.37f05155.chunk.css.map": "/awesome-crossplane-providers/static/css/main.37f05155.chunk.css.map",
     "static/js/2.72c18a43.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/2.72c18a43.chunk.js.LICENSE.txt",
-    "static/js/3.594f78f9.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/3.594f78f9.chunk.js.LICENSE.txt",
+    "static/js/3.c037af6f.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/3.c037af6f.chunk.js.LICENSE.txt",
     "static/js/4.5f0d87a1.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/4.5f0d87a1.chunk.js.LICENSE.txt",
     "static/js/5.0f86fbe9.chunk.js.LICENSE.txt": "/awesome-crossplane-providers/static/js/5.0f86fbe9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.321ed67a.js",
-    "static/js/3.594f78f9.chunk.js",
+    "static/js/3.c037af6f.chunk.js",
     "static/css/main.37f05155.chunk.css",
-    "static/js/main.f02356e3.chunk.js"
+    "static/js/main.a63b0e60.chunk.js"
   ]
 }
