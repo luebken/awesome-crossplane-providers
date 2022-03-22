@@ -10,7 +10,7 @@ const columns = [
 { title: 'CRDs', field: 'crds', filtering:false, type: 'numeric' },
 ];
 const data = [
-  {name:'timgchile/provider-jet-mongodbatlas', url: 'https://github.com/timgchile/provider-jet-mongodbatlas', docsURL: '','updated': '2022-03-21', 'crdsMaturity': 'Unreleased', 'crds': '0',},
+  {name:'timgchile/provider-jet-mongodba', url: 'https://github.com/timgchile/provider-jet-mongodba', docsURL: '','updated': '2022-03-21', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'crossplane-contrib/provider-sql', url: 'https://github.com/crossplane-contrib/provider-sql', docsURL: 'https://doc.crds.dev/github.com/crossplane-contrib/provider-sql@v0.3.0','updated': '2022-03-21', 'crdsMaturity': 'Alpha', 'crds': '16',},
   {name:'crossplane-contrib/provider-jet-alibaba', url: 'https://github.com/crossplane-contrib/provider-jet-alibaba', docsURL: '','updated': '2022-03-21', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'crossplane/provider-template', url: 'https://github.com/crossplane/provider-template', docsURL: '','updated': '2022-03-20', 'crdsMaturity': 'Unreleased', 'crds': '0',},
@@ -200,5 +200,5 @@ const data = [
   {name:'muvaf/test-generated-aws', url: 'https://github.com/muvaf/test-generated-aws', docsURL: '','updated': '2020-10-23', 'crdsMaturity': 'Unreleased', 'crds': '0',},
   {name:'ryanewk/test-crossplane-provider', url: 'https://github.com/ryanewk/test-crossplane-provider', docsURL: '','updated': '2020-04-02', 'crdsMaturity': 'Unreleased', 'crds': '0',},
 ];
-const exported = { data: data, columns: columns, date: '2022-03-21' }
+const exported = { data: data, columns: columns, date: '2022-03-22' }
 export default exported;
