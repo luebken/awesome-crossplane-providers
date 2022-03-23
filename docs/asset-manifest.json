@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/awesome-crossplane-providers/static/css/main.1d5f2213.chunk.css",
-    "main.js": "/awesome-crossplane-providers/static/js/main.935de769.chunk.js",
-    "main.js.map": "/awesome-crossplane-providers/static/js/main.935de769.chunk.js.map",
+    "main.css": "/awesome-crossplane-providers/static/css/main.c981886e.chunk.css",
+    "main.js": "/awesome-crossplane-providers/static/js/main.14e5e7ab.chunk.js",
+    "main.js.map": "/awesome-crossplane-providers/static/js/main.14e5e7ab.chunk.js.map",
     "runtime-main.js": "/awesome-crossplane-providers/static/js/runtime-main.e9947960.js",
     "runtime-main.js.map": "/awesome-crossplane-providers/static/js/runtime-main.e9947960.js.map",
     "static/js/2.b0bf218b.chunk.js": "/awesome-crossplane-providers/static/js/2.b0bf218b.chunk.js",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e9947960.js",
-    "static/js/3.f4f3e110.chunk.js",
-    "static/css/main.1d5f2213.chunk.css",
-    "static/js/main.935de769.chunk.js"
+    "static/js/3.1351757a.chunk.js",
+    "static/css/main.c981886e.chunk.css",
+    "static/js/main.14e5e7ab.chunk.js"
   ]
 }
