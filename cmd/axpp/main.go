@@ -24,20 +24,21 @@ var (
 )
 
 type ProviderStat struct {
-	Fullname    string
-	HTMLURL     string
-	Description string
-	Stargazers  int
-	Subscribers int
-	OpenIssues  int
-	UpdatedAt   time.Time
-	CreatedAt   time.Time
-	LastRelease string
-	DocsURL     string
-	CRDsTotal   int
-	CRDsBeta    int
-	CRDsAlpha   int
-	CRDsV1      int
+	Fullname       string
+	HTMLURL        string
+	Description    string
+	Stargazers     int
+	Subscribers    int
+	OpenIssues     int
+	UpdatedAt      time.Time
+	CreatedAt      time.Time
+	LastReleaseAt  time.Time
+	LastReleaseTag string
+	DocsURL        string
+	CRDsTotal      int
+	CRDsBeta       int
+	CRDsAlpha      int
+	CRDsV1         int
 }
 type ByUpdatedAt []ProviderStat
 
@@ -65,60 +66,54 @@ func main() {
 	repos := query.QueryPotentialProviderRepos(client, ctx)
 	for _, repo := range repos {
 		go func(repo *github.Repository) {
-			release, _, err := client.Repositories.GetLatestRelease(ctx, *repo.Owner.Login, *repo.Name)
-			last_release := ""
-			docs_url := ""
-			crdsTotal := 0
-			crdsAlpha := 0
-			crdsBeta := 0
-			crdsV1 := 0
-			if err != nil {
-				//fmt.Println("err ", err)
-			} else {
-				last_release = release.CreatedAt.Time.Format("2006-01-02")
-				docs_url = "https://doc.crds.dev/github.com/" + *repo.GetOwner().Login + "/" + *repo.Name + "@" + *release.TagName
-				crdsTotal = util.GetNumberOfCRDs(docs_url).Total
-				crdsAlpha = util.GetNumberOfCRDs(docs_url).Alpha
-				crdsBeta = util.GetNumberOfCRDs(docs_url).Beta
-				crdsV1 = util.GetNumberOfCRDs(docs_url).V1
-			}
 			ps := ProviderStat{
-				Fullname: *repo.FullName,
-				HTMLURL:  *repo.HTMLURL,
-				//Description:
+				Fullname:   *repo.Owner.Login + " / " + *repo.Name, // Extra whitepace for readability
+				HTMLURL:    *repo.HTMLURL,
 				Stargazers: *repo.StargazersCount,
-				// Subscribers:
-				OpenIssues:  *repo.OpenIssuesCount,
-				UpdatedAt:   repo.UpdatedAt.Time,
-				CreatedAt:   repo.CreatedAt.Time,
-				LastRelease: last_release,
-				DocsURL:     docs_url,
-				CRDsTotal:   crdsTotal,
-				CRDsAlpha:   crdsAlpha,
-				CRDsBeta:    crdsBeta,
-				CRDsV1:      crdsV1,
-			}
-			if repo.SubscribersCount != nil {
-				ps.Subscribers = *repo.SubscribersCount
+				OpenIssues: *repo.OpenIssuesCount,
+				UpdatedAt:  repo.UpdatedAt.Time,
+				CreatedAt:  repo.CreatedAt.Time,
 			}
 			if repo.Description != nil {
+				// remove ","" for csv export
 				ps.Description = strings.Replace(*repo.Description, ",", "", -1)
 			}
 
+			release, _, err := client.Repositories.GetLatestRelease(ctx, *repo.Owner.Login, *repo.Name)
+			if err != nil {
+				//fmt.Println("err ", err)
+			} else {
+				ps.LastReleaseAt = release.CreatedAt.Time
+				ps.DocsURL = "https://doc.crds.dev/github.com/" + *repo.GetOwner().Login + "/" + *repo.Name + "@" + *release.TagName
+				crds := util.GetNumberOfCRDs(ps.DocsURL)
+				ps.CRDsTotal = crds.Total
+				ps.CRDsAlpha = crds.Alpha
+				ps.CRDsBeta = crds.Beta
+				ps.CRDsV1 = crds.V1
+				ps.LastReleaseAt = release.CreatedAt.Time
+				ps.LastReleaseTag = *release.TagName
+			}
+
+			//TODO doesn't work
+			if repo.SubscribersCount != nil {
+				ps.Subscribers = *repo.SubscribersCount
+			}
+
+			// summary
 			providersTotal += 1
-			if crdsAlpha > 0 {
+			if ps.CRDsAlpha > 0 {
 				providersAlpha += 1
 			}
-			if crdsBeta > 0 {
+			if ps.CRDsBeta > 0 {
 				providersBeta += 1
 			}
-			if crdsV1 > 0 {
+			if ps.CRDsV1 > 0 {
 				providersV1 += 1
 			}
-			crdsTotalAlpha += crdsAlpha
-			crdsTotalBeta += crdsBeta
-			crdsTotalV1 += crdsTotalV1
-			crdsTotalTotal += crdsTotal
+			crdsTotalAlpha += ps.CRDsAlpha
+			crdsTotalBeta += ps.CRDsBeta
+			crdsTotalV1 += ps.CRDsV1
+			crdsTotalTotal += ps.CRDsV1
 
 			ch <- ps
 		}(repo)
@@ -144,7 +139,7 @@ func main() {
 			ps.OpenIssues,
 			ps.UpdatedAt.Format("2006-01-02"),
 			ps.CreatedAt.Format("2006-01-02"),
-			ps.LastRelease,
+			ps.LastReleaseAt.Format("2006-01-02"),
 			ps.DocsURL,
 			ps.CRDsTotal,
 			ps.CRDsAlpha,
@@ -170,15 +165,14 @@ func main() {
 	util.WriteToFile(summary, fmt.Sprintf("/repo/reports/repo-stats-summary-%s.csv", time.Now().Format("2006-01-02")))
 	util.WriteToFile(summary, "/repo/reports/repo-stats-summary.csv")
 
-	//Readme
 	sort.Sort(ByUpdatedAt(stats))
 
-	//readme.md
+	//released-providers.md
 	readme := "# Released Providers:\n\n"
 	readme += "||Updated|CRDs:|Alpha|Beta|V1|\n"
 	readme += "|---|---|---|---|---|---|\n"
 	for _, ps := range stats {
-		if ps.LastRelease != "" {
+		if ps.LastReleaseTag != "" {
 			readme += fmt.Sprintf("|[%s](%s) - [docs](%s)|%s||%d|%d|%d|\n",
 				ps.Fullname, ps.HTMLURL, ps.DocsURL, ps.UpdatedAt.Format("2006-01-02"), ps.CRDsAlpha, ps.CRDsBeta, ps.CRDsV1)
 		}
@@ -196,7 +190,8 @@ func main() {
 	datajs += "  lookup: { Unreleased: 'Unreleased', Alpha: 'Alpha', Beta: 'Beta', V1: 'V1' },\n"
 	datajs += "  defaultFilter: ['Alpha', 'Beta', 'V1']\n"
 	datajs += "},\n"
-	datajs += "{ title: 'CRDs', field: 'crds', filtering:false, type: 'numeric' },\n"
+	datajs += "{ title: 'CRDs', field: 'crdsTotal', filtering:false, type: 'numeric' },\n"
+	datajs += "{ title: '', field: 'description', hidden:true, searchable:true, sorting:false, filtering: false	},\n"
 	datajs += "];\n"
 
 	datajs += "const data = [\n"
@@ -211,8 +206,26 @@ func main() {
 		if ps.CRDsV1 > 0 {
 			crdsMaturity = "V1"
 		}
-		datajs += fmt.Sprintf("  {name:'%s', url: '%s', docsURL: '%s','updated': '%s', 'crdsMaturity': '%s', 'crds': '%d',},\n",
-			ps.Fullname, ps.HTMLURL, ps.DocsURL, ps.UpdatedAt.Format("2006-01-02"), crdsMaturity, ps.CRDsTotal)
+
+		//TODO create proper json
+		datajs += fmt.Sprintf("  {name:'%s', description:'%s', url: '%s', docsURL: '%s','updated': '%s', 'created': '%s',  'lastReleaseDate': '%s', 'lastReleaseTag': '%s', 'crdsMaturity': '%s', 'crdsAlpha': '%d','crdsBeta': '%d','crdsV1': '%d','crdsTotal': '%d','stargazers': '%d','subscribers': '%d','openIssues': '%d',},\n",
+			ps.Fullname,
+			ps.Description,
+			ps.HTMLURL,
+			ps.DocsURL,
+			util.DiffToTimeAsHumanReadable(ps.UpdatedAt),
+			util.DiffToTimeAsHumanReadable(ps.CreatedAt),
+			util.DiffToTimeAsHumanReadable(ps.LastReleaseAt),
+			ps.LastReleaseTag,
+			crdsMaturity,
+			ps.CRDsAlpha,
+			ps.CRDsBeta,
+			ps.CRDsV1,
+			ps.CRDsTotal,
+			ps.Stargazers,
+			ps.Subscribers,
+			ps.OpenIssues,
+		)
 	}
 	datajs += "];\n"
 	datajs += fmt.Sprintf("const exported = { data: data, columns: columns, date: '%s' }\n", time.Now().Format("2006-01-02"))

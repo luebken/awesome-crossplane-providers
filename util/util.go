@@ -5,10 +5,12 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"regexp"
 	"strings"
+	"time"
 )
 
 type OwnerRepo struct {
@@ -92,4 +94,43 @@ func GetNumberOfCRDs(url string) (cRDsStats *CRDsStats) {
 	}
 	//TODO calculate alpha / beta resources
 	return cRDsStats
+}
+
+func DiffToTimeAsHumanReadable(t2 time.Time) string {
+	t1 := time.Now()
+	diffInDays := int(math.Round(t1.Sub(t2).Hours() / 24))
+	diffInWeeks := int(math.Round(t1.Sub(t2).Hours() / 24 / 7))
+	diffInMonths := int(math.Round(t1.Sub(t2).Hours() / 24 / 31))
+	diffString := ""
+	unit := ""
+
+	if diffInDays < 1 {
+		diffString = " yesterday"
+	} else if diffInDays < 7 {
+		if diffInDays < 2 {
+			unit = "day"
+		} else {
+			unit = "days"
+		}
+		diffString = fmt.Sprintf(" %d %s ago", diffInDays, unit)
+	} else if diffInWeeks < 5 {
+		if diffInWeeks < 2 {
+			unit = "week"
+		} else {
+			unit = "weeks"
+		}
+		diffString = fmt.Sprintf(" %d %s ago", diffInWeeks, unit)
+	} else if diffInMonths > 3000 { //super hacky checking that this is not a valid date
+		diffString = "-"
+	} else {
+		if diffInMonths < 2 {
+			unit = "month"
+		} else {
+			unit = "months"
+		}
+		diffString = fmt.Sprintf(" %d %s ago", diffInMonths, unit)
+	}
+
+	return diffString
+
 }
