@@ -148,7 +148,6 @@ knfoo / provider-private-cloud,https://github.com/knfoo/provider-private-cloud,,
 cloud-pak-gitops / crossplane-provider-instana,https://github.com/cloud-pak-gitops/crossplane-provider-instana,Crossplane Provider for Instana to simplify the installation and management of Instana Cluster,0,0,0,2021-10-21,2021-10-11,0001-01-01,,0,0,0,0
 cloud-pak-gitops / crossplane-provider-cp4waiops,https://github.com/cloud-pak-gitops/crossplane-provider-cp4waiops,Crossplane Provider for Cloud Pak for Watson AIOps to simplify the installation and management of Cloud Pak for Watson AIOps,0,0,0,2021-10-21,2021-10-11,0001-01-01,,0,0,0,0
 crossplane-contrib / provider-terraform-aws,https://github.com/crossplane-contrib/provider-terraform-aws,An experimental Crossplane provider for @aws,1,0,0,2021-10-18,2020-12-15,0001-01-01,,0,0,0,0
-jianh619 / provider-instana,https://github.com/jianh619/provider-instana,,0,0,0,2021-10-18,2021-09-15,0001-01-01,,0,0,0,0
 crossplane-contrib / provider-nop,https://github.com/crossplane-contrib/provider-nop,,4,0,2,2021-10-15,2021-04-08,0001-01-01,,0,0,0,0
 cdloh / provider-tf-cloudflare,https://github.com/cdloh/provider-tf-cloudflare,,0,0,0,2021-10-14,2021-10-14,0001-01-01,,0,0,0,0
 crossplane-contrib / provider-terraform-vsphere,https://github.com/crossplane-contrib/provider-terraform-vsphere,An experimental @crossplane provider for @vmware vSphere,13,0,3,2021-10-12,2021-02-01,0001-01-01,,0,0,0,0
