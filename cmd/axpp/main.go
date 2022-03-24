@@ -165,6 +165,18 @@ func main() {
 	util.WriteToFile(summary, fmt.Sprintf("/repo/reports/repo-stats-summary-%s.csv", time.Now().Format("2006-01-02")))
 	util.WriteToFile(summary, "/repo/reports/repo-stats-summary.csv")
 
+	//repo-names.csv
+	reponames := []string{}
+	for _, ps := range stats {
+		reponames = append(reponames, ps.Fullname)
+	}
+	sort.Strings(reponames)
+	reponamesString := ""
+	for _, n := range reponames {
+		reponamesString += fmt.Sprintf("%s\n", n)
+	}
+	util.WriteToFile(reponamesString, "/repo/reports/repo-names.csv")
+
 	sort.Sort(ByUpdatedAt(stats))
 
 	//released-providers.md
@@ -230,7 +242,6 @@ func main() {
 	datajs += "];\n"
 	datajs += fmt.Sprintf("const exported = { data: data, columns: columns, date: '%s' }\n", time.Now().Format("2006-01-02"))
 	datajs += "export default exported;\n"
-
 	util.WriteToFile(datajs, "/repo/site/src/data.js")
 
 	fmt.Println("End")
