@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/google/go-github/v42/github"
-	"github.com/luebken/awesome-crossplane-providers/query"
+	"github.com/luebken/awesome-crossplane-providers/providers"
 	"github.com/luebken/awesome-crossplane-providers/util"
 	"golang.org/x/oauth2"
 )
@@ -49,6 +49,9 @@ func (ps ByUpdatedAt) Swap(i, j int)      { ps[i], ps[j] = ps[j], ps[i] }
 func main() {
 	fmt.Println("Start")
 
+	// TODO don't do this every run but selectively with manual PR
+	providers.UpdateProviderNamesToFile(client, ctx)
+
 	providersTotal := 0
 	providersAlpha := 0
 	providersBeta := 0
@@ -63,7 +66,7 @@ func main() {
 		close(ch)
 	}()
 
-	repos := query.QueryPotentialProviderRepos(client, ctx)
+	repos := providers.ProviderRepos(client, ctx)
 	for _, repo := range repos {
 		go func(repo *github.Repository) {
 			ps := ProviderStat{
@@ -147,9 +150,8 @@ func main() {
 			ps.CRDsV1)
 
 	}
-
-	util.WriteToFile(statsString, fmt.Sprintf("/repo/reports/repo-stats-%s.csv", time.Now().Format("2006-01-02")))
-	util.WriteToFile(statsString, "/repo/reports/repo-stats-latest.csv")
+	util.WriteToFile(statsString, fmt.Sprintf("reports/repo-stats-%s.csv", time.Now().Format("2006-01-02")))
+	util.WriteToFile(statsString, "reports/repo-stats-latest.csv")
 
 	//repo-stats-summary-%s.csv
 	summary := fmt.Sprintf("\nProviders Total:,%d\nProviders Alpha:,%d\nProviders Beta:,%d\nProviders V1:,%d\nCRDs Total:,%d\nCRDs Alpha:,%d\nCRDs Beta:,%d\nCRDs V1:,%d\n",
@@ -162,20 +164,8 @@ func main() {
 		crdsTotalBeta,
 		crdsTotalV1,
 	)
-	util.WriteToFile(summary, fmt.Sprintf("/repo/reports/repo-stats-summary-%s.csv", time.Now().Format("2006-01-02")))
-	util.WriteToFile(summary, "/repo/reports/repo-stats-summary.csv")
-
-	//repo-names.csv
-	reponames := []string{}
-	for _, ps := range stats {
-		reponames = append(reponames, ps.Fullname)
-	}
-	sort.Strings(reponames)
-	reponamesString := ""
-	for _, n := range reponames {
-		reponamesString += fmt.Sprintf("%s\n", n)
-	}
-	util.WriteToFile(reponamesString, "/repo/reports/repo-names.csv")
+	util.WriteToFile(summary, fmt.Sprintf("reports/repo-stats-summary-%s.csv", time.Now().Format("2006-01-02")))
+	util.WriteToFile(summary, "reports/repo-stats-summary.csv")
 
 	sort.Sort(ByUpdatedAt(stats))
 
@@ -190,7 +180,7 @@ func main() {
 		}
 	}
 	readme += "\nGenerated at: " + time.Now().Format("2006-01-02")
-	util.WriteToFile(readme, "/repo/released-providers.md")
+	util.WriteToFile(readme, "released-providers.md")
 
 	//data.js
 	datajs := "const columns = [\n"
@@ -242,7 +232,7 @@ func main() {
 	datajs += "];\n"
 	datajs += fmt.Sprintf("const exported = { data: data, columns: columns, date: '%s' }\n", time.Now().Format("2006-01-02"))
 	datajs += "export default exported;\n"
-	util.WriteToFile(datajs, "/repo/site/src/data.js")
+	util.WriteToFile(datajs, "site/src/data.js")
 
 	fmt.Println("End")
 }

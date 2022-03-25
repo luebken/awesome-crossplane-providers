@@ -18,15 +18,28 @@ type OwnerRepo struct {
 	Repo  string
 }
 
-// writes file to /reports
-func WriteToFile(s string, full_filename string) {
-	fmt.Println("\nWant to write to " + full_filename)
-	err := os.WriteFile(full_filename, []byte(s), 0644)
+//for local testing: const file_prefix = ""
+const file_prefix = "/reports/"
+
+func WriteToFile(s string, filename string) {
+	err := os.WriteFile(file_prefix+filename, []byte(s), 0644)
 	if err != nil {
 		fmt.Println("Err WriteFile ", err)
 	} else {
-		fmt.Println("Wrote to " + full_filename)
+		fmt.Println("Wrote to " + file_prefix + filename)
 	}
+}
+
+func ReadFromFile(filename string) ([]string, error) {
+	fmt.Println("Want to read frile " + file_prefix + filename)
+	bytes, err := os.ReadFile(file_prefix + filename)
+	if err != nil {
+		return nil, err
+	} else {
+		fmt.Println("Read file " + file_prefix + filename)
+	}
+	lines := strings.Split(string(bytes), "\n")
+	return lines, nil
 }
 
 type repoCRD struct {
