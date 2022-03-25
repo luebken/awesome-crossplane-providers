@@ -20,7 +20,7 @@ type OwnerRepo struct {
 
 //const file_prefix = ""
 
-const file_prefix = "/reports/"
+const file_prefix = "/repo/"
 
 func WriteToFile(s string, filename string) {
 	err := os.WriteFile(file_prefix+filename, []byte(s), 0644)
