@@ -35,7 +35,6 @@ bretagne-peiqi/terrajet-provider-example
 bryanl/provider-jet-vsphere
 cdloh/provider-tf-cloudflare
 cloud-pak-gitops/crossplane-provider-cp4waiops
-cloud-pak-gitops/crossplane-provider-instana
 cromark/provider-jet-vault
 cromark/terraform-provider-github
 crossplane-contrib/provider-argocd
