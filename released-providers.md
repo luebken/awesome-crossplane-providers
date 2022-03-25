@@ -2,8 +2,8 @@
 
 ||Updated|CRDs:|Alpha|Beta|V1|
 |---|---|---|---|---|---|
+|[crossplane / provider-aws](https://github.com/crossplane/provider-aws) - [docs](https://doc.crds.dev/github.com/crossplane/provider-aws@v0.25.0)|2022-03-25||96|37|0|
 |[crossplane-contrib / provider-digitalocean](https://github.com/crossplane-contrib/provider-digitalocean) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-digitalocean@v0.1.0)|2022-03-24||6|0|0|
-|[crossplane / provider-aws](https://github.com/crossplane/provider-aws) - [docs](https://doc.crds.dev/github.com/crossplane/provider-aws@v0.25.0)|2022-03-24||96|37|0|
 |[crossplane-contrib / provider-argocd](https://github.com/crossplane-contrib/provider-argocd) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-argocd@v0.1.0)|2022-03-24||5|0|0|
 |[crossplane-contrib / provider-kubernetes](https://github.com/crossplane-contrib/provider-kubernetes) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-kubernetes@v0.3.0)|2022-03-24||3|0|0|
 |[crossplane-contrib / provider-jet-aws](https://github.com/crossplane-contrib/provider-jet-aws) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.4.2)|2022-03-24||81|0|0|
