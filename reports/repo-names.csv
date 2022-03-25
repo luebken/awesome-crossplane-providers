@@ -119,6 +119,7 @@ jerrymccollom / provider-sample
 jgillich / crossplane-provider-scaleway
 jianh619 / cloudpak-provider
 jianh619 / crossplane-test-provider
+jianh619 / provider-instana
 jianh619 / provider-ssh
 jmazumder / provider-jet-spotinst
 jmazumder / terraform-provider-spotinst
@@ -134,7 +135,6 @@ lucj / provider-jet-exoscale
 luebken / provider-jet-rancher
 luebken / provider-stormforge
 luebken / provider-tf-rancher
-maltejk / crossplane-provider-myrasec
 maltejk / provider-metakube
 maqiuyujoyce / provider-jet-template
 matthewnolf / github-provider
