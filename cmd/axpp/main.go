@@ -49,9 +49,21 @@ func (ps ByUpdatedAt) Swap(i, j int)      { ps[i], ps[j] = ps[j], ps[i] }
 func main() {
 	fmt.Println("Start")
 
-	// TODO don't do this every run but selectively with manual PR
-	providers.UpdateProviderNamesToFile(client, ctx)
+	if len(os.Args) != 2 {
+		fmt.Println("Usage axxpp [provider-names|provider-stats]")
+		return
+	}
+	if !(os.Args[1] == "provider-names" || os.Args[1] == "provider-stats") {
+		fmt.Println("Usage axxpp [provider-names|provider-stats]")
+		return
+	}
 
+	if os.Args[1] == "provider-names" {
+		providers.UpdateProviderNamesToFile(client, ctx)
+		return
+	}
+
+	//	os.Args[1] == "provider-stats"
 	providersTotal := 0
 	providersAlpha := 0
 	providersBeta := 0
