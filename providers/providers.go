@@ -55,6 +55,8 @@ func ProviderRepos(client *github.Client, ctx context.Context) []*github.Reposit
 		repos = append(repos, repo)
 	}
 
+	fmt.Printf("Queried %d repos.", len(repos))
+	fmt.Println(repos)
 	return repos
 }
 
