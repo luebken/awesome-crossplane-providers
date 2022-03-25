@@ -27,4 +27,4 @@ COPY --from=builder go/app/axpp ./
 #COPY ./static ./static
 
 # Run the web service on container startup.
-ENTRYPOINT ["/axpp provider-stats"]
+ENTRYPOINT ["/axpp", "provider-stats"]
