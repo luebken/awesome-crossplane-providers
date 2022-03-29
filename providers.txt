@@ -132,6 +132,7 @@ keinproblem/hello-crossplane
 knfoo/provider-private-cloud
 laetho/provider-metagraf
 lucj/provider-jet-exoscale
+luebken/provider-dummy
 luebken/provider-jet-rancher
 luebken/provider-stormforge
 luebken/provider-tf-rancher
@@ -144,6 +145,7 @@ matthewnolf/grafana-provider
 matthewnolf/hello-crossplane
 meghana-rajashekar/new_repo
 meghana-rajashekar/testing-intersight
+mkram/provider-jet-gitlab
 morningspace/provider-roboshop
 mortenko/provider-template
 multicloudlab/crossplane-provider-ansible
