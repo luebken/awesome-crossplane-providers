@@ -7,12 +7,14 @@ AlertoJon-io/opsgenie-crossplane-provider
 AlertoJon-io/pagerduty-crossplane-provider
 ArunRamakani/hashicorp-provider
 ArunRamakani/provider-jet-grafana
+DZhuribeda/provider-jet-digitalocean
 Giomaster/azuredevops-jet
 HoogWater/provider-naas
 IBM/crossplane-provider-aws
 IBM/crossplane-provider-ibm-cloud
 IBM/crossplane-provider-kubernetes
 LucaLanziani/provider-jet-cloudflare
+MariusLeahu/provider-jet-aws4
 Piotr1215/provider-dogfacts
 Piotr1215/provider-jet-archive
 Telemetron/provider-jet-datadog
