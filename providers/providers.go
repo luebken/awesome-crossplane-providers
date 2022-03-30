@@ -44,15 +44,22 @@ func ProviderRepos(client *github.Client, ctx context.Context) []*github.Reposit
 	for _, pr := range providerNames {
 		go func(pr ProviderName) {
 			fmt.Print(".")
-			repo, _, _ := client.Repositories.Get(ctx, pr.Owner, pr.Repo)
-			ch <- repo
+			repo, _, err := client.Repositories.Get(ctx, pr.Owner, pr.Repo)
+			if err != nil {
+				fmt.Printf("Error querying '%v-%v'. Ignoring.", pr.Owner, pr.Repo)
+				ch <- nil
+			} else {
+				ch <- repo
+			}
 		}(pr)
 	}
 
 	for i := 0; i < len(providerNames); i++ {
 		fmt.Print(".") // progress indicator
 		repo := <-ch
-		repos = append(repos, repo)
+		if repo != nil {
+			repos = append(repos, repo)
+		}
 	}
 
 	fmt.Printf("Queried %d repos.\n", len(repos))
