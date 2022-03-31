@@ -2,13 +2,13 @@
 
 ||Updated|CRDs:|Alpha|Beta|V1|
 |---|---|---|---|---|---|
+|[crossplane-contrib / provider-digitalocean](https://github.com/crossplane-contrib/provider-digitalocean) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-digitalocean@v0.1.0)|2022-03-30||6|0|0|
 |[crossplane / provider-aws](https://github.com/crossplane/provider-aws) - [docs](https://doc.crds.dev/github.com/crossplane/provider-aws@v0.25.0)|2022-03-30||96|37|0|
 |[crossplane-contrib / provider-jet-aws](https://github.com/crossplane-contrib/provider-jet-aws) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.4.2)|2022-03-29||81|0|0|
 |[crossplane / provider-gcp](https://github.com/crossplane/provider-gcp) - [docs](https://doc.crds.dev/github.com/crossplane/provider-gcp@v0.21.0)|2022-03-29||17|11|0|
 |[crossplane-contrib / provider-kubernetes](https://github.com/crossplane-contrib/provider-kubernetes) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-kubernetes@v0.3.0)|2022-03-29||3|0|0|
 |[crossplane-contrib / provider-jet-mongodbatlas](https://github.com/crossplane-contrib/provider-jet-mongodbatlas) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-mongodbatlas@v0.2.1)|2022-03-27||39|0|0|
 |[crossplane-contrib / provider-jet-gcp](https://github.com/crossplane-contrib/provider-jet-gcp) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-gcp@v0.2.0-preview)|2022-03-26||438|0|0|
-|[crossplane-contrib / provider-digitalocean](https://github.com/crossplane-contrib/provider-digitalocean) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-digitalocean@v0.1.0)|2022-03-24||6|0|0|
 |[crossplane-contrib / provider-argocd](https://github.com/crossplane-contrib/provider-argocd) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-argocd@v0.1.0)|2022-03-24||5|0|0|
 |[crossplane-contrib / provider-sql](https://github.com/crossplane-contrib/provider-sql) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-sql@v0.4.1)|2022-03-23||16|0|0|
 |[crossplane-contrib / provider-jet-azure](https://github.com/crossplane-contrib/provider-jet-azure) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-azure@v0.8.0-preview)|2022-03-23||646|0|0|
@@ -28,4 +28,4 @@
 |[IBM / crossplane-provider-ibm-cloud](https://github.com/IBM/crossplane-provider-ibm-cloud) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-ibm-cloud@v1.5.0)|2022-01-10||13|2|0|
 |[IBM / crossplane-provider-kubernetes](https://github.com/IBM/crossplane-provider-kubernetes) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.5.0)|2022-01-05||3|0|0|
 
-Generated at: 2022-03-30
+Generated at: 2022-03-31
