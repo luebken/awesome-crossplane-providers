@@ -2,7 +2,7 @@
 
 ||Updated|CRDs:|Alpha|Beta|V1|
 |---|---|---|---|---|---|
-|[crossplane / provider-aws](https://github.com/crossplane/provider-aws) - [docs](https://doc.crds.dev/github.com/crossplane/provider-aws@v0.26.0)|2022-04-12||98|37|0|
+|[crossplane / provider-aws](https://github.com/crossplane/provider-aws) - [docs](https://doc.crds.dev/github.com/crossplane/provider-aws@v0.26.0)|2022-04-14||98|37|0|
 |[crossplane-contrib / provider-jet-aws](https://github.com/crossplane-contrib/provider-jet-aws) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.4.2)|2022-04-11||81|0|0|
 |[crossplane-contrib / provider-jet-mongodbatlas](https://github.com/crossplane-contrib/provider-jet-mongodbatlas) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-mongodbatlas@v0.2.1)|2022-04-07||39|0|0|
 |[crossplane-contrib / provider-digitalocean](https://github.com/crossplane-contrib/provider-digitalocean) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-digitalocean@v0.1.0)|2022-04-06||6|0|0|
@@ -32,4 +32,4 @@
 |[IBM / crossplane-provider-ibm-cloud](https://github.com/IBM/crossplane-provider-ibm-cloud) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-ibm-cloud@v1.5.0)|2022-01-10||13|2|0|
 |[IBM / crossplane-provider-kubernetes](https://github.com/IBM/crossplane-provider-kubernetes) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.5.0)|2022-01-05||3|0|0|
 
-Generated at: 2022-04-14
+Generated at: 2022-04-15
