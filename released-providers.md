@@ -2,7 +2,8 @@
 
 ||Updated|CRDs:|Alpha|Beta|V1|
 |---|---|---|---|---|---|
-|[crossplane-contrib / provider-terraform](https://github.com/crossplane-contrib/provider-terraform) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-terraform@v0.2.0)|2022-04-22||3|0|0|
+|[crossplane-contrib / provider-jet-rancher](https://github.com/crossplane-contrib/provider-jet-rancher) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-rancher@v0.1.0)|2022-04-23||53|0|0|
+|[crossplane-contrib / provider-terraform](https://github.com/crossplane-contrib/provider-terraform) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-terraform@v0.2.0)|2022-04-23||3|0|0|
 |[grafana / crossplane-provider-grafana](https://github.com/grafana/crossplane-provider-grafana) - [docs](https://doc.crds.dev/github.com/grafana/crossplane-provider-grafana@v0.1.0)|2022-04-22||27|0|0|
 |[crossplane-contrib / provider-gitlab](https://github.com/crossplane-contrib/provider-gitlab) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-gitlab@v0.2.0)|2022-04-21||8|2|0|
 |[crossplane / provider-aws](https://github.com/crossplane/provider-aws) - [docs](https://doc.crds.dev/github.com/crossplane/provider-aws@v0.26.1)|2022-04-21||98|37|0|
@@ -27,10 +28,9 @@
 |[crossplane-contrib / provider-equinix-metal](https://github.com/crossplane-contrib/provider-equinix-metal) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-equinix-metal@v0.0.11)|2022-02-11||3|2|0|
 |[crossplane / provider-gcp-beta](https://github.com/crossplane/provider-gcp-beta) - [docs](https://doc.crds.dev/github.com/crossplane/provider-gcp-beta@v0.1.0)|2022-02-08||2|4|0|
 |[dfds / provider-confluent](https://github.com/dfds/provider-confluent) - [docs](https://doc.crds.dev/github.com/dfds/provider-confluent@v0.0.4)|2022-02-04||6|0|0|
-|[crossplane-contrib / provider-jet-rancher](https://github.com/crossplane-contrib/provider-jet-rancher) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-rancher@v0.1.0)|2022-01-26||53|0|0|
 |[crossplane-contrib / provider-styra](https://github.com/crossplane-contrib/provider-styra) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-styra@v0.2.0)|2022-01-18||6|0|0|
 |[crossplane-contrib / provider-influxdb](https://github.com/crossplane-contrib/provider-influxdb) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-influxdb@v0.1.2)|2022-01-10||5|0|0|
 |[IBM / crossplane-provider-ibm-cloud](https://github.com/IBM/crossplane-provider-ibm-cloud) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-ibm-cloud@v1.5.0)|2022-01-10||13|2|0|
 |[IBM / crossplane-provider-kubernetes](https://github.com/IBM/crossplane-provider-kubernetes) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.5.0)|2022-01-05||3|0|0|
 
-Generated at: 2022-04-23
+Generated at: 2022-04-24
