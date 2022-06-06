@@ -2,8 +2,8 @@
 
 ||Updated|CRDs:|Alpha|Beta|V1|
 |---|---|---|---|---|---|
+|[crossplane-contrib / provider-terraform](https://github.com/crossplane-contrib/provider-terraform) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-terraform@v0.2.0)|2022-06-05||3|0|0|
 |[crossplane-contrib / provider-aws](https://github.com/crossplane-contrib/provider-aws) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-aws@v0.27.0)|2022-06-04||124|37|0|
-|[crossplane-contrib / provider-terraform](https://github.com/crossplane-contrib/provider-terraform) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-terraform@v0.2.0)|2022-06-04||3|0|0|
 |[crossplane-contrib / provider-azure](https://github.com/crossplane-contrib/provider-azure) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-azure@v0.19.0)|2022-06-03||17|7|0|
 |[crossplane-contrib / provider-sql](https://github.com/crossplane-contrib/provider-sql) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-sql@v0.5.0)|2022-06-03||16|0|0|
 |[crossplane-contrib / provider-jet-azure](https://github.com/crossplane-contrib/provider-jet-azure) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-azure@v0.10.0-preview)|2022-05-29||648|0|0|
@@ -33,7 +33,6 @@
 |[dfds / provider-confluent](https://github.com/dfds/provider-confluent) - [docs](https://doc.crds.dev/github.com/dfds/provider-confluent@v0.0.4)|2022-02-04||6|0|0|
 |[crossplane-contrib / provider-styra](https://github.com/crossplane-contrib/provider-styra) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-styra@v0.2.0)|2022-01-18||6|0|0|
 |[crossplane-contrib / provider-influxdb](https://github.com/crossplane-contrib/provider-influxdb) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-influxdb@v0.1.2)|2022-01-10||5|0|0|
-|[IBM / crossplane-provider-ibm-cloud](https://github.com/IBM/crossplane-provider-ibm-cloud) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-ibm-cloud@v1.5.0)|2022-01-10||13|2|0|
 |[IBM / crossplane-provider-kubernetes](https://github.com/IBM/crossplane-provider-kubernetes) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.5.0)|2022-01-05||3|0|0|
 
-Generated at: 2022-06-05
+Generated at: 2022-06-06
