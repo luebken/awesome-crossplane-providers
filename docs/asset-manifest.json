@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/awesome-crossplane-providers/static/css/main.08730fc5.chunk.css",
-    "main.js": "/awesome-crossplane-providers/static/js/main.c5141b9b.chunk.js",
-    "main.js.map": "/awesome-crossplane-providers/static/js/main.c5141b9b.chunk.js.map",
+    "main.js": "/awesome-crossplane-providers/static/js/main.07b6b560.chunk.js",
+    "main.js.map": "/awesome-crossplane-providers/static/js/main.07b6b560.chunk.js.map",
     "runtime-main.js": "/awesome-crossplane-providers/static/js/runtime-main.e9947960.js",
     "runtime-main.js.map": "/awesome-crossplane-providers/static/js/runtime-main.e9947960.js.map",
     "static/js/2.b0bf218b.chunk.js": "/awesome-crossplane-providers/static/js/2.b0bf218b.chunk.js",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.e9947960.js",
     "static/js/3.1351757a.chunk.js",
     "static/css/main.08730fc5.chunk.css",
-    "static/js/main.c5141b9b.chunk.js"
+    "static/js/main.07b6b560.chunk.js"
   ]
 }

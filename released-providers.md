@@ -37,4 +37,4 @@
 |[IBM / crossplane-provider-ibm-cloud](https://github.com/IBM/crossplane-provider-ibm-cloud) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-ibm-cloud@v1.8.0)|2022-01-10||13|2|0|
 |[IBM / crossplane-provider-kubernetes](https://github.com/IBM/crossplane-provider-kubernetes) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.8.0)|2022-01-05||3|0|0|
 
-Generated at: 2022-07-03
+Generated at: 2022-07-04
