@@ -3,8 +3,8 @@ name: provider-stats
 
 on:
   # Daily
-  schedule:
-    - cron: "59 23 * * *"
+  # schedule:
+  #   - cron: "59 23 * * *"
   # Manually from the Actions tab
   workflow_dispatch:
 
