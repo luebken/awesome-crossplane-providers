@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"sort"
 	"strings"
+	"time"
 
 	"github.com/google/go-github/v42/github"
 	"github.com/luebken/awesome-crossplane-providers/util"
@@ -42,11 +43,14 @@ func ProviderRepos(client *github.Client, ctx context.Context) []*github.Reposit
 
 	providerNames := getProviderNamesFromFile()
 	for _, pr := range providerNames {
+		// workaround for socket: too many open files error
+		time.Sleep(20 * time.Millisecond)
 		go func(pr ProviderName) {
 			fmt.Print(".")
 			repo, _, err := client.Repositories.Get(ctx, pr.Owner, pr.Repo)
 			if err != nil {
 				fmt.Printf("Error querying 'https://github.com/%v/%v'. Ignoring. ", pr.Owner, pr.Repo)
+				fmt.Printf("\n\nerr %v\n\n", err)
 				ch <- nil
 			} else {
 				ch <- repo

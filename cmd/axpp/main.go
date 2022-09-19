@@ -80,6 +80,7 @@ func main() {
 
 	repos := providers.ProviderRepos(client, ctx)
 	for _, repo := range repos {
+		time.Sleep(20 * time.Millisecond)
 		go func(repo *github.Repository) {
 			ps := ProviderStat{
 				Fullname:   *repo.Owner.Login + " / " + *repo.Name, // Extra whitepace for readability
@@ -100,7 +101,7 @@ func main() {
 			} else {
 				ps.LastReleaseAt = release.CreatedAt.Time
 				ps.DocsURL = "https://doc.crds.dev/github.com/" + *repo.GetOwner().Login + "/" + *repo.Name + "@" + *release.TagName
-				crds := util.GetNumberOfCRDs(ps.DocsURL)
+				crds := util.GetNumberOfCRDsFromCRDsDev(ps.DocsURL)
 				ps.CRDsTotal = crds.Total
 				ps.CRDsAlpha = crds.Alpha
 				ps.CRDsBeta = crds.Beta
