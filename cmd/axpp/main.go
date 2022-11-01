@@ -101,11 +101,13 @@ func main() {
 			} else {
 				ps.LastReleaseAt = release.CreatedAt.Time
 				ps.DocsURL = "https://doc.crds.dev/github.com/" + *repo.GetOwner().Login + "/" + *repo.Name + "@" + *release.TagName
-				crds := util.GetNumberOfCRDsFromCRDsDev(ps.DocsURL)
-				ps.CRDsTotal = crds.Total
-				ps.CRDsAlpha = crds.Alpha
-				ps.CRDsBeta = crds.Beta
-				ps.CRDsV1 = crds.V1
+				crds, err := util.GetNumberOfCRDsFromCRDsDev(ps.DocsURL)
+				if err == nil {
+					ps.CRDsTotal = crds.Total
+					ps.CRDsAlpha = crds.Alpha
+					ps.CRDsBeta = crds.Beta
+					ps.CRDsV1 = crds.V1
+				}
 				ps.LastReleaseAt = release.CreatedAt.Time
 				ps.LastReleaseTag = *release.TagName
 			}

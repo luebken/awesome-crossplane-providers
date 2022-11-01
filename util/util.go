@@ -2,6 +2,7 @@ package util
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -18,9 +19,9 @@ type OwnerRepo struct {
 	Repo  string
 }
 
-//const file_prefix = ""
+const file_prefix = ""
 
-const file_prefix = "/repo/"
+//const file_prefix = "/repo/"
 
 func WriteToFile(s string, filename string) {
 	err := os.WriteFile(file_prefix+filename, []byte(s), 0644)
@@ -32,7 +33,7 @@ func WriteToFile(s string, filename string) {
 }
 
 func ReadFromFile(filename string) ([]string, error) {
-	fmt.Println("Want to read frile " + file_prefix + filename)
+	fmt.Println("Want to read file " + file_prefix + filename)
 	bytes, err := os.ReadFile(file_prefix + filename)
 	if err != nil {
 		return nil, err
@@ -68,10 +69,10 @@ type CRDsStats struct {
 	V1    int
 }
 
-func GetNumberOfCRDs(url string) (cRDsStats *CRDsStats) {
-	res, err := http.Get(url)
+func GetNumberOfCRDsFromCRDsDev(docsURL string) (cRDsStats *CRDsStats, err error) {
+	res, err := http.Get(docsURL)
 	if err != nil {
-		log.Fatal(err)
+		return nil, err
 	}
 	defer res.Body.Close()
 	if res.StatusCode != 200 {
@@ -80,16 +81,22 @@ func GetNumberOfCRDs(url string) (cRDsStats *CRDsStats) {
 
 	buf, err := ioutil.ReadAll(res.Body)
 	if err != nil {
-		log.Fatal(err)
+		return nil, err
 	}
 	s := string(buf)
-	r, _ := regexp.Compile(`JSON\.parse\(.(.*).\)`)
-	rawMatch := r.FindStringSubmatch(s)[1]
-
+	r, err := regexp.Compile(`JSON\.parse\(.(.*).\)`)
+	if err != nil {
+		return nil, err
+	}
+	match := r.FindStringSubmatch(s)
+	if len(match) == 0 {
+		return nil, errors.New("FindStringSubmatch")
+	}
+	rawMatch := match[1]
 	var orgData orgData
 	err = json.Unmarshal([]byte(rawMatch), &orgData)
 	if err != nil {
-		log.Fatal(err)
+		return nil, err
 	}
 
 	cRDsStats = new(CRDsStats)
@@ -107,7 +114,7 @@ func GetNumberOfCRDs(url string) (cRDsStats *CRDsStats) {
 		}
 	}
 	//TODO calculate alpha / beta resources
-	return cRDsStats
+	return cRDsStats, nil
 }
 
 func DiffToTimeAsHumanReadable(t2 time.Time) string {
