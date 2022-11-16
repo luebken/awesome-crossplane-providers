@@ -442,7 +442,6 @@ worzeel/provider-jenkins
 xuyaming0800/crossplane-provider-test
 yandex-cloud/provider-jet-yc
 yannickcastano/crossplane-aci
-ym-Arcadia/provider-aws
 ytsarev/demo-uptest-intergration
 yyai326/provider-yy
 zeemy23/crossplane-launchdarkly
