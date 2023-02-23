@@ -23,11 +23,3 @@ run-local-provider-names:
 
 run-local-provider-stats:
 	go run ./cmd/axpp/main.go provider-stats
-
-build-site:
-	cd site; npm run build
-	rm -rf docs/*
-	mv site/build/* docs/
-
-serve-site:
-	cd site; npm run start
