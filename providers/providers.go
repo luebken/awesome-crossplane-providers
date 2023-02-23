@@ -20,6 +20,12 @@ func (pn ProviderName) Fullname() string {
 	return pn.Owner + "/" + pn.Repo
 }
 
+type SortedProviderName []ProviderName
+
+func (a SortedProviderName) Len() int           { return len(a) }
+func (a SortedProviderName) Less(i, j int) bool { return a[i].Fullname() < a[j].Fullname() }
+func (a SortedProviderName) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+
 var (
 	providerSearchQueries = []string{
 		`archived:false in:readme,name,description "is a crossplane provider"`,
@@ -90,7 +96,7 @@ func getProviderNamesFromFile() []ProviderName {
 			providerNames = append(providerNames, providerName)
 		}
 	}
-	fmt.Printf("Found %d unique providers in providers.txt.\n", len(providerNames))
+	fmt.Printf("Found %d providers in providers.txt excluding providers-ignored.txt\n", len(providerNames))
 	return providerNames
 }
 
@@ -147,24 +153,30 @@ func UpdateProviderNamesToFile(client *github.Client, ctx context.Context) {
 
 	// TODO search from topics
 
-	repos = removeDuplicateRepos(repos)
-	reposNames := []string{}
+	reposNames := []ProviderName{}
 	for _, r := range repos {
-		reposNames = append(reposNames, *r.FullName)
+		reposNames = append(reposNames, ProviderName{*r.Owner.Login, *r.Name})
 	}
-	sort.Strings(reposNames)
-	// TODO don't write if its on the ingore list
+
+	oldRepoNames := getProviderNamesFromFile()
+	reposNames = append(reposNames, oldRepoNames...)
+
+	reposNames = removeDuplicateRepos(reposNames)
+	sort.Sort(SortedProviderName(reposNames))
 	fmt.Printf("\nFound %d provider repos.\n", len(reposNames))
-	s := strings.Join(reposNames, "\n")
+	s := ""
+	for _, rn := range reposNames {
+		s = s + rn.Fullname() + "\n"
+	}
 	util.WriteToFile(s, "providers.txt")
 }
 
-func removeDuplicateRepos(repos []*github.Repository) []*github.Repository {
+func removeDuplicateRepos(repos []ProviderName) []ProviderName {
 	keys := make(map[string]bool)
-	list := []*github.Repository{}
+	list := []ProviderName{}
 	for _, repo := range repos {
-		if _, value := keys[*repo.HTMLURL]; !value {
-			keys[*repo.HTMLURL] = true
+		if _, value := keys[repo.Fullname()]; !value {
+			keys[repo.Fullname()] = true
 			list = append(list, repo)
 		}
 	}
