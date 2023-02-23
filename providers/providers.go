@@ -47,7 +47,7 @@ func ProviderRepos(client *github.Client, ctx context.Context) []*github.Reposit
 		close(ch)
 	}()
 
-	providerNames := getProviderNamesFromFile()
+	providerNames := getProviderNamesFromFileWithoutIgnored()
 	for _, pr := range providerNames {
 		// workaround for socket: too many open files error
 		time.Sleep(20 * time.Millisecond)
@@ -75,8 +75,27 @@ func ProviderRepos(client *github.Client, ctx context.Context) []*github.Reposit
 	return repos
 }
 
-// All provider names from "providers.txt" excluding "providers-ignored.txt"
+// All provider names from "providers.txt"
 func getProviderNamesFromFile() []ProviderName {
+	lines, err := util.ReadFromFile("providers.txt")
+	if err != nil {
+		panic(err)
+	}
+	providerNames := []ProviderName{}
+	for _, l := range lines {
+		if !strings.HasPrefix(l, "#") {
+			var providerName ProviderName
+			providerName.Owner = strings.Split(l, "/")[0]
+			providerName.Repo = strings.Split(l, "/")[1]
+			providerNames = append(providerNames, providerName)
+		}
+	}
+	fmt.Printf("Found %d providers in providers.txt\n", len(providerNames))
+	return providerNames
+}
+
+// All provider names from "providers.txt" excluding "providers-ignored.txt"
+func getProviderNamesFromFileWithoutIgnored() []ProviderName {
 	lines, err := util.ReadFromFile("providers.txt")
 	if err != nil {
 		panic(err)
