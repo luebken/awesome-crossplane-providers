@@ -24,6 +24,7 @@ Damiang95/provider-damyan
 DanielVilaFalcon/terra-test
 DavidBajus/provider-github-example
 EttoreFoti/provider-hertznercloud
+FCosta999/provider-openstack
 FrangipaneTeam/provider-flexibleengine
 FrangipaneTeam/provider-vcd
 Giomaster/azuredevops-jet
@@ -361,6 +362,7 @@ luebken/provider-stormforge
 luebken/provider-tf-rancher
 luebken/provider-vultr
 luisgj/poc-crossplane-provider
+m-augustine/provider-auth0
 malarinv/provider-jet-gitea
 maltejk/crossplane-provider-myrasec
 maltejk/provider-jet-metakube
@@ -402,6 +404,7 @@ nelscata/crossplane-aws-provider
 nest000/provider-alks
 nickebbitt/provider-filesystem
 niiku/crossplane-example-provider
+niklasbeinghaus/provider-bitwarden
 nlamirault/provider-jet-scaleway
 noseka1/github-terrajet-provider
 octo-technology/provider-jet-scaleway
