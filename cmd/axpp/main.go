@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/google/go-github/v42/github"
+	"github.com/google/go-github/v50/github"
 	"github.com/luebken/awesome-crossplane-providers/providers"
 	"github.com/luebken/awesome-crossplane-providers/util"
 	"golang.org/x/oauth2"
