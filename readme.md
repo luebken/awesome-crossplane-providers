@@ -4,7 +4,7 @@ This project queries a set of [Awesome Crossplane Providers](providers.txt) and 
 
 * An interactive table: [luebken.github.io/awesome-crossplane-providers](https://luebken.github.io/awesome-crossplane-providers/)
 * A markdown file: [released-providers.md](./released-providers.md)
-* A CSV: [repo-stats-latest.csv](./reports/repo-stats-latest.csv)
+* A CSV: [repo-stats-latest.csv](https://blocks.githubnext.com/luebken/awesome-crossplane-providers/blob/master/reports/repo-stats-latest.csv?blockKey=githubnext__blocks-examples__flat&fullscreen=1)
 
 ## How
 
