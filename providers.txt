@@ -16,6 +16,8 @@ BaburajSoumya/provider-jet-akamai
 Breee/provider-vault
 BrennenMM7/provider-newrelic
 BrennenMM7/provider-newrelics
+CalinFlorescu/provider-gcp-haiilo
+DANIELF01/provider-databricks
 DZhuribeda/provider-jet-digitalocean
 Damiang95/dynatrace_damyan
 Damiang95/provider-damyan
@@ -31,6 +33,7 @@ HotThoughts/provider-jet-github
 IBM/crossplane-provider-aws
 IBM/crossplane-provider-ibm-cloud
 IBM/crossplane-provider-kubernetes
+IntaSlapna/provider-github
 IvanTurgenev1/monitoring-provider
 IvanTurgenev1/provider-ldap1
 IvanTurgenev1/provider-salt
@@ -59,12 +62,12 @@ Striar-Yunis/provider-jet-rancher-test
 Striar-Yunis/provider-jet-rke
 SuryaLeon/apigeebasic
 SuryaLeon/apigeebasictwo
-SuryaLeon/provider-apg
 SuryaLeon/jettemplate
+SuryaLeon/provider-apg
 SuryaLeon/provider-taurus
 SuryaLeon/upapigee
-Teja446/apigee_provider
 Teja446/Provider_Jet_Mongodb
+Teja446/apigee_provider
 Teja446/apigeeprov
 Teja446/crossplane-gitprovider
 Teja446/demoprovider1
@@ -89,6 +92,7 @@ ahan0123/provider-jet-random
 ajwgroup/provider-jet-azuread
 akuity/awesome-argo
 alex-broad/crossplane-provider-template
+alexinthesky/provider-postgresql
 alexisries/provider-petstore
 alexisries/terrajet-test-dd
 alperencelik/crossplane-terrajet-sample
@@ -96,6 +100,7 @@ anandgopalanantham/aws_provider
 anandgopalanantham/myawsprovider
 anasinnyk/provider-cloudflare
 anasinnyk/provider-github
+andy-mcgrath/provider-gitlab
 anka-software/provider-jet-vra
 ankasoftco/provider-cmdb
 ankasoftco/provider-jenkins
@@ -112,15 +117,20 @@ appclacks/provider-appclacks
 arianvp/provider-jet-vultr
 arijanluiken/shizzle-provider
 arnefm/terrajet-template
+ashwinshirva/crossplane
+ashwinshirva/provider-grpc
+ashwinshirva/provider-template
 balu-ce/provider-spotinst
 barunavo/provider-demo
-batthebee/provider-jet-vault
 batthebee/provider-jet-github
+batthebee/provider-jet-vault
 beeyingl/provider-github
 beeyingl/provider-netbox
 beeyingl/provider-netbox-generic
 beeyingln/provider-github
 beeyingln/provider-github-1
+beeyingln/provider-netbox
+beeyingln/provider-terraform
 benagricola/provider-aws-irsa
 benagricola/provider-externaldata
 benagricola/provider-yaegi
@@ -131,6 +141,8 @@ bryanl/provider-jet-vsphere
 cdloh/crossplane-provider-dynatrace
 cdloh/provider-cloudflare
 cdloh/provider-tf-cloudflare
+cevans111/provider-rancher
+cevans111/provider-rancher2
 charliemaiors/provider-jet-jenkins
 charliemaiors/provider-jet-xenorchestra
 chicoribas/provider-github
@@ -189,6 +201,7 @@ crossplane-contrib/provider-newrelic
 crossplane-contrib/provider-nop
 crossplane-contrib/provider-opsgenie
 crossplane-contrib/provider-pagerduty
+crossplane-contrib/provider-palette
 crossplane-contrib/provider-planetscale
 crossplane-contrib/provider-rancher
 crossplane-contrib/provider-rook
@@ -220,6 +233,7 @@ d3ployment/provider-jet-esxi
 davidcollom/crossplane-jet-cloudflare
 davidcollom/crossplane-jet-uptimerobot
 devops-chris/provider-jet-gh
+devops-chris/provider-twingate
 devopsrockers/provider-planetscale
 dfds/provider-confluent
 dgmorales/crossplane-provider-approval
@@ -227,8 +241,8 @@ dhano6/provider-dev-planetscale
 dirien/provider-minectl
 dkb-bank/provider-opensearch
 dkb-bank/provider-zscaler-zpa
-dormullor/provider-rosa
 dormullor/provider-rancher
+dormullor/provider-rosa
 dorroddorrod/provider-kops
 dorroddorrod/provider-openshift
 driosalido/provider-opsgenie
@@ -255,6 +269,7 @@ gmichelo/test-crossplane-provider
 grafana/crossplane-provider-grafana
 gruberdev/provider-vultr
 guiguan/provider-jet-cloudflare
+haarchri/provider-opensearch
 haardikdharma10/terrajet-test
 halochou/crossplane-provider-jet-openstack
 haorenfsa/provider-milvus
@@ -262,6 +277,7 @@ hasheddan/kc-provider-github
 headyj/crossplane-provider-neo4j
 herveleclerc/crossplane-provider-azure
 hprotzek/provider-jet-okta
+iddunk/crossplane-provider
 ig12/crossplanprovider
 ionos-cloud/crossplane-provider-ionoscloud
 itera-io/provider-jet-taikun
@@ -328,6 +344,7 @@ kirubaCathrin/provideraws
 kmn-Arcadia/provider-aws
 knfoo/provider-private-cloud
 knowshan/provider-jet-template
+krateoplatformops/provider-azuredevops
 kssaril/provider-jet-github
 kubefirst/provider-civo
 kumarshivam12/aws-crd-provider
@@ -369,6 +386,7 @@ mleahu/provider-jet-aws4
 mleahu/provider-jet-awssc
 mmontes11/provider-cockroachdb
 moeller142/provider-test
+mondragonfx/crossplane-vultr-provider
 mondragonfx/provider-vultr
 morningspace/provider-roboshop
 mortenko/provider-template
@@ -392,6 +410,8 @@ ok-amba/provider-datadog
 ok-amba/provider-opsgenie
 opendevsecopsio/crossplane-provider-jet-vsphere
 opentelekomcloud/provider-jet-opentelekomcloud
+oracle-samples/provider-jet-oci
+outscale-vbr/upjet-provider-outscale
 parul5sahoo/k8s-test-provider
 parul5sahoo/test_provider
 perlinger/provider-jet-github
@@ -459,11 +479,14 @@ shahidv3/git-provider-jet
 shahidv3/oracle-provider
 shahidv3/provider-jet-oracle
 shailsirohi/orchestration-provider
+shift/provider-gsuite
 siddharthlal-cn/scratch-provider
 simonkaiser9/provider-authentik
 simonkaiser9/provider-jet-authentik
 skydjol/provider-terrajet-ovh
 smileisak/provider-harbor
+smondeli/provider-github
+smondeli/provider-oci
 spectrocloud/provider-jet-palette
 spkane/crossplane-provider-jet-todo
 srlobo/provider-redislabs
@@ -484,7 +507,6 @@ systemstart/terrajet-stunts
 tannerrs/provider-jet-tmc
 tanujd11/provider-jet-aws
 teaglebuilt/provider-proxmox
-terrytangyuan/awesome-argo
 thunderboltsid/provider-jet-nutanix
 timgchile/provider-jet-cloudamqp
 timgchile/provider-jet-elasticcloud
@@ -508,9 +530,11 @@ udemirtas-ankasoftco/test-template
 upbound/demo-uptest-integration
 upbound/provider-aws
 upbound/provider-azure
+upbound/provider-azuread
 upbound/provider-gcp
 upbound/provider-terraform
 upbound/upjet-provider-template
+upsidr/provider-civo-upjet
 vasu1124/provider-planetscale
 vbergbauer/sample-provider-jet
 vestas/provider-jet-vsphere
