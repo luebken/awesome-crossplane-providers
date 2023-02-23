@@ -194,58 +194,5 @@ func main() {
 	}
 	readme += "\nGenerated at: " + time.Now().Format("2006-01-02")
 	util.WriteToFile(readme, "released-providers.md")
-
-	//data.js
-	datajs := "const columns = [\n"
-	datajs += "{ title: 'Provider', field: 'name', filtering:false, headerStyle: {minWidth: 400}, cellStyle: {minWidth: 400}, render: rowData => <a href={rowData.url}>{rowData.name}</a> },\n"
-	datajs += "{ title: '', field: 'docs', filtering:false, render: rowData => { if (rowData.docsURL !== '') return <a href={rowData.docsURL}>Docs</a> } },\n"
-	datajs += "{ title: 'Updated', field: 'updated', filtering:false},\n"
-	datajs += "{\n"
-	datajs += "  title: 'CRDs maturity', field: 'crdsMaturity',\n"
-	datajs += "  lookup: { Unreleased: 'Unreleased', Alpha: 'Alpha', Beta: 'Beta', V1: 'V1' },\n"
-	datajs += "  defaultFilter: ['Alpha', 'Beta', 'V1']\n"
-	datajs += "},\n"
-	datajs += "{ title: 'CRDs', field: 'crdsTotal', filtering:false, type: 'numeric' },\n"
-	datajs += "{ title: '', field: 'description', hidden:true, searchable:true, sorting:false, filtering: false	},\n"
-	datajs += "];\n"
-
-	datajs += "const data = [\n"
-	for _, ps := range stats {
-		crdsMaturity := "Unreleased"
-		if ps.CRDsAlpha > 0 {
-			crdsMaturity = "Alpha"
-		}
-		if ps.CRDsBeta > 0 {
-			crdsMaturity = "Beta"
-		}
-		if ps.CRDsV1 > 0 {
-			crdsMaturity = "V1"
-		}
-
-		//TODO create proper json
-		datajs += fmt.Sprintf("  {name:'%s', description:'%s', url: '%s', docsURL: '%s','updated': '%s', 'created': '%s',  'lastReleaseDate': '%s', 'lastReleaseTag': '%s', 'crdsMaturity': '%s', 'crdsAlpha': '%d','crdsBeta': '%d','crdsV1': '%d','crdsTotal': '%d','stargazers': '%d','subscribers': '%d','openIssues': '%d',},\n",
-			ps.Fullname,
-			ps.Description,
-			ps.HTMLURL,
-			ps.DocsURL,
-			util.DiffToTimeAsHumanReadable(ps.UpdatedAt),
-			util.DiffToTimeAsHumanReadable(ps.CreatedAt),
-			util.DiffToTimeAsHumanReadable(ps.LastReleaseAt),
-			ps.LastReleaseTag,
-			crdsMaturity,
-			ps.CRDsAlpha,
-			ps.CRDsBeta,
-			ps.CRDsV1,
-			ps.CRDsTotal,
-			ps.Stargazers,
-			ps.Subscribers,
-			ps.OpenIssues,
-		)
-	}
-	datajs += "];\n"
-	datajs += fmt.Sprintf("const exported = { data: data, columns: columns, date: '%s' }\n", time.Now().Format("2006-01-02"))
-	datajs += "export default exported;\n"
-	util.WriteToFile(datajs, "site/src/data.js")
-
 	fmt.Println("End")
 }
