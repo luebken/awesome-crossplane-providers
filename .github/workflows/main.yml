@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE
-      - uses: actions/checkout@v2
-      - name: test
+      - uses: actions/checkout@v3
+      - name: go-run
         run: |
-          echo helloworld
+          go run ./cmd/axpp/main.go provider-names
