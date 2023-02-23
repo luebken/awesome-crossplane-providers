@@ -33,5 +33,5 @@ kirubaCathrin/provider-git
 kirubaCathrin/provideraws
 sebastienbrunkyndryl/provider-jet-vsphere
 vladimirvshivkov/opentelekomcloud-crossplane-provider
-akuity / awesome-argo
-Alliedium / awesome-software-engineering
+akuity/awesome-argo
+Alliedium/awesome-software-engineering

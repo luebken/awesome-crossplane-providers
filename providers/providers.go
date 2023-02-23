@@ -56,6 +56,7 @@ func ProviderRepos(client *github.Client, ctx context.Context) []*github.Reposit
 			repo, _, err := client.Repositories.Get(ctx, pr.Owner, pr.Repo)
 			if err != nil {
 				fmt.Printf("\nError querying 'https://github.com/%v/%v\n", pr.Owner, pr.Repo)
+				fmt.Printf("\n%v\n", err)
 				ch <- nil
 			} else {
 				ch <- repo
