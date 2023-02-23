@@ -47,8 +47,6 @@ func (ps ByUpdatedAt) Less(i, j int) bool { return ps[i].UpdatedAt.After(ps[j].U
 func (ps ByUpdatedAt) Swap(i, j int)      { ps[i], ps[j] = ps[j], ps[i] }
 
 func main() {
-	fmt.Println("Start")
-
 	if len(os.Args) != 2 {
 		fmt.Println("Usage axxpp [provider-names|provider-stats]")
 		return
