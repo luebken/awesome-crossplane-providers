@@ -33,7 +33,6 @@ func WriteToFile(s string, filename string) {
 }
 
 func ReadFromFile(filename string) ([]string, error) {
-	fmt.Println("Want to read file " + file_prefix + filename)
 	bytes, err := os.ReadFile(file_prefix + filename)
 	if err != nil {
 		return nil, err
