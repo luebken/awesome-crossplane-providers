@@ -83,7 +83,7 @@ func getProviderNamesFromFile() []ProviderName {
 	}
 	providerNames := []ProviderName{}
 	for _, l := range lines {
-		if !strings.HasPrefix(l, "#") {
+		if !strings.HasPrefix(l, "#") && len(l) > 1 {
 			var providerName ProviderName
 			providerName.Owner = strings.Split(l, "/")[0]
 			providerName.Repo = strings.Split(l, "/")[1]
