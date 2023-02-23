@@ -1,0 +1,14 @@
+# Creates the provider stats for all known providers
+name: provider-stats
+on:
+  # Manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v2
+      - name: test
+        run: |
+          echo helloworld
