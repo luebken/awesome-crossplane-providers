@@ -15,10 +15,10 @@ jobs:
           go run ./cmd/axpp/main.go provider-names
       - name: git diff
         run: git diff
-      - name: Commit provider.txt
+      - name: Commit providers.txt
         run: |
           git config --global user.name 'Gitub Action'
           git config --global user.email 'Gitub-Action@users.noreply.github.com'
-          git add provider.txt
+          git add providers.txt
           git commit -am "Daily Stats Update"
           git push
