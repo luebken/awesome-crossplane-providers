@@ -138,6 +138,7 @@ benagricola/provider-yaegi
 bmpandrade/provider-jet-datadog
 bretagne-peiqi/alicloud-jet-provider
 bretagne-peiqi/alicloud-upjet-provider
+bretagne-peiqi/upjet-ali
 bryanl/provider-jet-vsphere
 cdloh/crossplane-provider-dynatrace
 cdloh/provider-cloudflare
