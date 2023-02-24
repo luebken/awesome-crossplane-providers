@@ -1,5 +1,8 @@
 name: provider-names
 on:
+  # Daily
+  schedule:
+     - cron: "54 23 * * *"
   # Manually from the Actions tab
   workflow_dispatch:
 jobs:
