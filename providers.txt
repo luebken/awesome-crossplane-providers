@@ -251,6 +251,7 @@ driosalido/provider-opsgenie
 dropte/provider-jet-nsxt
 dwerder/uptest
 edgefarm/provider-nats
+edgefarm/provider-natssecrets
 elvis-cai/provider-jet-github
 elyasafm/my_private_cloud
 eminokic/crossplane-provider-template
@@ -360,6 +361,7 @@ luebken/provider-aiven
 luebken/provider-dummy
 luebken/provider-jet-rancher
 luebken/provider-stormforge
+luebken/provider-test
 luebken/provider-tf-rancher
 luebken/provider-vultr
 luisgj/poc-crossplane-provider
