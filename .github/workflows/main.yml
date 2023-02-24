@@ -10,6 +10,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE
       - uses: actions/checkout@v3
       - name: go-run
+        env:
+          MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         run: |
-          echo $MY_GITHUB_TOKEN
           go run ./cmd/axpp/main.go provider-names
