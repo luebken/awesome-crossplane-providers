@@ -267,6 +267,7 @@ flerwin/provider-jet-vultr
 foshantiger/provider-jet-tencentcloud
 fosterm-mw/supernetes-upjet-provider
 foundatn-io/provider-jet-github
+frazier/crossplane-provider-demo
 giattal/provider-jet-vsphere
 gmichelo/test-crossplane-provider
 grafana/crossplane-provider-grafana
@@ -555,6 +556,7 @@ waldner/testjet
 warmmike/provider-citbbs
 william86370/vsphere-jet-template
 woehrl01/provider-newrelic
+woof/provider-openstack
 worzeel/provider-jenkins
 xuyaming0800/crossplane-provider-test
 yandex-cloud/provider-jet-yc
