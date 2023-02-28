@@ -267,6 +267,7 @@ flerwin/provider-jet-vultr
 foshantiger/provider-jet-tencentcloud
 fosterm-mw/supernetes-upjet-provider
 foundatn-io/provider-jet-github
+fr123k/crossplane-provider-test
 frazier/crossplane-provider-demo
 giattal/provider-jet-vsphere
 gmichelo/test-crossplane-provider
