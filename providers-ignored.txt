@@ -37,3 +37,6 @@ akuity/awesome-argo
 Alliedium/awesome-software-engineering
 krateoplatformops/provider-azuredevops
 tracdi/crossplane-provider-common
+crossplane-contrib/provider-rancher
+crossplane-contrib/provider-ssh
+shailsirohi/orchestration-provider
