@@ -154,6 +154,7 @@ chnyda/provider-planetscale
 clhain/provider-volterra
 cloud-pak-gitops/crossplane-provider-cp4waiops
 cloud-pak-gitops/crossplane-provider-instana
+codergolem/provider-aiven
 conmurphy/crossplane-aci
 conmurphy/crossplane-github
 conmurphy/crossplane-test
@@ -250,6 +251,7 @@ dorroddorrod/provider-openshift
 driosalido/provider-opsgenie
 dropte/provider-jet-nsxt
 dwerder/uptest
+ederst/provider-kops
 edgefarm/provider-nats
 edgefarm/provider-natssecrets
 elvis-cai/provider-jet-github
