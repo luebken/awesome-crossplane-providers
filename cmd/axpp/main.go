@@ -76,7 +76,12 @@ func main() {
 		close(ch)
 	}()
 
-	repos := providers.ProviderRepos(client, ctx)
+	providernames := providers.GetProviderNamesFromFileWithoutIgnored()
+	repos := providers.GetRepositories(client, ctx, providernames)
+	// TODO query implementation detail
+	// fileContent, _, _, err := client.Repositories.GetContents(ctx, pr.Owner, pr.Repo, "go.mod", nil)
+	// content, err := fileContent.GetContent()
+	// fmt.Printf("\nUpjet: %v\n", strings.Contains(content, "github.com/upbound/upjet"))
 	for _, repo := range repos {
 		time.Sleep(20 * time.Millisecond)
 		go func(repo *github.Repository) {

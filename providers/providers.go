@@ -38,8 +38,8 @@ var (
 	}
 )
 
-// Read providers.txt and get latest repo info
-func ProviderRepos(client *github.Client, ctx context.Context) []*github.Repository {
+// Get latest repo info for "providerNames"
+func GetRepositories(client *github.Client, ctx context.Context, providerNames []ProviderName) []*github.Repository {
 	repos := []*github.Repository{}
 
 	ch := make(chan *github.Repository)
@@ -47,12 +47,11 @@ func ProviderRepos(client *github.Client, ctx context.Context) []*github.Reposit
 		close(ch)
 	}()
 
-	providerNames := getProviderNamesFromFileWithoutIgnored()
 	for _, pr := range providerNames {
 		// workaround for socket: too many open files error
 		time.Sleep(20 * time.Millisecond)
 		go func(pr ProviderName) {
-			fmt.Print(".")
+			fmt.Print("r")
 			repo, _, err := client.Repositories.Get(ctx, pr.Owner, pr.Repo)
 			if err != nil {
 				fmt.Printf("\nError querying 'https://github.com/%v/%v\n", pr.Owner, pr.Repo)
@@ -65,14 +64,13 @@ func ProviderRepos(client *github.Client, ctx context.Context) []*github.Reposit
 	}
 
 	for i := 0; i < len(providerNames); i++ {
-		fmt.Print(".") // progress indicator
 		repo := <-ch
 		if repo != nil {
 			repos = append(repos, repo)
 		}
 	}
 
-	fmt.Printf("Queried %d repos.\n", len(repos))
+	fmt.Printf("\nQueried %d repos.\n", len(repos))
 	return repos
 }
 
@@ -96,7 +94,7 @@ func getProviderNamesFromFile() []ProviderName {
 }
 
 // All provider names from "providers.txt" excluding "providers-ignored.txt"
-func getProviderNamesFromFileWithoutIgnored() []ProviderName {
+func GetProviderNamesFromFileWithoutIgnored() []ProviderName {
 	lines, err := util.ReadFromFile("providers.txt")
 	if err != nil {
 		panic(err)
