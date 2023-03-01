@@ -11,20 +11,21 @@ import (
 	"github.com/luebken/awesome-crossplane-providers/util"
 )
 
-type ProviderName struct {
-	Owner string
-	Repo  string
+type ProviderImplementationType string
+
+type FullRepoName string
+type SortedFullRepoName []FullRepoName
+
+func (a SortedFullRepoName) Len() int           { return len(a) }
+func (a SortedFullRepoName) Less(i, j int) bool { return a[i] < a[j] }
+func (a SortedFullRepoName) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+
+func (frn FullRepoName) GetOwner() string {
+	return strings.Split(string(frn), "/")[0]
 }
-
-func (pn ProviderName) Fullname() string {
-	return pn.Owner + "/" + pn.Repo
+func (frn FullRepoName) GetRepo() string {
+	return strings.Split(string(frn), "/")[1]
 }
-
-type SortedProviderName []ProviderName
-
-func (a SortedProviderName) Len() int           { return len(a) }
-func (a SortedProviderName) Less(i, j int) bool { return a[i].Fullname() < a[j].Fullname() }
-func (a SortedProviderName) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 
 var (
 	providerSearchQueries = []string{
@@ -39,7 +40,7 @@ var (
 )
 
 // Get latest repo info for "providerNames"
-func GetRepositories(client *github.Client, ctx context.Context, providerNames []ProviderName) []*github.Repository {
+func GetRepositories(client *github.Client, ctx context.Context, providerNames []FullRepoName) []*github.Repository {
 	repos := []*github.Repository{}
 
 	ch := make(chan *github.Repository)
@@ -50,11 +51,11 @@ func GetRepositories(client *github.Client, ctx context.Context, providerNames [
 	for _, pr := range providerNames {
 		// workaround for socket: too many open files error
 		time.Sleep(20 * time.Millisecond)
-		go func(pr ProviderName) {
+		go func(pr FullRepoName) {
 			fmt.Print("r")
-			repo, _, err := client.Repositories.Get(ctx, pr.Owner, pr.Repo)
+			repo, _, err := client.Repositories.Get(ctx, pr.GetOwner(), pr.GetRepo())
 			if err != nil {
-				fmt.Printf("\nError querying 'https://github.com/%v/%v\n", pr.Owner, pr.Repo)
+				fmt.Printf("\nError querying 'https://github.com/%v/%v\n", pr.GetOwner(), pr.GetRepo())
 				fmt.Printf("\n%v\n", err)
 				ch <- nil
 			} else {
@@ -75,18 +76,15 @@ func GetRepositories(client *github.Client, ctx context.Context, providerNames [
 }
 
 // All provider names from "providers.txt"
-func getProviderNamesFromFile() []ProviderName {
+func getProviderNamesFromFile() []FullRepoName {
 	lines, err := util.ReadFromFile("providers.txt")
 	if err != nil {
 		panic(err)
 	}
-	providerNames := []ProviderName{}
+	providerNames := []FullRepoName{}
 	for _, l := range lines {
 		if !strings.HasPrefix(l, "#") && len(l) > 1 {
-			var providerName ProviderName
-			providerName.Owner = strings.Split(l, "/")[0]
-			providerName.Repo = strings.Split(l, "/")[1]
-			providerNames = append(providerNames, providerName)
+			providerNames = append(providerNames, FullRepoName(l))
 		}
 	}
 	fmt.Printf("Found %d providers in providers.txt\n", len(providerNames))
@@ -94,7 +92,7 @@ func getProviderNamesFromFile() []ProviderName {
 }
 
 // All provider names from "providers.txt" excluding "providers-ignored.txt"
-func GetProviderNamesFromFileWithoutIgnored() []ProviderName {
+func ReadProviderNamesFromFileWithoutIgnored() []FullRepoName {
 	lines, err := util.ReadFromFile("providers.txt")
 	if err != nil {
 		panic(err)
@@ -104,13 +102,10 @@ func GetProviderNamesFromFileWithoutIgnored() []ProviderName {
 		panic(err)
 	}
 	ignoreList := strings.Join(linesIgnored, " ")
-	providerNames := []ProviderName{}
+	providerNames := []FullRepoName{}
 	for _, l := range lines {
 		if !strings.HasPrefix(l, "#") && !strings.Contains(ignoreList, l) {
-			var providerName ProviderName
-			providerName.Owner = strings.Split(l, "/")[0]
-			providerName.Repo = strings.Split(l, "/")[1]
-			providerNames = append(providerNames, providerName)
+			providerNames = append(providerNames, FullRepoName(l))
 		}
 	}
 	fmt.Printf("Found %d providers in providers.txt excluding providers-ignored.txt\n", len(providerNames))
@@ -170,30 +165,30 @@ func UpdateProviderNamesToFile(client *github.Client, ctx context.Context) {
 
 	// TODO search from topics
 
-	reposNames := []ProviderName{}
+	reposNames := []FullRepoName{}
 	for _, r := range repos {
-		reposNames = append(reposNames, ProviderName{*r.Owner.Login, *r.Name})
+		reposNames = append(reposNames, FullRepoName(*r.FullName))
 	}
 
 	oldRepoNames := getProviderNamesFromFile()
 	reposNames = append(reposNames, oldRepoNames...)
 
 	reposNames = removeDuplicateRepos(reposNames)
-	sort.Sort(SortedProviderName(reposNames))
+	sort.Sort(SortedFullRepoName(reposNames))
 	fmt.Printf("\nFound %d provider repos.\n", len(reposNames))
 	s := ""
 	for _, rn := range reposNames {
-		s = s + rn.Fullname() + "\n"
+		s = s + string(rn) + "\n"
 	}
 	util.WriteToFile(s, "providers.txt")
 }
 
-func removeDuplicateRepos(repos []ProviderName) []ProviderName {
-	keys := make(map[string]bool)
-	list := []ProviderName{}
+func removeDuplicateRepos(repos []FullRepoName) []FullRepoName {
+	keys := make(map[FullRepoName]bool)
+	list := []FullRepoName{}
 	for _, repo := range repos {
-		if _, value := keys[repo.Fullname()]; !value {
-			keys[repo.Fullname()] = true
+		if _, value := keys[repo]; !value {
+			keys[repo] = true
 			list = append(list, repo)
 		}
 	}

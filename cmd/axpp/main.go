@@ -76,15 +76,17 @@ func main() {
 		close(ch)
 	}()
 
-	providernames := providers.GetProviderNamesFromFileWithoutIgnored()
+	providernames := providers.ReadProviderNamesFromFileWithoutIgnored()
 	repos := providers.GetRepositories(client, ctx, providernames)
 	// TODO query implementation detail
+	//implementationTypes := providers.GetDependenciesAndClasifyImplementationType(client, ctx, providernames)
 	// fileContent, _, _, err := client.Repositories.GetContents(ctx, pr.Owner, pr.Repo, "go.mod", nil)
 	// content, err := fileContent.GetContent()
 	// fmt.Printf("\nUpjet: %v\n", strings.Contains(content, "github.com/upbound/upjet"))
 	for _, repo := range repos {
 		time.Sleep(20 * time.Millisecond)
 		go func(repo *github.Repository) {
+			//type := implementationTypes[*repo.get]
 			ps := ProviderStat{
 				Fullname:   *repo.Owner.Login + " / " + *repo.Name, // Extra whitepace for readability
 				HTMLURL:    *repo.HTMLURL,
@@ -99,6 +101,7 @@ func main() {
 			}
 
 			release, _, err := client.Repositories.GetLatestRelease(ctx, *repo.Owner.Login, *repo.Name)
+			fmt.Print(".") // progress indicator
 			if err != nil {
 				//fmt.Println("err ", err)
 			} else {
@@ -142,7 +145,6 @@ func main() {
 
 	stats := []ProviderStat{}
 	for i := 0; i < len(repos); i++ {
-		fmt.Print(".") // progress indicator
 		ps := <-ch
 		stats = append(stats, ps)
 	}
