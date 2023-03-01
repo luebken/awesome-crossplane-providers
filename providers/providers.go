@@ -12,7 +12,6 @@ import (
 )
 
 type ProviderImplementationType string
-
 type FullRepoName string
 type SortedFullRepoName []FullRepoName
 
@@ -89,6 +88,55 @@ func getProviderNamesFromFile() []FullRepoName {
 	}
 	fmt.Printf("Found %d providers in providers.txt\n", len(providerNames))
 	return providerNames
+}
+
+// checks go.mod for upjet or terrajet dependencies
+func GetDependenciesAndClasifyImplementationType(client *github.Client, ctx context.Context, providerNames []FullRepoName) map[FullRepoName]ProviderImplementationType {
+	ptypes := make(map[FullRepoName]ProviderImplementationType)
+
+	type RepoAndType struct {
+		FullRepoName               FullRepoName
+		ProviderImplementationType ProviderImplementationType
+	}
+	ch := make(chan RepoAndType)
+	defer func() {
+		close(ch)
+	}()
+	for _, pn := range providerNames {
+		// workaround for socket: too many open files error
+		time.Sleep(20 * time.Millisecond)
+		go func(pn FullRepoName) {
+			fmt.Print("x")
+			var ptype ProviderImplementationType
+			fileContent, _, _, err := client.Repositories.GetContents(ctx, pn.GetOwner(), pn.GetRepo(), "go.mod", nil)
+			if err != nil {
+				fmt.Printf("\n%v\n", err)
+			}
+			content, err := fileContent.GetContent()
+			if err != nil {
+				fmt.Printf("\n%v\n", err)
+			}
+
+			if strings.Contains(content, "github.com/upbound/upjet") {
+				ptype = "Upjet"
+			} else if strings.Contains(content, "github.com/crossplane/terrajet") {
+				ptype = "Terrajet"
+			} else {
+				// todo check fork from crossplane/provider-template
+				ptype = "Native"
+			}
+			ch <- RepoAndType{FullRepoName: pn, ProviderImplementationType: ptype}
+		}(pn)
+	}
+
+	for i := 0; i < len(providerNames); i++ {
+		repoAndTyp := <-ch
+		ptypes[repoAndTyp.FullRepoName] = repoAndTyp.ProviderImplementationType
+	}
+
+	fmt.Printf("\nQueried %d types.\n", len(providerNames))
+
+	return ptypes
 }
 
 // All provider names from "providers.txt" excluding "providers-ignored.txt"

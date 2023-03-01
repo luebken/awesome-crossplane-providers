@@ -24,21 +24,22 @@ var (
 )
 
 type ProviderStat struct {
-	Fullname       string
-	HTMLURL        string
-	Description    string
-	Stargazers     int
-	Subscribers    int
-	OpenIssues     int
-	UpdatedAt      time.Time
-	CreatedAt      time.Time
-	LastReleaseAt  time.Time
-	LastReleaseTag string
-	DocsURL        string
-	CRDsTotal      int
-	CRDsBeta       int
-	CRDsAlpha      int
-	CRDsV1         int
+	Fullname           string
+	HTMLURL            string
+	Description        string
+	Stargazers         int
+	Subscribers        int
+	OpenIssues         int
+	UpdatedAt          time.Time
+	CreatedAt          time.Time
+	LastReleaseAt      time.Time
+	LastReleaseTag     string
+	DocsURL            string
+	CRDsTotal          int
+	CRDsBeta           int
+	CRDsAlpha          int
+	CRDsV1             int
+	ImplementationType providers.ProviderImplementationType
 }
 type ByUpdatedAt []ProviderStat
 
@@ -78,23 +79,23 @@ func main() {
 
 	providernames := providers.ReadProviderNamesFromFileWithoutIgnored()
 	repos := providers.GetRepositories(client, ctx, providernames)
-	// TODO query implementation detail
-	//implementationTypes := providers.GetDependenciesAndClasifyImplementationType(client, ctx, providernames)
-	// fileContent, _, _, err := client.Repositories.GetContents(ctx, pr.Owner, pr.Repo, "go.mod", nil)
-	// content, err := fileContent.GetContent()
-	// fmt.Printf("\nUpjet: %v\n", strings.Contains(content, "github.com/upbound/upjet"))
+
+	implementationTypes := providers.GetDependenciesAndClasifyImplementationType(client, ctx, providernames)
+
 	for _, repo := range repos {
 		time.Sleep(20 * time.Millisecond)
 		go func(repo *github.Repository) {
 			//type := implementationTypes[*repo.get]
 			ps := ProviderStat{
-				Fullname:   *repo.Owner.Login + " / " + *repo.Name, // Extra whitepace for readability
-				HTMLURL:    *repo.HTMLURL,
-				Stargazers: *repo.StargazersCount,
-				OpenIssues: *repo.OpenIssuesCount,
-				UpdatedAt:  repo.UpdatedAt.Time,
-				CreatedAt:  repo.CreatedAt.Time,
+				Fullname:           *repo.Owner.Login + " / " + *repo.Name, // Extra whitepace for readability
+				HTMLURL:            *repo.HTMLURL,
+				Stargazers:         *repo.StargazersCount,
+				OpenIssues:         *repo.OpenIssuesCount,
+				UpdatedAt:          repo.UpdatedAt.Time,
+				CreatedAt:          repo.CreatedAt.Time,
+				ImplementationType: implementationTypes[providers.FullRepoName(*repo.FullName)],
 			}
+
 			if repo.Description != nil {
 				// remove ","" for csv export
 				ps.Description = strings.Replace(*repo.Description, ",", "", -1)
@@ -151,10 +152,11 @@ func main() {
 	sort.Sort(ByUpdatedAt(stats))
 
 	// repo-stats-%s.csv
-	statsString := "Repository,URL,Description,Stars,Subscribers,Open Issues,Last Update,Created,Last Release,Docs,CRDs Total,CRDs Alpha,CRDs Beta,CRDs V1\n"
+	statsString := "Repository,Type,URL,Description,Stars,Subscribers,Open Issues,Last Update,Created,Last Release,Docs,CRDs Total,CRDs Alpha,CRDs Beta,CRDs V1\n"
 	for _, ps := range stats {
-		statsString += fmt.Sprintf("%s,%s,%s,%d,%d,%d,%v,%v,%v,%v,%d,%d,%d,%d\n",
+		statsString += fmt.Sprintf("%s,%s,%s,%s,%d,%d,%d,%v,%v,%v,%v,%d,%d,%d,%d\n",
 			ps.Fullname,
+			ps.ImplementationType,
 			ps.HTMLURL,
 			ps.Description,
 			ps.Stargazers,
