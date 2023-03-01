@@ -35,3 +35,5 @@ sebastienbrunkyndryl/provider-jet-vsphere
 vladimirvshivkov/opentelekomcloud-crossplane-provider
 akuity/awesome-argo
 Alliedium/awesome-software-engineering
+krateoplatformops/provider-azuredevops
+tracdi/crossplane-provider-common
