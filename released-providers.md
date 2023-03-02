@@ -37,8 +37,8 @@
 |[remyleone / crossplane-scaleway-provider](https://github.com/remyleone/crossplane-scaleway-provider) - [docs](https://doc.crds.dev/github.com/remyleone/crossplane-scaleway-provider@v0.0.1)|2023-01-23||41|0|0|
 |[crossplane-contrib / provider-civo](https://github.com/crossplane-contrib/provider-civo) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-civo@v0.1)|2023-01-17||4|0|0|
 |[crossplane-contrib / provider-jet-aws](https://github.com/crossplane-contrib/provider-jet-aws) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-aws@v0.5.0-preview)|2023-01-16||780|0|0|
-|[IBM / crossplane-provider-kubernetes](https://github.com/IBM/crossplane-provider-kubernetes) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.8.0)|2023-01-09||3|0|0|
 |[IBM / crossplane-provider-ibm-cloud](https://github.com/IBM/crossplane-provider-ibm-cloud) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-ibm-cloud@v1.8.0)|2023-01-09||13|2|0|
+|[IBM / crossplane-provider-kubernetes](https://github.com/IBM/crossplane-provider-kubernetes) - [docs](https://doc.crds.dev/github.com/IBM/crossplane-provider-kubernetes@v1.8.0)|2023-01-09||3|0|0|
 |[davidcollom / crossplane-jet-cloudflare](https://github.com/davidcollom/crossplane-jet-cloudflare) - [docs](https://doc.crds.dev/github.com/davidcollom/crossplane-jet-cloudflare@0.0.1)|2023-01-03||65|0|0|
 |[ok-amba / provider-opsgenie](https://github.com/ok-amba/provider-opsgenie) - [docs](https://doc.crds.dev/github.com/ok-amba/provider-opsgenie@v0.2.0)|2022-12-22||11|2|0|
 |[crossplane-contrib / provider-jet-gcp](https://github.com/crossplane-contrib/provider-jet-gcp) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-gcp@v0.3.0-preview)|2022-12-15||472|0|0|
@@ -65,4 +65,4 @@
 |[davidcollom / crossplane-jet-uptimerobot](https://github.com/davidcollom/crossplane-jet-uptimerobot) - [docs](https://doc.crds.dev/github.com/davidcollom/crossplane-jet-uptimerobot@0.0.1)|2022-03-16||5|0|0|
 |[crossplane-contrib / provider-influxdb](https://github.com/crossplane-contrib/provider-influxdb) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-influxdb@v0.1.2)|2022-01-10||5|0|0|
 
-Generated at: 2023-03-01
+Generated at: 2023-03-02
