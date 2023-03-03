@@ -479,6 +479,7 @@ samueltorres/crossplane-do-provider
 sboschman/provider-jet-rancher2
 sboschman/provider-rancher
 sboyapati-Arcadia/provider-aws
+scaleway/crossplane-provider-scaleway
 scalvetr/poc-crossplane-provider
 schaubce/example-provider
 sean-martinsplace/provider-jet-okta
