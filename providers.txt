@@ -325,6 +325,7 @@ jmazumder/terraform-provider-spotjet
 joakimhew/provider-jet-github
 joakimhew/provider-jet-googleworkspace
 jograca/provider-awsscheduler
+jograca/provider-sample
 jograca/provider-template
 juddowilcox/provider-jet-gitea
 juddowilcox/provider-jet-github
@@ -421,6 +422,7 @@ ok-amba/provider-opsgenie
 opendevsecopsio/crossplane-provider-jet-vsphere
 opentelekomcloud/provider-jet-opentelekomcloud
 oracle-samples/provider-jet-oci
+oracle-samples/provider-oci
 outscale-vbr/upjet-provider-outscale
 parul5sahoo/k8s-test-provider
 parul5sahoo/test_provider
