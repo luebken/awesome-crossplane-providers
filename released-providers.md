@@ -2,6 +2,7 @@
 
 ||Updated|CRDs:|Alpha|Beta|V1|
 |---|---|---|---|---|---|
+|[crossplane-contrib / provider-ansible](https://github.com/crossplane-contrib/provider-ansible) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-ansible@v0.4.1)|2023-03-04||3|0|0|
 |[upbound / provider-aws](https://github.com/upbound/provider-aws) - [docs](https://doc.crds.dev/github.com/upbound/provider-aws@v0.30.0)|2023-03-03||1|871|0|
 |[crossplane-contrib / provider-kops](https://github.com/crossplane-contrib/provider-kops) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-kops@v0.1.1)|2023-03-02||4|0|0|
 |[crossplane-contrib / provider-gcp](https://github.com/crossplane-contrib/provider-gcp) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-gcp@v0.22.0)|2023-03-02||18|11|0|
@@ -9,7 +10,7 @@
 |[HotThoughts / provider-jet-github](https://github.com/HotThoughts/provider-jet-github) - [docs](https://doc.crds.dev/github.com/HotThoughts/provider-jet-github@v0.0.2)|2023-02-26||6|0|0|
 |[upbound / provider-terraform](https://github.com/upbound/provider-terraform) - [docs](https://doc.crds.dev/github.com/upbound/provider-terraform@v0.5.0)|2023-02-25||0|4|0|
 |[crossplane-contrib / provider-helm](https://github.com/crossplane-contrib/provider-helm) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-helm@v0.14.0)|2023-02-25||0|3|0|
-|[edgefarm / provider-natssecrets](https://github.com/edgefarm/provider-natssecrets) - [docs](https://doc.crds.dev/github.com/edgefarm/provider-natssecrets@v0.1.1)|2023-02-24||0|0|0|
+|[edgefarm / provider-natssecrets](https://github.com/edgefarm/provider-natssecrets) - [docs](https://doc.crds.dev/github.com/edgefarm/provider-natssecrets@v0.1.1)|2023-02-24||8|0|0|
 |[grafana / crossplane-provider-grafana](https://github.com/grafana/crossplane-provider-grafana) - [docs](https://doc.crds.dev/github.com/grafana/crossplane-provider-grafana@v0.3.0)|2023-02-24||28|2|0|
 |[upbound / provider-gcp](https://github.com/upbound/provider-gcp) - [docs](https://doc.crds.dev/github.com/upbound/provider-gcp@v0.28.0)|2023-02-23||1|324|0|
 |[crossplane-contrib / provider-kubernetes](https://github.com/crossplane-contrib/provider-kubernetes) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-kubernetes@v0.7.0)|2023-02-23||3|0|0|
@@ -27,13 +28,12 @@
 |[zscaler / crossplane-provider-zpa](https://github.com/zscaler/crossplane-provider-zpa) - [docs](https://doc.crds.dev/github.com/zscaler/crossplane-provider-zpa@v0.1.0)|2023-02-07||18|2|0|
 |[cdloh / provider-cloudflare](https://github.com/cdloh/provider-cloudflare) - [docs](https://doc.crds.dev/github.com/cdloh/provider-cloudflare@v0.1.0)|2023-02-06||91|2|0|
 |[crossplane-contrib / provider-styra](https://github.com/crossplane-contrib/provider-styra) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-styra@v0.3.0)|2023-02-03||6|0|0|
-|[FrangipaneTeam / provider-flexibleengine](https://github.com/FrangipaneTeam/provider-flexibleengine) - [docs](https://doc.crds.dev/github.com/FrangipaneTeam/provider-flexibleengine@v0.4.1)|2023-01-31||0|0|0|
-|[crossplane-contrib / provider-ansible](https://github.com/crossplane-contrib/provider-ansible) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-ansible@v0.4.1)|2023-01-31||3|0|0|
+|[FrangipaneTeam / provider-flexibleengine](https://github.com/FrangipaneTeam/provider-flexibleengine) - [docs](https://doc.crds.dev/github.com/FrangipaneTeam/provider-flexibleengine@v0.4.1)|2023-01-31||1|168|0|
 |[crossplane-contrib / provider-tencentcloud](https://github.com/crossplane-contrib/provider-tencentcloud) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-tencentcloud@v0.6.0)|2023-01-31||268|0|0|
 |[edgefarm / provider-nats](https://github.com/edgefarm/provider-nats) - [docs](https://doc.crds.dev/github.com/edgefarm/provider-nats@v0.1.0)|2023-01-30||5|0|0|
 |[crossplane-contrib / provider-kafka](https://github.com/crossplane-contrib/provider-kafka) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-kafka@v0.4.2)|2023-01-28||4|0|0|
 |[dkb-bank / provider-opensearch](https://github.com/dkb-bank/provider-opensearch) - [docs](https://doc.crds.dev/github.com/dkb-bank/provider-opensearch@v0.3.0)|2023-01-26||8|2|0|
-|[linode / provider-linode](https://github.com/linode/provider-linode) - [docs](https://doc.crds.dev/github.com/linode/provider-linode@v0.0.5)|2023-01-25||0|0|0|
+|[linode / provider-linode](https://github.com/linode/provider-linode) - [docs](https://doc.crds.dev/github.com/linode/provider-linode@v0.0.5)|2023-01-25||29|2|0|
 |[crossplane-contrib / provider-jet-datadog](https://github.com/crossplane-contrib/provider-jet-datadog) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-datadog@v0.1.0)|2023-01-25||6|0|0|
 |[topfreegames / crossplane-provider-vault](https://github.com/topfreegames/crossplane-provider-vault) - [docs](https://doc.crds.dev/github.com/topfreegames/crossplane-provider-vault@v0.3.1)|2023-01-24||6|0|0|
 |[crossplane-contrib / provider-sql](https://github.com/crossplane-contrib/provider-sql) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-sql@v0.6.0)|2023-01-24||16|0|0|
@@ -67,4 +67,4 @@
 |[davidcollom / crossplane-jet-uptimerobot](https://github.com/davidcollom/crossplane-jet-uptimerobot) - [docs](https://doc.crds.dev/github.com/davidcollom/crossplane-jet-uptimerobot@0.0.1)|2022-03-16||5|0|0|
 |[crossplane-contrib / provider-influxdb](https://github.com/crossplane-contrib/provider-influxdb) - [docs](https://doc.crds.dev/github.com/crossplane-contrib/provider-influxdb@v0.1.2)|2022-01-10||5|0|0|
 
-Generated at: 2023-03-04
+Generated at: 2023-03-05
