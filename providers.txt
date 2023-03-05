@@ -567,6 +567,7 @@ worzeel/provider-jenkins
 xuyaming0800/crossplane-provider-test
 yandex-cloud/provider-jet-yc
 yannickcastano/crossplane-aci
+yaskoo/provider-hcloud
 yaskoo/provider-hetzner
 yfodil/crossplane-provider-scaleway
 ytsarev/demo-uptest-intergration
