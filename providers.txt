@@ -90,6 +90,7 @@ abdelazizhd/provider-jet-template
 abdelazizhd/provider-timg-gcp
 acald-creator/how-to-use-terrajet
 ahan0123/provider-jet-random
+ahanafy/provider-cloudamqp
 ajwgroup/provider-jet-azuread
 akuity/awesome-argo
 alex-broad/crossplane-provider-template
@@ -135,6 +136,7 @@ beeyingln/provider-terraform
 benagricola/provider-aws-irsa
 benagricola/provider-externaldata
 benagricola/provider-yaegi
+blakepettersson/provider-jet-vault
 bmpandrade/provider-jet-datadog
 bretagne-peiqi/alicloud-jet-provider
 bretagne-peiqi/alicloud-upjet-provider
