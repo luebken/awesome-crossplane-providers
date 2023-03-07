@@ -381,6 +381,7 @@ mapril-aspentech/provider-aspencloud
 mapril-aspentech/provider-jet-aspencloud
 maqiuyujoyce/provider-jet-template
 marcosQuesada/provider-planetscale
+marcoths/demo-uptest-integration
 matthewnolf/github-provider
 matthewnolf/grafana-provider
 matthewnolf/hello-crossplane
