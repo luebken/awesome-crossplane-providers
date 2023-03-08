@@ -334,6 +334,7 @@ juddowilcox/provider-jet-github
 juliosueiras/provider-jet-openstack
 justin-watkinson-cherre/hello-crossplane
 kalininsn/provider-gcore
+kanzifucius/provider-postgres-sql
 karthikeyanas/provider-confluent
 katafira/provider-gitlab-operator
 katafira/provider-jet-gitlab
