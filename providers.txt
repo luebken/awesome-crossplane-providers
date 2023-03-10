@@ -57,6 +57,7 @@ Meghana-R-ML/testing-intersight
 Piotr1215/provider-dogfacts
 Piotr1215/provider-jet-archive
 R3DRUN3/provider-azuredevops
+SharathChandraB/provider-oci
 Sparkybeard/mbcp-workload-manager-cux-provider
 SrikanthBhimani/provider-jet-azure
 Striar-Yunis/provider-jet-rancher-test
@@ -463,6 +464,7 @@ ricable/provider-jet-civo
 ricable/provider-jet-harvester
 ricable/provider-talos
 ricable/provider-terrajet-talos
+rimbi/provider-openstack
 ripro-patrick/crossplane-provider-grapple
 ripro-patrick/crossplane-provider-grpl
 ripro-patrick/myprovider
