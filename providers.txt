@@ -57,6 +57,8 @@ Meghana-R-ML/testing-intersight
 Piotr1215/provider-dogfacts
 Piotr1215/provider-jet-archive
 R3DRUN3/provider-azuredevops
+SharathChandraB/example-oci-provider
+SharathChandraB/provider-git
 SharathChandraB/provider-oci
 Sparkybeard/mbcp-workload-manager-cux-provider
 SrikanthBhimani/provider-jet-azure
@@ -117,6 +119,7 @@ antoniodiazroman/provider-jet-vsphere-2
 antonionappi88/terrajet-openstack
 antonum/upjet-rediscloud
 appclacks/provider-appclacks
+apten-fors/pagerduty-provider
 arianvp/provider-jet-vultr
 arijanluiken/shizzle-provider
 arnefm/terrajet-template
