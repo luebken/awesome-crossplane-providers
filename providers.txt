@@ -60,6 +60,7 @@ R3DRUN3/provider-azuredevops
 SharathChandraB/example-oci-provider
 SharathChandraB/provider-git
 SharathChandraB/provider-oci
+SharathChandraB/provider-sample
 Sparkybeard/mbcp-workload-manager-cux-provider
 SrikanthBhimani/provider-jet-azure
 Striar-Yunis/provider-jet-rancher-test
@@ -467,6 +468,7 @@ ricable/provider-jet-civo
 ricable/provider-jet-harvester
 ricable/provider-talos
 ricable/provider-terrajet-talos
+rimbi/provider-github
 rimbi/provider-openstack
 ripro-patrick/crossplane-provider-grapple
 ripro-patrick/crossplane-provider-grpl
