@@ -278,6 +278,7 @@ fosterm-mw/supernetes-upjet-provider
 foundatn-io/provider-jet-github
 fr123k/crossplane-provider-test
 frazier/crossplane-provider-demo
+frazier/provider-github
 giattal/provider-jet-vsphere
 gmichelo/test-crossplane-provider
 grafana/crossplane-provider-grafana
