@@ -448,6 +448,7 @@ pickjonathan/provider-jet-vsphere
 pkrishnath/provider-jet-cloudflare
 pkrishnath/provider-jet-keycloak
 poblin-orange/provider-jet-cf
+prafull01/crossplane-provider-cockroach
 prakashmishra1598/provider-jet-palette
 ps-akhil/provider-dynatrace
 ps-akhil/provider-jet-aws-test
