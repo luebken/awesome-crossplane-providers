@@ -60,6 +60,7 @@ R3DRUN3/provider-azuredevops
 SharathChandraB/example-oci-provider
 SharathChandraB/provider-git
 SharathChandraB/provider-oci
+SharathChandraB/provider-oracle
 SharathChandraB/provider-sample
 Sparkybeard/mbcp-workload-manager-cux-provider
 SrikanthBhimani/provider-jet-azure
