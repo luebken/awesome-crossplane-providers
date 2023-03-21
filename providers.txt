@@ -6,6 +6,7 @@ AaronME/provider-jet-vault-old
 AdrianFarmadin/provider-vault
 AlertoJon-io/opsgenie-crossplane-provider
 AlertoJon-io/pagerduty-crossplane-provider
+AlexM4H/provider-hcloud
 Alliedium/awesome-software-engineering
 Alt-Shivam/Provider-Openstack
 Alt-Shivam/provider-planetscale
@@ -14,6 +15,7 @@ ArunRamakani/hashicorp-provider
 ArunRamakani/provider-jet-grafana
 BaburajSoumya/provider-jet-akamai
 Breee/provider-vault
+Breee/upjet-provider-template
 BrennenMM7/provider-newrelic
 BrennenMM7/provider-newrelics
 CalinFlorescu/provider-gcp-haiilo
@@ -169,6 +171,7 @@ conmurphy/crossplane-test
 coopnorge/provider-github
 cromark/provider-jet-vault
 cromark/terraform-provider-github
+crossplane-contrib/native-provider-gcp
 crossplane-contrib/provider-alibaba
 crossplane-contrib/provider-ansible
 crossplane-contrib/provider-argocd
