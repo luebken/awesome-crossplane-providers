@@ -457,6 +457,7 @@ prakashmishra1598/provider-jet-palette
 ps-akhil/provider-dynatrace
 ps-akhil/provider-jet-aws-test
 qamodi/crossplane
+radupana/provider-confluent
 raffaelespazzoli/provider-jet-github
 rahulgrover99/provider-nop-2
 raildo/crossplane-spotinst-provider
@@ -558,6 +559,7 @@ turkenh/provider-jet-alibaba
 turkenh/provider-jet-tencentcloud
 turkenh/provider-kubernetes-poc
 udemirtas-ankasoftco/test-template
+uint0/crossplane-provider-databricks
 upbound/demo-uptest-integration
 upbound/provider-aws
 upbound/provider-azure
