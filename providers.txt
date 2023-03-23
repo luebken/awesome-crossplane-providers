@@ -328,6 +328,7 @@ jianh619/cloudpak-provider
 jianh619/crossplane-test-provider
 jianh619/provider-instana
 jianh619/provider-ssh
+jiramot/crossplane-provider-test
 jisnardo/provider-jet-vsphere
 jithujayapal88/mongojet
 jjedr/provider-jet-okta
@@ -566,6 +567,7 @@ upbound/provider-azure
 upbound/provider-azuread
 upbound/provider-gcp
 upbound/provider-terraform
+upbound/provider-upbound
 upbound/upjet-provider-template
 upsidr/provider-civo-upjet
 vasu1124/provider-planetscale
