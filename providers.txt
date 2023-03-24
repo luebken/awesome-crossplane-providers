@@ -130,6 +130,7 @@ arnefm/terrajet-template
 ashwinshirva/crossplane
 ashwinshirva/provider-grpc
 ashwinshirva/provider-template
+aviatrix/crossplane-provider-aviatrix
 balu-ce/provider-spotinst
 barunavo/provider-demo
 batthebee/provider-jet-github
@@ -283,6 +284,7 @@ foundatn-io/provider-jet-github
 fr123k/crossplane-provider-test
 frazier/crossplane-provider-demo
 frazier/provider-github
+garethjevans/provider-ytt
 giattal/provider-jet-vsphere
 gmichelo/test-crossplane-provider
 grafana/crossplane-provider-grafana
@@ -504,6 +506,7 @@ sboyapati-Arcadia/provider-aws
 scaleway/crossplane-provider-scaleway
 scalvetr/poc-crossplane-provider
 schaubce/example-provider
+schinmai-akamai/provider-akamai
 sean-martinsplace/provider-jet-okta
 sebastien-prudhomme/provider-jet-github
 sebastienbrunkyndryl/provider-jet-vsphere
