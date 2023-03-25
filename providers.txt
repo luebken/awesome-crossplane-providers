@@ -397,6 +397,7 @@ maqiuyujoyce/provider-jet-template
 marcosQuesada/provider-planetscale
 marcoths/demo-uptest-integration
 markussiebert/crossplane-test
+martinflemingdev/mftesting-provider
 matthewnolf/github-provider
 matthewnolf/grafana-provider
 matthewnolf/hello-crossplane
