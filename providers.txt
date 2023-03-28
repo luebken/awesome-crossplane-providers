@@ -146,6 +146,7 @@ benagricola/provider-aws-irsa
 benagricola/provider-externaldata
 benagricola/provider-yaegi
 blakepettersson/provider-jet-vault
+blakepettersson/provider-vault
 bmpandrade/provider-jet-datadog
 bretagne-peiqi/alicloud-jet-provider
 bretagne-peiqi/alicloud-upjet-provider
@@ -266,6 +267,7 @@ dwerder/uptest
 ederst/provider-kops
 edgefarm/provider-nats
 edgefarm/provider-natssecrets
+elvis-cai/provider-github
 elvis-cai/provider-jet-github
 elyasafm/my_private_cloud
 eminokic/crossplane-provider-template
