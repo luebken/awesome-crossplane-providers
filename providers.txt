@@ -11,6 +11,7 @@ Alliedium/awesome-software-engineering
 Alt-Shivam/Provider-Openstack
 Alt-Shivam/provider-planetscale
 AntoineDao/upjet-provider-sysdig
+AnushaSN/hello-crossplane
 ArunRamakani/hashicorp-provider
 ArunRamakani/provider-jet-grafana
 BaburajSoumya/provider-jet-akamai
@@ -90,6 +91,7 @@ Telemetron/provider-jet-datadog
 ZhengjunHUO/terrajetlearn
 abacus3/crossplane-provider-grafana
 abacus3/provider-jet-grafana
+abbudao/provider-pulsar
 abdelazizhd/crossplane-gcp
 abdelazizhd/gcp-lb-https
 abdelazizhd/provider-jet-imgix
