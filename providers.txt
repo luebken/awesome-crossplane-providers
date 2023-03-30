@@ -102,6 +102,7 @@ ahan0123/provider-jet-random
 ahanafy/provider-cloudamqp
 ajwgroup/provider-jet-azuread
 akuity/awesome-argo
+akyriako/provider-opentelekomcloud
 alex-broad/crossplane-provider-template
 alexinthesky/provider-postgresql
 alexisries/provider-petstore
@@ -281,6 +282,7 @@ ewadegam/crossplane-provider-splunk
 fahedouch/crossplane-provider-ansible
 fanzhenzhen1/provider-template
 fire-ant/provider-flux
+flerwin/provider-jet-cloudflare
 flerwin/provider-jet-vultr
 foshantiger/provider-jet-tencentcloud
 fosterm-mw/supernetes-upjet-provider
