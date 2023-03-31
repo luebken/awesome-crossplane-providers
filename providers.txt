@@ -12,6 +12,7 @@ Alt-Shivam/Provider-Openstack
 Alt-Shivam/provider-planetscale
 AntoineDao/upjet-provider-sysdig
 AnushaSN/hello-crossplane
+AnushaSN/hello-crossplane-new
 ArunRamakani/hashicorp-provider
 ArunRamakani/provider-jet-grafana
 BaburajSoumya/provider-jet-akamai
@@ -365,6 +366,7 @@ kaushik287/provider-akamai
 kaushik287/provider-jet-akamai
 kaushik287/provider-jet-dynatrace
 kaushik287/secdynatrace
+kaushik287/upjet-try
 kbabiak/crossplane-provider-demo
 keinproblem/hello-crossplane
 kirubaCathrin/My-aws-provider
@@ -439,6 +441,7 @@ nickebbitt/provider-filesystem
 niiku/crossplane-example-provider
 niklasbeinghaus/provider-bitwarden
 nlamirault/provider-jet-scaleway
+noorjahans/provider-akamai
 noseka1/github-terrajet-provider
 octo-technology/provider-jet-scaleway
 octo-technology/provider-scaleway
