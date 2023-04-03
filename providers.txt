@@ -23,8 +23,11 @@ BrennenMM7/provider-newrelics
 CalinFlorescu/provider-gcp-haiilo
 DANIELF01/provider-databricks
 DZhuribeda/provider-jet-digitalocean
+DZhurybida/provider-jet-digitalocean
 Damiang95/dynatrace_damyan
 Damiang95/provider-damyan
+DanielVilaFalcon/crossplane-vsphere-provider
+DanielVilaFalcon/provider-vsphere
 DanielVilaFalcon/terra-test
 DavidBajus/provider-github-example
 EttoreFoti/provider-hertznercloud
@@ -366,6 +369,7 @@ kaushik287/provider-akamai
 kaushik287/provider-jet-akamai
 kaushik287/provider-jet-dynatrace
 kaushik287/secdynatrace
+kaushik287/tryjet
 kaushik287/upjet-try
 kbabiak/crossplane-provider-demo
 keinproblem/hello-crossplane
@@ -431,6 +435,7 @@ mruge-shr/managedproject-provider
 mruge-shr/project-provider
 mshvartszayd/upjet-provider-template
 mtrin/provider-azure
+muvaf/provider-dummy
 muvaf/test-generated-aws
 myscale/provider-jet-tencentcloud
 nacef-labidi/provider-harbor
