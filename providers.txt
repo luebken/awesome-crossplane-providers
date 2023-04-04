@@ -410,6 +410,7 @@ marcosQuesada/provider-planetscale
 marcoths/demo-uptest-integration
 markussiebert/crossplane-test
 martinflemingdev/mftesting-provider
+martinnirtl/provider-openstack
 matthewnolf/github-provider
 matthewnolf/grafana-provider
 matthewnolf/hello-crossplane
@@ -583,6 +584,7 @@ upbound/demo-uptest-integration
 upbound/provider-aws
 upbound/provider-azure
 upbound/provider-azuread
+upbound/provider-dummy
 upbound/provider-gcp
 upbound/provider-terraform
 upbound/provider-upbound
