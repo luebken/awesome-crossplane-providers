@@ -312,6 +312,7 @@ iddunk/crossplane-provider
 ig12/crossplanprovider
 ionos-cloud/crossplane-provider-ionoscloud
 itera-io/provider-jet-taikun
+ivanbulyk/provider-planetscale
 ixxeL2097/xo-ter
 j-gourdon/planet-scale-provider
 j-griffith/terrajet-eksctl
@@ -447,6 +448,7 @@ nickebbitt/provider-filesystem
 niiku/crossplane-example-provider
 niklasbeinghaus/provider-bitwarden
 nlamirault/provider-jet-scaleway
+nolancon/provider-ceph
 noorjahans/provider-akamai
 noseka1/github-terrajet-provider
 octo-technology/provider-jet-scaleway
