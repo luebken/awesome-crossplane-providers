@@ -93,6 +93,7 @@ Teja446/mongoprovider
 Teja446/provider-mongodb
 Telemetron/provider-jet-datadog
 ZhengjunHUO/terrajetlearn
+Zipstack/provider-datastax-astra
 abacus3/crossplane-provider-grafana
 abacus3/provider-jet-grafana
 abbudao/provider-pulsar
