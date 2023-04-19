@@ -458,6 +458,7 @@ ok-amba/provider-datadog
 ok-amba/provider-opsgenie
 opendevsecopsio/crossplane-provider-jet-vsphere
 opentelekomcloud/provider-jet-opentelekomcloud
+oracle-samples/crossplane-provider-oci
 oracle-samples/provider-jet-oci
 oracle-samples/provider-oci
 outscale-vbr/upjet-provider-outscale
@@ -575,6 +576,7 @@ topfreegames/crossplane-provider-vault
 topfreegames/upjet-provider-vault
 topicuskeyhub/provider-jet-keyhub
 tracdi/crossplane-provider-common
+triThirty/provider-github
 turkenf/provider-github
 turkenh/demo-uptest-integration
 turkenh/provider-alicloud
