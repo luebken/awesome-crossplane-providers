@@ -621,6 +621,7 @@ ytsarev/demo-uptest-intergration
 yyai326/provider-yy
 zeemy23/crossplane-launchdarkly
 zeronorth-oss/provider-jet-github
+zicongmei/provider-anthos-gcp
 zscaler/crossplane-provider-zpa
 zzxwill/provider-jet-alibaba2
 zzxwill/provider-tf-alibaba
