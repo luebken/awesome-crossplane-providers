@@ -91,6 +91,7 @@ Teja446/githubprovider
 Teja446/mongoprov
 Teja446/mongoprovider
 Teja446/provider-mongodb
+Teja446/provider-upjet-mongodb
 Telemetron/provider-jet-datadog
 ZhengjunHUO/terrajetlearn
 Zipstack/provider-datastax-astra
@@ -540,6 +541,7 @@ siddharthlal-cn/scratch-provider
 simonkaiser9/provider-authentik
 simonkaiser9/provider-jet-authentik
 skydjol/provider-terrajet-ovh
+smartpcr/crossplane-provider-azs
 smileisak/provider-harbor
 smondeli/provider-github
 smondeli/provider-oci
