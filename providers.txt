@@ -32,6 +32,7 @@ DanielVilaFalcon/terra-test
 DavidBajus/provider-github-example
 EttoreFoti/provider-hertznercloud
 FCosta999/provider-openstack
+FlexibleEngineCloud/provider-flexibleengine
 FrangipaneTeam/provider-flexibleengine
 FrangipaneTeam/provider-vcd
 Giomaster/azuredevops-jet
@@ -240,6 +241,7 @@ crossplane-contrib/provider-terraform-aws
 crossplane-contrib/provider-terraform-vsphere
 crossplane-contrib/provider-tf-equinix-metal
 crossplane-contrib/provider-tinkerbell
+crossplane-contrib/provider-vultr
 crossplane-contrib/provider-yandex-cloud
 crossplane-contrib/provider-zpa
 crossplane-contrib/terraform-provider-dl
@@ -613,6 +615,7 @@ william86370/vsphere-jet-template
 woehrl01/provider-newrelic
 woof/provider-openstack
 worzeel/provider-jenkins
+xtrasolver/upjet-provider-azuredevops
 xuyaming0800/crossplane-provider-test
 yandex-cloud/provider-jet-yc
 yannickcastano/crossplane-aci
