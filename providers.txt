@@ -509,6 +509,9 @@ ripro-patrick/crossplane-provider-grpl
 ripro-patrick/myprovider
 rkaneria-sap/crossplane-provider-cloudlogging
 rkaneria-sap/crossplane-provider-tf
+robinschneider/provider-s3
+robinschneider/provider-stackit-s3
+robinschneider/stackit-s3
 rogerdalvi/terrajet-github
 roopeshvs/crossplane-template
 rspurgeon/provider-konnect
