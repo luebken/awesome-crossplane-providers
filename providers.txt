@@ -368,6 +368,7 @@ katafira/provider-gitlab-operator
 katafira/provider-jet-gitlab
 kaushik287/aws-prov-build
 kaushik287/awsprovider
+kaushik287/demotemp
 kaushik287/dynadev
 kaushik287/myaws
 kaushik287/provider-akamai
