@@ -302,6 +302,7 @@ garethjevans/provider-ytt
 giattal/provider-jet-vsphere
 gmichelo/test-crossplane-provider
 grafana/crossplane-provider-grafana
+grafpoo/provider-tess
 gruberdev/provider-vultr
 guiguan/provider-jet-cloudflare
 haarchri/provider-opensearch
@@ -316,6 +317,7 @@ iddunk/crossplane-provider
 ig12/crossplanprovider
 ionos-cloud/crossplane-provider-ionoscloud
 itera-io/provider-jet-taikun
+ivanbulyk/provider-exoscale-kubernetes
 ivanbulyk/provider-planetscale
 ixxeL2097/xo-ter
 j-gourdon/planet-scale-provider
@@ -527,6 +529,7 @@ salaboy/provider-knative
 salaboy/provider-kubecon
 samidbb/provider-planetscale
 samueltorres/crossplane-do-provider
+saril009/sample
 sboschman/provider-jet-rancher2
 sboschman/provider-rancher
 sboyapati-Arcadia/provider-aws
