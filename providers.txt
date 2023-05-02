@@ -394,6 +394,7 @@ kubefirst/provider-civo
 kumarshivam12/aws-crd-provider
 laetho/provider-metagraf
 lechugaletal/test
+linode/provider-ceph
 linode/provider-linode
 loafoe/upjet-provider-hsdp
 lorand-plensys/provider-template
@@ -622,6 +623,7 @@ william86370/vsphere-jet-template
 woehrl01/provider-newrelic
 woof/provider-openstack
 worzeel/provider-jenkins
+xtrasolver/provider-azuredevops
 xtrasolver/upjet-provider-azuredevops
 xuyaming0800/crossplane-provider-test
 yandex-cloud/provider-jet-yc
