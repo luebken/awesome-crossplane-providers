@@ -538,6 +538,7 @@ scaleway/crossplane-provider-scaleway
 scalvetr/poc-crossplane-provider
 schaubce/example-provider
 schinmai-akamai/provider-akamai
+schlakob/provider-openstack
 sean-martinsplace/provider-jet-okta
 sebastien-prudhomme/provider-jet-github
 sebastienbrunkyndryl/provider-jet-vsphere
@@ -589,6 +590,7 @@ topfreegames/upjet-provider-vault
 topicuskeyhub/provider-jet-keyhub
 tracdi/crossplane-provider-common
 triThirty/provider-github
+tsrob/provider-layer7-portal
 turkenf/provider-github
 turkenh/demo-uptest-integration
 turkenh/provider-alicloud
