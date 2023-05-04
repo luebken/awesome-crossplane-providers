@@ -590,6 +590,7 @@ topfreegames/upjet-provider-vault
 topicuskeyhub/provider-jet-keyhub
 tracdi/crossplane-provider-common
 triThirty/provider-github
+tsrob/provider-layer7
 tsrob/provider-layer7-portal
 turkenf/provider-github
 turkenh/demo-uptest-integration
