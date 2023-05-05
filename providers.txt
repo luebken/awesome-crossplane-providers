@@ -274,6 +274,7 @@ dorroddorrod/provider-kops
 dorroddorrod/provider-openshift
 driosalido/provider-opsgenie
 dropte/provider-jet-nsxt
+dusky-mate/provider-openstack
 dwerder/uptest
 ederst/provider-kops
 edgefarm/provider-nats
@@ -374,6 +375,7 @@ kaushik287/demotemp
 kaushik287/dynadev
 kaushik287/myaws
 kaushik287/provider-akamai
+kaushik287/provider-demo
 kaushik287/provider-jet-akamai
 kaushik287/provider-jet-dynatrace
 kaushik287/secdynatrace
