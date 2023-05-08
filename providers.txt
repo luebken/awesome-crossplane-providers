@@ -93,6 +93,7 @@ Teja446/mongoprov
 Teja446/mongoprovider
 Teja446/provider-mongodb
 Teja446/provider-upjet-mongodb
+Teja446/providerdev-upjet-mongodb
 Telemetron/provider-jet-datadog
 ZhengjunHUO/terrajetlearn
 Zipstack/provider-datastax-astra
@@ -272,6 +273,7 @@ dormullor/provider-rancher
 dormullor/provider-rosa
 dorroddorrod/provider-kops
 dorroddorrod/provider-openshift
+dougsong/provider-volcengine
 driosalido/provider-opsgenie
 dropte/provider-jet-nsxt
 dusky-mate/provider-openstack
@@ -286,6 +288,7 @@ eminokic/crossplane-provider-template
 empath-nirvana/provider-jet-confluent
 enrichman/provider-epinio
 enschilling/provider-terrajet-oraclecloud
+etesami/provider-template
 eugercek/crossplane-provider-fs
 ewadegam/crossplane-provider-splunk
 fahedouch/crossplane-provider-ansible
@@ -500,6 +503,7 @@ raoudhalagha/provider-jt-cloudflare
 rauerhans/xplane-prov
 razvanbojoga/crossplane-provider-test
 realli07kkk/huaweicloud-crossplane
+reegnz/provider-kubernetes
 remyleone/crossplane-scaleway-provider
 remyleone/provider-scaleway
 renato0307/cloud-provider-aws
@@ -553,12 +557,14 @@ shift/provider-gsuite
 siddharthlal-cn/scratch-provider
 simonkaiser9/provider-authentik
 simonkaiser9/provider-jet-authentik
+sinotna/upbound-provider-aws
 skydjol/provider-terrajet-ovh
 smartpcr/crossplane-provider-azs
 smileisak/provider-harbor
 smondeli/provider-github
 smondeli/provider-oci
 spectrocloud/provider-jet-palette
+spirosco/provider-aws
 spkane/crossplane-provider-jet-todo
 srlobo/provider-redislabs
 srust/provider-linode
