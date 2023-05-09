@@ -565,6 +565,7 @@ smondeli/provider-github
 smondeli/provider-oci
 spectrocloud/provider-jet-palette
 spirosco/provider-aws
+spirosco/upbound-provider-aws
 spkane/crossplane-provider-jet-todo
 srlobo/provider-redislabs
 srust/provider-linode
@@ -579,6 +580,7 @@ sumantan/FWProvider
 sumeet70/provider-h2
 suramasamy/provider-artifactory
 susunola/crossplane
+svscheg/provider-githubbug198
 systemstart/provider-jet-hcloud
 systemstart/terrajet-stunts
 tannerrs/provider-jet-tmc
