@@ -308,6 +308,7 @@ gmichelo/test-crossplane-provider
 grafana/crossplane-provider-grafana
 grafpoo/provider-tess
 gruberdev/provider-vultr
+grupoboticario/arq-pdd-crossplane-provider-sonar
 guiguan/provider-jet-cloudflare
 haarchri/provider-opensearch
 haardikdharma10/terrajet-test
