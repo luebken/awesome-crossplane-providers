@@ -288,6 +288,7 @@ eminokic/crossplane-provider-template
 empath-nirvana/provider-jet-confluent
 enrichman/provider-epinio
 enschilling/provider-terrajet-oraclecloud
+etesami/provider-opensack
 etesami/provider-template
 eugercek/crossplane-provider-fs
 ewadegam/crossplane-provider-splunk
@@ -364,6 +365,8 @@ joakimhew/provider-jet-googleworkspace
 jograca/provider-awsscheduler
 jograca/provider-sample
 jograca/provider-template
+joshuadeanhall/provider-github
+joshuadeanhall/upjet_test
 juddowilcox/provider-jet-gitea
 juddowilcox/provider-jet-github
 juliosueiras/provider-jet-openstack
