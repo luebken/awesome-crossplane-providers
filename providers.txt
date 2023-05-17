@@ -266,6 +266,7 @@ devopsrockers/provider-planetscale
 dfds/provider-confluent
 dgmorales/crossplane-provider-approval
 dhano6/provider-dev-planetscale
+dimq/provider_outscale
 dirien/provider-minectl
 dkb-bank/provider-opensearch
 dkb-bank/provider-zscaler-zpa
@@ -319,6 +320,7 @@ hasheddan/kc-provider-github
 headyj/crossplane-provider-neo4j
 herveleclerc/crossplane-provider-azure
 hprotzek/provider-jet-okta
+ibakshay/crossplane-provider-test
 iddunk/crossplane-provider
 ig12/crossplanprovider
 ionos-cloud/crossplane-provider-ionoscloud
