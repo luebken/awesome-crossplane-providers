@@ -266,6 +266,7 @@ devopsrockers/provider-planetscale
 dfds/provider-confluent
 dgmorales/crossplane-provider-approval
 dhano6/provider-dev-planetscale
+dimq/provider-outscale
 dimq/provider_outscale
 dirien/provider-minectl
 dkb-bank/provider-opensearch
@@ -290,6 +291,7 @@ empath-nirvana/provider-jet-confluent
 enrichman/provider-epinio
 enschilling/provider-terrajet-oraclecloud
 etesami/provider-opensack
+etesami/provider-openstack
 etesami/provider-template
 eugercek/crossplane-provider-fs
 ewadegam/crossplane-provider-splunk
