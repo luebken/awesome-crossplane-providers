@@ -298,6 +298,7 @@ ewadegam/crossplane-provider-splunk
 fahedouch/crossplane-provider-ansible
 fanzhenzhen1/provider-template
 fire-ant/provider-flux
+fire-ant/provider-netbox
 flerwin/provider-jet-cloudflare
 flerwin/provider-jet-vultr
 foshantiger/provider-jet-tencentcloud
@@ -611,6 +612,7 @@ triThirty/provider-github
 tsrob/provider-layer7
 tsrob/provider-layer7-portal
 turkenf/provider-github
+turkenf/provider-launchdarkly
 turkenh/demo-uptest-integration
 turkenh/provider-alicloud
 turkenh/provider-jet-alibaba
@@ -640,6 +642,7 @@ vjc2/learn_provider_cp_one
 vladimirvshivkov/opentelekomcloud-crossplane-provider
 waldner/testjet
 warmmike/provider-citbbs
+webchi/provider-minio
 william86370/vsphere-jet-template
 woehrl01/provider-newrelic
 woof/provider-openstack
