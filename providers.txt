@@ -483,6 +483,7 @@ oracle-samples/crossplane-provider-oci
 oracle-samples/provider-jet-oci
 oracle-samples/provider-oci
 outscale-vbr/upjet-provider-outscale
+outscale/upjet-provider-outscale
 parul5sahoo/k8s-test-provider
 parul5sahoo/test_provider
 perlinger/provider-jet-github
@@ -640,6 +641,8 @@ vjc2/kafka_provider_v1
 vjc2/kafka_v1
 vjc2/learn_provider_cp_one
 vladimirvshivkov/opentelekomcloud-crossplane-provider
+voviettue/crossplane-provider-common
+vultr/crossplane-provider-vultr
 waldner/testjet
 warmmike/provider-citbbs
 webchi/provider-minio
