@@ -74,6 +74,7 @@ Sparkybeard/mbcp-workload-manager-cux-provider
 SrikanthBhimani/provider-jet-azure
 Striar-Yunis/provider-jet-rancher-test
 Striar-Yunis/provider-jet-rke
+Superm4n97/provider-github
 SuryaLeon/apigeebasic
 SuryaLeon/apigeebasictwo
 SuryaLeon/jettemplate
@@ -283,6 +284,7 @@ dwerder/uptest
 ederst/provider-kops
 edgefarm/provider-nats
 edgefarm/provider-natssecrets
+ekevalo/provider-template
 elvis-cai/provider-github
 elvis-cai/provider-jet-github
 elyasafm/my_private_cloud
