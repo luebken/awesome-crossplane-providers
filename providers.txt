@@ -633,6 +633,7 @@ upbound/provider-terraform
 upbound/provider-upbound
 upbound/upjet-provider-template
 upsidr/provider-civo-upjet
+vaibhavkewl/provider-tf-controller
 vasu1124/provider-planetscale
 vbergbauer/sample-provider-jet
 vestas/provider-jet-vsphere
