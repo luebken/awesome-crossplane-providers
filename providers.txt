@@ -292,6 +292,7 @@ eminokic/crossplane-provider-template
 empath-nirvana/provider-jet-confluent
 enrichman/provider-epinio
 enschilling/provider-terrajet-oraclecloud
+estenrye/crossplane-provider-phoenixnap-bmc-upjet
 etesami/provider-opensack
 etesami/provider-openstack
 etesami/provider-template
