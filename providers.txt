@@ -157,6 +157,7 @@ beeyingln/provider-terraform
 benagricola/provider-aws-irsa
 benagricola/provider-externaldata
 benagricola/provider-yaegi
+blakebarnett/provider-fivetran
 blakepettersson/provider-jet-vault
 blakepettersson/provider-vault
 bmpandrade/provider-jet-datadog
@@ -293,6 +294,7 @@ empath-nirvana/provider-jet-confluent
 enrichman/provider-epinio
 enschilling/provider-terrajet-oraclecloud
 estenrye/crossplane-provider-phoenixnap-bmc-upjet
+estenrye/provider-phoenixnap-bmc
 etesami/provider-opensack
 etesami/provider-openstack
 etesami/provider-template
@@ -339,6 +341,7 @@ j-griffith/terrajet-eksctl
 jabbrwcky/provider-b2
 james-martinez/provider-proxmox
 janwillies/provider-akamai
+janwillies/provider-cortex
 janwillies/provider-jet-akamai
 janwillies/provider-jet-dynatrace
 janwillies/provider-mend
