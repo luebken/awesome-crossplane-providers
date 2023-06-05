@@ -303,6 +303,7 @@ ewadegam/crossplane-provider-splunk
 fahedouch/crossplane-provider-ansible
 fanzhenzhen1/provider-template
 fire-ant/provider-flux
+fire-ant/provider-infoblox-nios
 fire-ant/provider-netbox
 flerwin/provider-jet-cloudflare
 flerwin/provider-jet-vultr
