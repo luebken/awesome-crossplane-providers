@@ -179,6 +179,7 @@ chnyda/provider-planetscale
 clhain/provider-volterra
 cloud-pak-gitops/crossplane-provider-cp4waiops
 cloud-pak-gitops/crossplane-provider-instana
+cnuss/upjet
 codergolem/provider-aiven
 conmurphy/crossplane-aci
 conmurphy/crossplane-github
